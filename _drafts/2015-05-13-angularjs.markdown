@@ -16,3 +16,12 @@ AngularJS's **resource** object lets developers interact with  REST services lik
 
 AngularJS services help to greatly simplify an application by compartmentalizing client-side logic into single units of code.
 
+## Dependency Injection
+
+Dependency injection (DI) is a design pattern where dependencies are defined in an application as part of the configuration. Dependency injection helps you avouid having to manually create application dependencies.
+
+One of its main advantages is that it reduces the need for boilerplate code, writing of which would normally be a time-consuming proccess.
+
+DI also helps to mak an application more testable.
+
+
