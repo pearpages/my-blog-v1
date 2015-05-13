@@ -2,6 +2,7 @@
 layout: post
 title:  "Karma Test Runner"
 date:   2015-05-14 00:00:12
+categories: javascript tests
 ---
 
 Karma is a test runner based on Node.js. 
