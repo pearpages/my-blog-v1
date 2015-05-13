@@ -44,6 +44,10 @@ There are two types of AngularJS tets that integrate well with CI tools:
 
 CI tools (such as Travis CI or Jenkins) have the ability to run test scripts during build process and give immediate feedback by way of tests resuls.
 
+### Testing Considerations
+
+The two most popular test frameworks used for client-side Javascript and AngularJS, Karma and Protractor, run on the Node.js framework. Applications and test scripts that run on Node.js run extremely fast.
+
 ## Essential Modules
 
 * angular.min.js (main)
