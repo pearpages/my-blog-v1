@@ -2,6 +2,7 @@
 layout: post
 title:  "AngularJs"
 categories: angularjs web javascript
+date:   2015-05-13 19:32:53
 ---
 # AngularJS
 

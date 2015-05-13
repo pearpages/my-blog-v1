@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Markdown"
+date:   2015-05-13 09:32:53
 ---
 For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
 
