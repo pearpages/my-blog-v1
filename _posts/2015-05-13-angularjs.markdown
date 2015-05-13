@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "AngularJs"
+categories: angularjs web javascript
 ---
 # AngularJS
 
@@ -9,6 +10,8 @@ Javascript client-side frameworks are sustainable models that offer many advanta
 ## MVC
 
 AngularJS uses the MVC design pattern and embraces that pattern completely. The model, view, and controller are all clearly defined in AngularJS.
+
+Business logic should almost always be placed in backend REST services whenver possible.
 
 ## RESTful web services
 
@@ -24,4 +27,21 @@ One of its main advantages is that it reduces the need for boilerplate code, wri
 
 DI also helps to mak an application more testable.
 
+## Testing
+
+There are two types of AngularJS tets that integrate well with CI tools:
+
+* Unit Testing with Karma
+* End-to-end (E2E) with Protractor
+
+### Continnous Integration (CI)
+
+CI tools (such as Travis CI or Jenkins) have the ability to run test scripts during build process and give immediate feedback by way of tests resuls.
+
+## Essential Modules
+
+* angular.min.js (main)
+* angular-route.min.js (routing)
+* angular-cookies.min.js (cookies)
+* angular-resource.min.js (REST)
 
