@@ -1,1 +1,47 @@
-Hello World
+---
+layout: default
+---
+
+<div class="container-fluid">
+
+    {% assign lastPost = site.posts.first %}
+  {% assign lastPostContent = lastPost.content %}
+
+<div class="row">
+<div class="col-md-8">
+<h1 class="entry-title">
+{% if lastPost.title %}
+    <a href="{{ root_url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
+{% endif %}
+{% if post.title %}
+    <a href="{{ root_url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
+{% endif %}
+</h1>
+<div class="entry-content">{{ lastPostContent }}</div>
+</div>
+
+<hr class='visible-sm visible-xs' />
+
+<div class="col-md-4">
+<h2 class="page-heading">Posts</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+</div>
+</div>
+</div>

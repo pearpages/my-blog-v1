@@ -1,0 +1,14 @@
+# Site settings
+title: PearPages
+myName: Pere Pages
+email: hello@pearpages.com
+description: "Blog about programming. Patterns, javascript, angularjs, html, css, sass, less, desing, UX, PHP, front end, back end, Unit testing, QA,... and any other thing that matters like Movies and Series."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.pearpages.com" # the base hostname & protocol for your site
+twitter_username: pearpages
+github_username:  pearpages
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+timezone: Europe/Madrid
