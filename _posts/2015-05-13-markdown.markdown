@@ -1,0 +1,91 @@
+---
+layout: post
+title:  "Markdown"
+---
+For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
+
+---
+
+## Headers
+
+{% highlight PHP %}
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+{% endhighlight %}
+
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+
+---
+
+## Text
+
+{% highlight PHP %}
+*emphasis*
+**bold**
+{% endhighlight %}
+
+*emphasis*
+
+**bold**
+
+---
+
+## Lists
+
+{% highlight PHP %}
+1. blah
+    1. bleh
+    2. bloh
+2. bleh
+
+* blah
+    - blih
+    - bloh
+        + bluh
+* bleh
+* bloh
+{% endhighlight %}
+
+1. blah
+    1. bleh
+    2. bloh
+2. bleh
+
+* blah
+    - blih
+    - bloh
+        + bluh
+* bleh
+* bloh
+
+---
+
+## Separator
+
+{% highlight PHP %}
+---
+{% endhighlight %}
+
+---
+
+## Code
+
+{% highlight PHP %}
+<?php
+echo 'Hello World!';
+{% endhighlight %}
+
