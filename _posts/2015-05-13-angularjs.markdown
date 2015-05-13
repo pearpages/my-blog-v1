@@ -4,7 +4,6 @@ title:  "AngularJs"
 categories: angularjs web javascript
 date:   2015-05-13 19:32:53
 ---
-# AngularJS
 
 Javascript client-side frameworks are sustainable models that offer many advantages over conventional web frameworks, such as simplicity, rapid development, speed of operation, testability, and the ability to package the entire application and deploy it to all movile devices and the Web with relative ease.
 
