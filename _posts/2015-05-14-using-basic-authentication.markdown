@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Basic Authentication"
-date:   2015-05-14 16:33:15
+date:   2015-05-15 09:33:15
 categories: authentication javascript angularjs
 ---
 
