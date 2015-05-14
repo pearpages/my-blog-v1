@@ -55,3 +55,41 @@ The two most popular test frameworks used for client-side Javascript and Angular
 * angular-cookies.min.js (cookies)
 * angular-resource.min.js (REST)
 
+## Controllers
+
+AngularJS controllers have two primary duties in an application:
+
+* Controllers should be used to initialize the model scope properties. When a controller is created and attached to the DOM, a child scope is created. **The child scope holds a model used specifically for the controller which is attached**. You can access the child scope by using the *$scope* object.
+* Controllers add behavior to the *$scope* object. We add behavior by adding methods to the scope.
+
+### Business Logic
+
+Business logic that needs to be available to multiple controllers should not be placed in the controller but should instead be placed in AngularJS non-REST services.
+
+{% highlight javascript %}
+angular.module('addonsControllers',[])
+    .controller('AddonsCtrl',['$scope','checkCreds','$location','AddonsList','$http','getToken',function AddonsCtrl($scope, checkCreds, $location, AddonsList, $http, getToken){
+        if(checkCreds !== true){
+            $location.path('/loginForm');
+        }
+
+        $http.defaults.headers.common['Authorization'] = 'Basic ' + getToken();
+
+        AddonsList.getList({},
+            function success(response){
+                console.log("Success");
+            },
+            function error(errorResponse){
+                console.log("Error");
+            }
+        );
+
+        $scope.addonsActiveClass = "active";
+    }]);
+{% endhighlight %}
+
+## Rest Services
+
+Any business logic that can be pushed off the client-side application should be implemented as a **REST service** and not actually inside the AngularJS application.
+
+**REST services** must have a response time of **two (2) seconds** or less.
