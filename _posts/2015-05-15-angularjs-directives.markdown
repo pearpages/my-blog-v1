@@ -27,4 +27,29 @@ We use prefixes so our directives don't match any existing HTML tag name, future
 
 ## Restrict Option
 
-* 
+For e.g. myAppCalendar
+
+* 'A' (attribute) <div my-app-calendar></div>
+* 'E' (element) <my-app-calendar />
+* 'C' (class name) <div class="my-app-calendar"></div>
+* 'M' (comment name) \<!-- directive: my-app-calendar --\>
+
+## Code Example
+
+### Directive
+{% highlight javascript %}
+angular.module('myApp')
+  .directive('myMenu', function () {
+    return {
+      templateUrl: 'views/header.html',
+      restrict: 'A',
+      link: function postLink(scope, element, attrs) {
+        scope.label = attrs.menuTitle;
+    }};
+  });
+{% endhighlight %}
+
+### In the View
+{% highlight html %}
+<div blg-menu menu-title="AngularJS Blog"></div>
+{% endhighlight %}
