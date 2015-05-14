@@ -15,3 +15,7 @@ The following rules should be considered
 * Always make sure that any Javascript that may get injected inside a JSON property does not get executed server side.
 
 The responsibility for security rests entirely on the shoulders of the backend service developers.
+
+In a production environment, SSL should always be used to protect private data and the user's credentials.
+
+Additional security steps could even be taken in the REST services to limit access to a particular machine or a particular IP address.
