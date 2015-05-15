@@ -80,3 +80,35 @@ Theoretically we don't know when the REST service call will return results, but 
         }]);
 
 {% endhighlight %}
+
+## Other Examples
+
+{% highlight javascript %}
+angular.module('myModule',[])
+    .factory('User',['$resource',function ($resource){
+        return $resource("./server/user/:id", {},{
+        get: {method: 'GET', cache: false, isArray: false},
+        save: {method: 'POST', cache: false, isArray: false},
+        update: {method: 'PUT', cache: false, isArray: false},
+        delete: {method: 'DELETE', cache: false, isArray: false}
+        });
+    }]);
+{% endhighlight %}
+
+{% highlight javascript %}
+angular.module('myModule',[])
+    .factory('UserList',['$resource',function ($resource){
+        return $resource("./server/userList", {},{
+        get: {method: 'GET', cache: false, isArray: true}
+    });
+    }]);
+{% endhighlight %}
+
+{% highlight javascript %}
+angular.module('myModule',[])
+    .factory('User',['$resource',function ($resource){
+        return $resource("./server/login", {}, {
+        login: {method: 'POST', cache: false, isArray: false}
+        });
+    }]);
+{% endhighlight %}
