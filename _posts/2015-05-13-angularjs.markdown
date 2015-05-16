@@ -19,6 +19,10 @@ AngularJS uses the MVC design pattern and embraces that pattern completely. The 
 
 Business logic should almost always be placed in backend REST services whenver possible.
 
+* Model: Stores the business data.
+* View: Represents the model in UI.
+* Controller: Responsible for coordinatin between model and view.
+
 ## RESTful web services
 
 AngularJS's **resource** object lets developers interact with  REST services like standard objects.

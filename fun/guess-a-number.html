@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div ng-app="app" class="container" ng-controller="MyController">
+	<h2>Guess the Number !</h2>
+
+	<p>Have fun trying to figure out the number. This is a very simple example of AngularJS</p>
+
+	<p class="well lead">Guess the computer generated random number between 1 and 1000.</p>
+
+	<label>Your Guess: </label> <input type="number" ng-model="guess" />
+	<button ng-click="verifyGuess()" class="btn btn-success btn-sm">Verify</button>
+	<button ng-click="initializeGame()" class="btn btn-warning btn-sm">Restart</button>
+	<br/><br/>
+	<p ng-show="deviation < 0" class="alert alert-warning">Your guess is higher.</p>
+	<p ng-show="deviation > 0" class="alert alert-warning">Your guess is lower.</p>
+	<p ng-show="deviation === 0" class="alert alert-success">Yes! That's it!</p>
+	<p class="text-info">No of guesses: <span class="badge" ng-bind="noOftries"></span></p>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script>
+	angular.module('app',[])
+	.controller('MyController',['$scope',function ($scope){
+		$scope.hello = "hello";
+	$scope.verifyGuess = function (){
+		$scope.deviation = $scope.original - $scope.guess;
+		$scope.noOftries = $scope.noOftries + 1;
+	}
+	$scope.initializeGame = function (){
+		$scope.noOftries = 0;
+		$scope.original = Math.floor((Math.random() * 1000) + 1);
+		$scope.guess = null;
+		$scope.deviation = null;
+	}
+	$scope.initializeGame();
+}]);
+
+</script>
