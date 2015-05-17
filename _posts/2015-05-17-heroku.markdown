@@ -6,6 +6,66 @@ categories: heroku nodejs app
 author: Pere Pages
 ---
 
+#### Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ## What is it?
 
-A platform as a service (PaaS) that enables developers to build and run applications entirely in the cloud.
+>A platform as a service (PaaS) that enables developers to build and run applications entirely in the cloud.
+
+## Deploy the app
+
+I am going to create an app. I use my nickname as a namespace.
+
+{% highlight bash %}
+#create remote
+heroku create pearpages-test-app
+#deploy the code, same code for pushing changes
+git push heroku master
+{% endhighlight %}
+
+## Run and instance and open it
+
+{% highlight  bash %}
+heroku ps:scale web=1
+heroku open
+#view logs
+heroku logs
+{% endhighlight %}
+
+## Define a Procfile
+
+> Use a Procfile, a text file in the root directory of your application, to explicitly declare what command should be executed to start your app.
+
+{% highlight  bash %}
+web: node index.js
+{% endhighlight %}
+
+> This declares a single process type, **web**, and the command needed to run it.
+
+## Run the app locally
+
+{% highlight  bash %}
+foreman start web
+{% endhighlight %}
+
+> Just like Heroku, Foreman examines the **Procfile** to determine what to run.
+
+## Start a console
+
+When the console starts, it has nothing loaded other than the *Nodee.js* standard library. From here you can ```require``` some of your application files.
+
+{% highlight  bash %}
+heroku run node
+{% endhighlight %}
+
+## Links
+
+[How Heroku Works](https://devcenter.heroku.com/articles/how-heroku-works)
+
+[Deploying Node.js Apps on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
+
+[Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
