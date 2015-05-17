@@ -3,15 +3,16 @@ layout: default
 ---
 
 <div ng-app="app" class="container" ng-controller="MyController">
-	<h2>Guess the Number !</h2>
+	<h2>Guess the Number!</h2>
 
 	<p>Have fun trying to figure out the number. This is a very simple example of AngularJS</p>
 
 	<p class="well lead">Guess the computer generated random number between 1 and 1000.</p>
 
 	<label>Your Guess: </label> <input type="number" ng-model="guess" />
-	<button ng-click="verifyGuess()" class="btn btn-success btn-sm">Verify</button>
-	<button ng-click="initializeGame()" class="btn btn-warning btn-sm">Restart</button>
+	<br/><br/>
+	<button ng-click="verifyGuess()" class="btn btn-success btn-lg">Verify</button>
+	<button ng-click="initializeGame()" class="btn btn-warning btn-lg">Restart</button>
 	<br/><br/>
 	<p ng-show="deviation < 0" class="alert alert-warning">Your guess is higher.</p>
 	<p ng-show="deviation > 0" class="alert alert-warning">Your guess is lower.</p>

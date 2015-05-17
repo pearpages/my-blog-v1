@@ -9,6 +9,12 @@ layout: default
 
 <div class="row">
 <div class="col-md-8">
+
+<div class='visible-sm visible-xs'>
+<a class='btn btn-lg btn-primary' href="#posts">Goto Posts</a>
+<a class='btn btn-lg btn-primary' href="#follow-me">Follow me</a>
+</div>
+
 <h1 class="entry-title">
 {% if lastPost.title %}
     <a href="{{ root_url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
@@ -23,9 +29,12 @@ layout: default
 <hr class='visible-sm visible-xs' />
 
 <div class="col-md-4">
-<a class="twitter-timeline" href="https://twitter.com/pearpages" data-widget-id="599942102483623936">Tweets by @pearpages</a>
+<a id="twitter" class="twitter-timeline" href="https://twitter.com/pearpages" data-widget-id="599942102483623936">Tweets by @pearpages</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<h2 class="page-heading">Posts</h2>
+
+<hr class='visible-sm visible-xs' />
+
+<h2 class="page-heading" id="posts">Posts</h2>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
