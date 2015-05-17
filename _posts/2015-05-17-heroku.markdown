@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Heroku"
+date:   2015-05-17 12:32:53
+categories: heroku nodejs app
+author: Pere Pages
+---
+
+## What is it?
+
+A platform as a service (PaaS) that enables developers to build and run applications entirely in the cloud.
