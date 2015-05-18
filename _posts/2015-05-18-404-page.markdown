@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "404 page"
+date:   2015-05-18 22:15:01
+categories: web 404 page response
+---
+
+> A 404 page is what a user sees when they try to reach a non-existent page on your site (because they've clicked on a broken link, the page has been deleted, or they've mistyped a URL). A 404 page is called that because in response to a request for a missing page, webservers send back a HTTP status code of 404 to indicate that a page is not found. While the standard 404 page can vary depending on your ISP, it usually doesn't provide the user with any useful information, and most users may just surf away from your site.
+
+[Create useful 404 pages](https://support.google.com/webmasters/answer/93641?hl=en)
+
+## Custom 404 pages in Jekyll
+
+1. Create a new HTML file named 404.html—or a new Markdown file named 404.md, with permalink: /404.html in its YAML front matter—at the root level of your GitHub Pages repository.
+2. Add the content you want to display to lost souls and weary travelers.
+3. Commit your changes and, if you're working on a local clone of your repository, push them up to GitHub.
+
+[Github explanation](https://help.github.com/articles/custom-404-pages/)
+
+
