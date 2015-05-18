@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "BDD (Behaviour Driven Development)"
+date:   2015-05-19 00:44:21
+categories: web testing agile
+---
+
+BDD (Behaviour Driven Development) is a synthesis and refinement of practices stemming from TDD (Test Driven Development) and ATDD (Acceptance Test Driven Development).
+
+BDD augments TDD and ATDD with the following tactics:
+* apply the "Five Why's" principle to each proposed User Story, so that its purpose is clearly related to business outcomes
+* thinking "from the outside in", in other words implement only those behaviors which contribute most directly to these business outcomes, so as to minimize waste
+* describe behaviors in a single notation which is directly accessible to domain experts, testers and developers, so as to improve communication
+* apply these techniques all the way down to the lowest levels of abstraction of the software, paying particular attention to the distribution of behavior, so that evolution remains cheap
+
+[See more](http://guide.agilealliance.org/guide/bdd.html)
