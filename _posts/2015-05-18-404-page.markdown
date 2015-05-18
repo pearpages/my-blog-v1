@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "404 page"
+title:  "About 404 pages"
 date:   2015-05-18 22:15:01
 categories: web 404 page response
 ---
