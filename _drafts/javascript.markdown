@@ -107,3 +107,5 @@ an object, and if the object lacks the property name, then JavaScript attempts t
 retrieve the property value from the prototype object. This is called delegation.
 
 ## Reflection
+
+p23
