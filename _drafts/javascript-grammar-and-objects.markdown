@@ -76,7 +76,7 @@ var flight = {
 		city: "Los Angeles"
 	}
 };
-{% endhiglight %}
+{% endhighlight %}
 
 ## Retrieval
 {% highlight javascript %}
