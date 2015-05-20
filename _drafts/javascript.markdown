@@ -1,4 +1,5 @@
 ---
+title: Grammar and Objects
 layout:post
 ---
 
@@ -108,4 +109,59 @@ retrieve the property value from the prototype object. This is called delegation
 
 ## Reflection
 
-p23
+Usually it's very helpfu to use **typeof**. But scare must be taken because any property on the **prototype chain** can produce a value.
+
+### hasOwnProperty
+
+It returns true if the object has a particular property. The *hasOwnProperty* does not look at the prototype chain.
+
+{% highlight javascript %}
+myObject.hasOwnProperty('propertyName');
+{% endhighlight %}
+
+## Enumeration
+
+The for in statement can loop over all of the property names in an object. The enumeration will include all of the properties **including functions and prototype properties**. If you want to filter out these values you have to use the **hasOwnProperty**.
+
+{% highlight javascript %}
+var propertyName;
+for(propertyName in myObject){
+	if(typeof myObject[propertyName] !== 'function' && myObject.hasOwnProperty(propertyName)){
+		document.writeln(name + ': ' + myObject[propertyName]);	
+	}
+	
+}
+{% endhighlight %}
+
+If we want a specific order whe need an **array**.
+{% highlight javascript %}
+var i;
+var properties = [
+	'first-name',
+	'middle-name',
+	'last-name',
+	'profession'
+];
+for(i = 0; i < properties.length; i +=1 ){
+	document.writeln(properties[i] + ': ' myObject[properties[i]]);
+}
+{% endhighlight %}
+
+## Delete
+
+The delete operator can be used to remove a property from an object.
+
+Removing a property from an object may allow a property from the prototype linkage to shine through.
+
+{% highlight javascript %}
+delete myObject.propertyOne;
+{% endhighlight %}
+
+## Global Abatement
+
+One way to minimize the use of global bariables is to create a single global variable for your application:
+
+{% highlight javascript %}
+var MYAPP = {};
+{% endhighlight %}
+
