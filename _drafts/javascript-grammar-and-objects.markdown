@@ -1,6 +1,6 @@
 ---
-title: Grammar and Objects
-layout:post
+layout: post
+title: "Javascript Grammar and Objects"
 ---
 
 ## Gramar

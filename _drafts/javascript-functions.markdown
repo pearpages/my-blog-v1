@@ -1,6 +1,6 @@
 ---
-title: Javascript Functions
-layout:post
+layout: post
+title: "Javascript Functions"
 ---
 
 Functions are the fundamental modular unit of Javascript.
@@ -237,13 +237,56 @@ A *recursive* function is a function that calls itself, either directly or indir
 
 ## Closure
 
+{% highlight javascript %}
+var myObject = function (){
+        var value = 0;
+
+        return {
+                increment: function (inc){
+                        value += typeof inc === 'number' ? inc: 1;
+                },
+                getValue: function (){
+                        return value;
+                }
+        };
+}();
+{% endhighlight %}
+
+We are not assigining a function to *myObject*. We are assigning the result of invoking that function.
+
+{% highlight javascript %}
+var fade = function (node){
+        var level = 1;
+        var step = function (){
+                var hex = level.toString(16);
+                node.style.backgroundColor = '#FFF' +hex +hex;
+                if(level < 15){
+                        level += 1;
+                        setTimeout(step,100);
+                }
+        };
+        setTimeout(step,100);
+}
+{% endhighlight %}
+
 ## Callbacks
+
+We pass a function parameter to the send_request_asynchronously function that will be called when the response is available.
 
 ## Module
 
+We can use functions and closure to make modules.
+
+**A module is a function or object that presents an interface but that hides its state and implementation**.
+
 ## Cascade
+
+It is typical for methods that set or change the state of an object to return nothing. If we have those methods return this instead of undefined, we can enable cascades.
 
 ## Curry
 
+Currying allows us to produce a new function by combining a function and an argument.
+
 ## Memoization
 
+Functions can use objects to remember the results of previous operations, making it possible to avoid unnecessary work.
