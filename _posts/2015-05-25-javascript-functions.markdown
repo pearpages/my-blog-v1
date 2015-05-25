@@ -1,9 +1,17 @@
 ---
 layout: post
 title: "Javascript Functions"
+categories: javascript functions
+date: 2015-05-25 20:00:23
 ---
 
-Functions are the fundamental modular unit of Javascript.
+#### Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+A function encloses a set of statements. Functions are the fundamental modular unit of JavaScript.
 
 They are used for:
 
@@ -26,13 +34,20 @@ The thing that is special about functions is that they can be invoked.
 
 ## Function Literal
 
+A function literal has four parts:
+
+* word *function*
+* name or *anonymous*
+* set of parameters
+* set of statements
+
 {% highlight javascript %}
 function optionalNameOfTheFunction(param1, param2){
  //statements 
 }
 {% endhighlight %}
 
-An inner function also enjoys access to the parameters and variables of the functions it is nested within. The function object created by a function literal contains a link to that outer context. This is called *closure*.
+An inner function also enjoys access to the parameters and variables of the functions it is nested within. The function object created by a function literal contains **a link to that outer context**. This is called *closure*.
 
 ## Invocation
 
@@ -62,11 +77,13 @@ var myObject = {
  myObject.increment(3); //4
 {% endhighlight %}
 
-The binding of this to the object happens at invocation time.
+The binding of this to the object happens at **invocation time**.
 
 Methods that get their object context from this are called *pubic methods*.
 
 ### The Function Invocation Pattern
+
+When a function is invoked with this pattern, **this** is bound to the global object.
 
 {% highlight javascript %}
 function add(param1, param2){
@@ -76,13 +93,12 @@ function add(param1, param2){
 var sum = add(3,6); //9
 {% endhighlight %}
 
-When a function is invoked with this pattern, **this** is bound to the global object.
-
 A consequence of this error is that a method cannot employ an inner function to help it do its work because the inner function does not share the method's acceses to the object as it its **this** is bound to the wrong value.
 
 By convention, we use **that**
 
 {% highlight javascript %}
+//no problem with this
 var myObject = {
         value:2,
         getValue : function (){
@@ -90,6 +106,7 @@ var myObject = {
         }
 };
 //augment myObject
+//because it isn't part of the object we have to use that
 myObject.double = function (){
         var that = this;
 
@@ -235,9 +252,20 @@ A *recursive* function is a function that calls itself, either directly or indir
 
 ## Scope
 
+> *Scope* in a programming language controls the visibility and lifetimes of variables and parameters.
+
+> Javascript does not have block scope, but does have function scope.
+
+In javascript it is best to declare all of the variables used in a function at the top of the function body.
+
 ## Closure
 
+Inner functions get access to the parameters and variables of the functions they are defined within (with the eception of *this* and *arguments*).
+
+In the following example we are not assigning a function, we are assigning the result of invoking that function. The inner function has a longer lifetime than its outer function.  *Value* variable is always available to *increment* and *getValue* methods, but the function's scope keeps it hidden from the rest of the program.
+
 {% highlight javascript %}
+//We are not assigining a function to *myObject*. We are assigning the result of invoking that function
 var myObject = function (){
         var value = 0;
 
@@ -252,32 +280,29 @@ var myObject = function (){
 }();
 {% endhighlight %}
 
-We are not assigining a function to *myObject*. We are assigning the result of invoking that function.
-
-{% highlight javascript %}
-var fade = function (node){
-        var level = 1;
-        var step = function (){
-                var hex = level.toString(16);
-                node.style.backgroundColor = '#FFF' +hex +hex;
-                if(level < 15){
-                        level += 1;
-                        setTimeout(step,100);
-                }
-        };
-        setTimeout(step,100);
-}
-{% endhighlight %}
+The function returns an object containing two methods, and those methods continue to enjoy the privilege of access to the value variable.
 
 ## Callbacks
 
 We pass a function parameter to the send_request_asynchronously function that will be called when the response is available.
 
+{% highlight javascript %}
+request = prepare_the_request( );
+send_request_asynchronously(request, function (response) {
+        display(response);
+});
+{% endhighlight %}
+
 ## Module
 
 We can use functions and closure to make modules.
 
-**A module is a function or object that presents an interface but that hides its state and implementation**.
+By using functions to produce modules, we can almost completely eliminate our use of global variables,
+thereby mitigating one of JavaScript’s worst features.
+
+> A module is a function or object that presents an interface but that hides its state and implementation.
+
+The module pattern takes advantage of function scope and closure to create relationships that are binding and private.
 
 ## Cascade
 
