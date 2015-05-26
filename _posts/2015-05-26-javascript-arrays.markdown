@@ -104,3 +104,16 @@ var is_array = function (value) {
 ## Methods
 
 We can *augment* the type (**Array.method**) or add the methods directly to an individual array.
+
+### array methods
+
+* array.concat(item...)
+* array.join(separator)
+* array.pop()
+* array.push(item...)
+* array.reverse()
+* array.shift()
+* array.slice(start,end)
+* array.sort(comparefn)
+* array.splice(start,deleteCount,item...)
+* array.unshift(item...)
