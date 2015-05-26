@@ -4,6 +4,13 @@ title: "Javascript Arrays"
 categories: javascript arrays
 date:  2015-05-26 19:40:22
 ---
+
+#### Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 > An array is a linear allocation of memory in which elements are accessed by integers that are used to compute offsets.
 
 JavaScript provides an object that has some array-like characteristics. Arrays in javascript are significantly slower than a real array. They inherit from *Array.prototype* and have a larger set of useful methods and the *length* property.
