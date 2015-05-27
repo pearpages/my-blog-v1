@@ -1,7 +1,15 @@
 ---
 layout: post
-title: "Javascript Grammar and Objects"
+title: "Javascript, Grammar, Objects and Methods"
 ---
+
+Javascript has a malleable nature and lack of type checking.
+
+We use javascript for things like:
+
+* User Interface (UI) manipulation
+* Client Server interaction
+* Business processing/validation
 
 ## Gramar
 
@@ -165,3 +173,48 @@ One way to minimize the use of global bariables is to create a single global var
 var MYAPP = {};
 {% endhighlight %}
 
+## Methods
+
+### Array
+
+[Go to the arrays post]({% post_url 2015-05-26-javascript-arrays %})
+
+### Function
+
+* function.apply(thisArg,argArray)
+
+### Number
+
+* number.toExponential(fractionDigits)
+* number.toFixed(fractionDigits)
+* number.toPrecision(precision)
+* number.toString(radix)
+
+### Object
+
+* object.hasOwnProperty(name)
+
+### RegExp
+
+* regexp.exec(string)
+* regexp.test(string)
+
+### String
+
+* string.charAt(pos)
+* string.charCodeAt(pos)
+* string.concat(string...)
+* string.indexOf(searchString, position)
+* string.lastIndexOf(searchString, position)
+* string.localeCompare(that)
+* string.match(regexp)
+* string.replace(searchValue, replaceValue)
+* string.search(regexp)
+* string.slice(start,end)
+* string.split(separator,limit)
+* string.substring(start,end)
+* string.toLocaleLowerCase()
+* string.toLocaleUpperCase()
+* string.toLowerCase()
+* string.toUpperCase()
+* String.fromCharCode(char...)
