@@ -178,5 +178,40 @@ my_hask.keys
 * bitwise & ^ |
 * logical || && not or and
 
+### Blocks Iterators
+
+5.times {puts "Hello"}
+
+[1,2,3,4,5].each { |item| puts item }
+
+["a","b","c"].each_with_index do |item, index|
+	puts "Item: #{item}"
+	puts "Index: #{index}"
+	puts "---"
+end
+
+### Control Structure
+
+now = Time.now
+
+if now == Time.now
+	puts "now is the past"
+else
+	puts "time has passed"
+end
 
 
+
+a = 5
+b = 10
+puts "b is greater than a" if a < b
+puts "a is greater than b" unless a < b
+
+
+a = 5
+b = 10
+
+while a < b
+	puts "a is #{a}"
+	a += 1
+end
