@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Javascript, Grammar, Objects and Methods"
+date:   2015-05-24 20:12:15
 ---
+#### Contents
+{:.no_toc}
 
 Javascript has a malleable nature and lack of type checking.
 
@@ -12,6 +15,12 @@ We use javascript for things like:
 * Business processing/validation
 
 ## Gramar
+=======
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Grammar
+>>>>>>> Stashed changes:_drafts/javascript-grammar-and-objects.markdown
 
 * Whitespace
 * Names
@@ -19,13 +28,12 @@ We use javascript for things like:
 * Strings
 * Statements
 	* Falsy values
-	false
-	null
-	undefined
-	empty string ''
-	number 0
-	number NaN
-
+		+ false
+		+ null
+		+ undefined
+		+ empty string ''
+		+ number 0
+		+ number NaN
 	* switch
 	* case
 	* while
@@ -35,32 +43,32 @@ We use javascript for things like:
 	* throw
 	* return
 	* break
-	* expression
-		*precedence
-			* . [] ()
-			* delete new typeof + - !
-			* / %
-			* + -
-			* >= <= > <
-			* === !==
-			* &&
-			* ||
-			* ?:
+* expression
+	* precedence
+		* . [] ()
+		* delete new typeof + - !
+		* / %
+		* \+ -
+		* \>= <= > <
+		* === !==
+		* &&
+		* \|\|
+		* ?:
 
 ## Objects
 
 The simple types of Javascript are
+
 * numbers
 * strings
 * booleans
 * null
 * undefined
+* objects
 
-All the other values are **objects**!
+> Javascript includes a prototype linkage feature that allows one object to inherit the properties of another.
 
-Javascript includes a prototype linkage feature that allows one object to inherit the properties of another.
-
-## Object Literals
+### Object Literals
 
 {% highlight javascript %}
 var empty_object = {};
@@ -86,7 +94,7 @@ var flight = {
 };
 {% endhighlight %}
 
-## Retrieval
+### Retrieval
 {% highlight javascript %}
 //Both ways are correct but the second one is preferred
 var var1 = stooge['first-name'];
@@ -100,11 +108,11 @@ var status = flight.status || "unknown";
 
 Attempting to retrieve values from *undefined* will trhow a **TypeError** exception.
 
-## Reference
+### Reference
 
 Objects are passed around by **reference**. They are **never copied**.
 
-## Prototype
+### Prototype
 
 Every object is linked to a prototype object from which it can inherit properties. All
 objects created from object literals are linked to **Object.prototype**, an object that
@@ -115,7 +123,7 @@ comes standard with JavaScript.
 an object, and if the object lacks the property name, then JavaScript attempts to
 retrieve the property value from the prototype object. This is called delegation.
 
-## Reflection
+### Reflection
 
 Usually it's very helpfu to use **typeof**. But scare must be taken because any property on the **prototype chain** can produce a value.
 
@@ -127,7 +135,7 @@ It returns true if the object has a particular property. The *hasOwnProperty* do
 myObject.hasOwnProperty('propertyName');
 {% endhighlight %}
 
-## Enumeration
+### Enumeration
 
 The for in statement can loop over all of the property names in an object. The enumeration will include all of the properties **including functions and prototype properties**. If you want to filter out these values you have to use the **hasOwnProperty**.
 
@@ -155,7 +163,7 @@ for(i = 0; i < properties.length; i +=1 ){
 }
 {% endhighlight %}
 
-## Delete
+### Delete
 
 The delete operator can be used to remove a property from an object.
 
@@ -165,7 +173,7 @@ Removing a property from an object may allow a property from the prototype linka
 delete myObject.propertyOne;
 {% endhighlight %}
 
-## Global Abatement
+### Global Abatement
 
 One way to minimize the use of global bariables is to create a single global variable for your application:
 
