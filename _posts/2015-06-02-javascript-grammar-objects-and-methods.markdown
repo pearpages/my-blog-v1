@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Javascript, Grammar, Objects and Methods"
-date:   2015-05-24 20:12:15
+date:   2015-06-02 09:02:15
+categories: javascript
 ---
 #### Contents
 {:.no_toc}
