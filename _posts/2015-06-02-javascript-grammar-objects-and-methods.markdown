@@ -6,6 +6,8 @@ categories: javascript
 ---
 #### Contents
 {:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 Javascript has a malleable nature and lack of type checking.
 
@@ -16,12 +18,6 @@ We use javascript for things like:
 * Business processing/validation
 
 ## Gramar
-=======
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
-
-## Grammar
->>>>>>> Stashed changes:_drafts/javascript-grammar-and-objects.markdown
 
 * Whitespace
 * Names
