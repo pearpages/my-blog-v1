@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Modules in AngularJS"
+date:   2015-06-02 19:33:15
+categories: yeoman javascript angularjs
 ---
 #### Contents
 {:.no_toc}
