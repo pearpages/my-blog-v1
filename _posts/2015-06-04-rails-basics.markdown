@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "Rails"
+title: "Rails Basics"
+categories: ruby rails
+date:   2015-06-04 19:02:23
 ---
 
 {% highlight bash %}
@@ -38,7 +40,7 @@ config.routes.rb
 Hello::Application.routes.draw do
 	get ':controller(/:action(/:id(.:format)))'
 end
-{% endhiglight %}
+{% endhighlight %}
 
 ## About the Folder Structure
 
@@ -226,7 +228,7 @@ my_hask.keys
 	puts "Index: #{index}"
 	puts "---"
 end
-{% highlight %}
+{% endhighlight %}
 
 ### Control Structure
 
@@ -254,7 +256,7 @@ while a < b
 	puts "a is #{a}"
 	a += 1
 end
-{% highlight %}
+{% endhighlight %}
 
 ### Methods
 
