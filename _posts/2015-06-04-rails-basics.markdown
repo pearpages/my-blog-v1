@@ -20,6 +20,7 @@ create test/unit/helpers/salutation_helper_test.rb
 {% endhighlight %}
 
 creates:
+
 * controller
 * helper
 * view
