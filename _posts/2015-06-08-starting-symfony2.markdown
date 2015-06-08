@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: "Starting Symfony2"
 date:   2015-06-08 19:18:03
 categories: php symfony2
@@ -56,7 +56,7 @@ $ php app/console security:check
 
 Simfony applications already contain a **.gitignore** file.
 
-When using Composer to manage application's dependencies, it's recommended to ignore the entire **vendor/** directory before committing its code to the repository. 
+When using Composer to manage dependencies, it is recommended to ignore the entire **vendor/** directory before committing its code to the repository. 
 
 When cloning from git we need to install the *vendor* files
 {% highlight Bash %}
