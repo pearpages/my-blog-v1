@@ -51,3 +51,14 @@ $ php composer update
 {% highlight Bash %}
 $ php app/console security:check
 {% endhighlight %}
+
+## Using Git
+
+Simfony applications already contain a **.gitignore** file.
+
+When using Composer to manage application's dependencies, it's recommended to ignore the entire **vendor/** directory before committing its code to the repository. 
+
+When cloning from git we need to install the *vendor* files
+{% highlight Bash %}
+$ composer install
+{% endhighlight %}
