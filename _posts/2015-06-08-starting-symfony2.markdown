@@ -2,7 +2,7 @@
 layout: post
 title: "Starting Symfony2"
 date:   2015-06-08 19:18:03
-categories: php symfony2
+categories: php symfony
 ---
 
 ## Symfony Distributions
@@ -40,7 +40,15 @@ $ php app/console --version
 {% highlight Bash %}
 $ php app/console server:run #start
 $ php app/console server:stop #stop
+
+$ php app/console cache:clear --env=prod --no-debug #prod environment
 {% endhighlight %}
+
+So for accessing dev
+http://localhost/app_dev.php/random/10
+
+For accessing prod
+http://localhost/app.php/random/10
 
 ## Updating symfony
 {% highlight Bash %}
