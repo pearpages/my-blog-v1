@@ -1,4 +1,28 @@
 /**
+ * My hacks
+ */
+input.gsc-search-button{
+       box-sizing: content-box;   
+}
+input.gsc-input{
+        line-height: normal;
+}
+
+.entry-content table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #666;
+    th{
+        border:1px solid #666;
+        padding: 4px;
+    }
+    td{
+        border:1px solid #666;
+        padding: 4px;
+    }
+}
+
+/**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
@@ -7,14 +31,6 @@ dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
-input.gsc-search-button{
-       box-sizing: content-box;   
-}
-input.gsc-input{
-        line-height: normal;
-}
-
 
 /**
  * Basic styling
