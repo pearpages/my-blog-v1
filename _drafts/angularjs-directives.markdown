@@ -122,3 +122,28 @@ There's a way to communicate with the outside but it's isolated.
 * = Local Scope Property: Two-way binding
 * & Local Scope Property: Parent Scope with Function Callback
 
+## The link() Function
+
+The link function it's about DOM manipulation.
+
+<% highlight js %>
+return {
+        link: function (scope, element, attr) {}
+};
+<% endhighlight %>
+
+Angular by default has already a jqLite so you do not really need jQuery.
+
+###jqLite typical Functions
+
+[jqLite Docs](https://docs.angularjs.org/api/ng/function/angular.element)
+
+angular.element()
+addClass()/css()
+attr()
+on()/off()
+find()
+append()/remove()
+html()/text()
+ready()
+
