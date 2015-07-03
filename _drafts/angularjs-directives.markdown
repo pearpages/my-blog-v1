@@ -96,10 +96,6 @@ Template --> $compile --> Template function |--> <html>
 
 ## Shared and Isolate Scope
 
-* @ Local Scope Property
-* = Local Scope Property
-* & Local Scope Property
-
 ### Shared Scope
 
 Shared Scope is the inherited scope. And they behave the same way that controllers do. They are inherited in a prototypical way.
@@ -122,4 +118,7 @@ Because the variable has a different name, it is isolated.
 
 There's a way to communicate with the outside but it's isolated.
 
+* @ Local Scope Property: One-way binding (entry)
+* = Local Scope Property: Two-way binding
+* & Local Scope Property: Parent Scope with Function Callback
 
