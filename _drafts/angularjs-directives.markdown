@@ -4,8 +4,9 @@ title:  "Angular Directives"
 date:   2015-06-22 19:48:12
 categories: angularjs directives
 ---
+## Main Concepts
 
-## What can directives do?
+### What can directives do?
 
 * Manipulate the DOM
 * Iterate through data
@@ -14,7 +15,7 @@ categories: angularjs directives
 * Validate data
 * Data binding
 
-## General types
+### General types
 
 * Forms
         + ng-maxlength
@@ -49,23 +50,76 @@ categories: angularjs directives
         + ng-switch
         + ng-view
 
-## 3rd Party Directives
+### 3rd Party Directives
 
 * UI Bootstrap
 * AngularStrap
 * Angular UI Grid
 * Angular Translate
 
-## Directives categories
+### Directives categories
 
 * DOM-Driven Directives: All about DOM Manipulation
 * Data-Driven Directives: All about data, using other directives and a controller. The equivalent of a view with a controller (Baby view).
 * Behavior-Driven Directives: All about handling DOM Events.
 
-## Directive Types
+### Directive Types
 
 * Attribute directives: <span hello-world></span>
 * Element directives: <hello-world></hello-world>
 * CSS class directives: <span class="hello-world: exp;"></span>
 * Comment directives: <!-- directive: hello-world exp --> 
+
+### $compile
+
+$compile > DDO (Directive Definition Object) > template > scope
+
+Template --> $compile --> Template function |--> <html>
+                      --> Scope             |
+
+### Directive Definition Object (DDO)
+
+* Defines the template for the directive
+* Can include DOM manipulation code
+* Can define a controller for the directive
+* Controls the directive's scope
+* Defines how the directive can be used
+
+#### Properties
+
+* restrict
+* template
+* templateUrl
+* scope
+* controller
+* link
+
+## Shared and Isolate Scope
+
+* @ Local Scope Property
+* = Local Scope Property
+* & Local Scope Property
+
+### Shared Scope
+
+Shared Scope is the inherited scope. And they behave the same way that controllers do. They are inherited in a prototypical way.
+
+**Controller** 
+
+$scope.customers = [];
+
+**Directive**
+
+$scope.customers = [];
+
+Because the variable it is already defined in the controller we inherit it.
+
+$scope.isolated = true;
+
+Because the variable has a different name, it is isolated.
+
+### Isolate Scope
+
+There's a way to communicate with the outside but it's isolated.
+
 
