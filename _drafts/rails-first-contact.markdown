@@ -119,6 +119,8 @@ $ rails generate scaffold Article title:string location:string excerpt:string bo
 
 $ irb
 
+$ rails console
+
 ## Ruby Data Types
 
 ### Strings
@@ -215,3 +217,95 @@ while a < b
 	puts "a is #{a}"
 	a += 1
 end
+
+## Methods
+
+def time_as_string
+    Time.now.to_s
+end
+
+def say_hello_to(name)
+    "Hello, #{name}!"
+end
+
+## Classes and Objects
+
+{% highlight ruby %}
+class Student
+    # Setter method for @first_name
+    def first_name=(value)
+        @first_name=(value)
+    end
+
+    # getter method for @first_name
+    def first_name
+        @first_name
+    end
+
+    # setter method for @last_name
+    def last_name=(value)
+        @last_name = value
+    end
+
+    # Getter method for @last_name
+    def last_name
+        @last_name
+    end
+
+    # returns full name
+    def full_name
+        last_name + ", " + first_name
+    end
+end
+{% endhighlight %}
+
+### Getting to know accessors
+
+{% higlight ruby %}
+class Student
+    attr_accessor :first_name, :last_name, :id_number
+
+    def full_name
+        last_name + ", " + first_name
+    end
+end
+{% endhiglight %}
+
+{% higlight ruby %}
+class Team
+    attr_accessor :name, :students
+
+    def initialize(name)
+        @name = name
+        @students = []
+    end
+
+    def add_student(id_number, first_name, last_name)
+        student = Student.new
+        student.id_number = id_number
+        student.first_name = first_name
+        student.last_name = last_name
+        @students << student
+    end
+
+    def print_students
+        @students.each do |student|
+            puts student.full_name
+        end
+    end
+end
+{% endhilight %}
+
+## Ruby Style
+
+* INdentation size is two spaces
+* Spaces are preferred to tabs
+* variables should be lowercase and underscored: some_variable
+* method definitons should include parenteses and no unnecessary spaces
+
+**Ruby Documentation**
+* Core Library
+* Standard Library
+* Online resources
+
+
