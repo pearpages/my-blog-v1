@@ -7,11 +7,6 @@ categories: javascript angularjs
 
 ## The Form
 
-### Directives
-
-* ng-submit
-* ng-model
-
 Two or more controllers can be applied to the same element, and we can use **controller as** to identify each controller.
 
 {% highlight html %}
@@ -31,6 +26,12 @@ Two or more controllers can be applied to the same element, and we can use **con
 
 </form>
 {% endhighlight %}
+### Directives
+
+* ng-submit
+* ng-model
+
+**ng-submit** Automatically prevents the brower from doing its defualt *METHOD* action when it tries to submit the form.
 
 ## The Controller
 
@@ -40,4 +41,14 @@ app.controller('AddUserCtrl',['$scope','$location',function($scope,$location){
         $location.path('/addedUser/' + $scope.name + '/' + $scope.city);
     };
 }]);
+{% endhighlight %}
+
+## $watch
+
+When not only the users  update a particular input we might need to keep track of it.
+
+You can call **$watch()** with an expression to observe and a callback that gets invoked whenever the expression changes.
+
+{% highlight javascript %}
+$scope.$watch('myObject.myValue', myCallback);
 {% endhighlight %}
