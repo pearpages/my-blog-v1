@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "About printing HTML"
-categories: html printing
 date:   2015-05-22 19:00:23
+categories: html printing
 ---
 
 There are several ways of printing a rendered html page. The easiest way, I guess is to have a specific *.css* file for the print version.

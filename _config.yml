@@ -12,5 +12,6 @@ github_username:  pearpages
 markdown: kramdown
 highlighter: pygments
 timezone: Europe/Madrid
+excerpt_separator: "" 
 gems:
   - jekyll-sitemap
