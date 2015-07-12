@@ -51,4 +51,7 @@ You can call **$watch()** with an expression to observe and a callback that gets
 
 {% highlight javascript %}
 $scope.$watch('myObject.myValue', myCallback);
+
+//$watch(watchFn, watchAction, deepWatch)
 {% endhighlight %}
+

@@ -22,6 +22,53 @@ Some examples:
 * ng-click
 * ng-repeat
 * ng-change (whenever the **USER** changes the value). See **$scope.$watch**.
+* ng-show, ng-hide
+* ng-class
+* ng-src, ng-href
+
+**ng-src** **ng-href**
+
+Because Browsers ara agressive about loading images parallel to other content. Angular doesn't get a chance to intercept data binding requests.
+
+**ng-class** examples
+
+{% highlight html %}
+<style>
+    .warning{
+        background-color: yellow;
+    }
+    .error{
+        background-color: red;
+    }
+</style>
+
+<div ng-controller ='myController'>
+    <div ng-class="{error: isError, warning: isWarning}" ng-bind="messageText">
+    </div>
+
+    <button ng-click="showError()">Simulate Error</button>
+    <button ng-click="showWarning()">Simulate Warning</button>
+</div>
+{% endhighlight %}
+
+{% highlight javascript %}
+function HeaderController($scope){
+    $scope.isError = false;
+    $scope.isWarning = false;
+
+    $scope.showError = function (){
+        $scope.messageText = 'This is an error!';
+        $scope.isError = true;
+        $scope.isWarning = false;
+    };
+
+    $scope.showWarning = function (){
+        $scope.messageText = 'Just a warning. Please carry on.';
+        $scope.isWarning = true;
+        $scope.isError = false;
+    };
+}
+{% endhighlight %}
 
 ## Creating Directives
 
