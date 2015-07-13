@@ -45,6 +45,17 @@ app.controller('AddUserCtrl',['$scope','$location',function($scope,$location){
 }]);
 {% endhighlight %}
 
+## Validate a form
+
+Disable a button because the form is not valid
+
+{% highlight javascript %}
+<form name="addUserForm" ng-controller="myController">
+...
+<button ng-click="addUser()" ng-disabled="!addUserForm.$valid">Submit</button>
+</form>
+{% endhighlight %}
+
 ## $watch
 
 When not only the users  update a particular input we might need to keep track of it.
