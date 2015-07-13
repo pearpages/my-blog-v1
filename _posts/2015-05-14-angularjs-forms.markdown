@@ -31,7 +31,9 @@ Two or more controllers can be applied to the same element, and we can use **con
 * ng-submit
 * ng-model
 
-**ng-submit** Automatically prevents the brower from doing its defualt *METHOD* action when it tries to submit the form.
+#### ng-submit
+
+Automatically prevents the brower from doing its defualt *METHOD* action when it tries to submit the form.
 
 ## The Controller
 
@@ -55,3 +57,18 @@ $scope.$watch('myObject.myValue', myCallback);
 //$watch(watchFn, watchAction, deepWatch)
 {% endhighlight %}
 
+* watchFn
+* watchAction
+* deepWatch
+
+#### watchFn
+
+This parameter is a string with an Angular expression or a function that returns the current value of the model you want to watch.
+
+#### watchAction
+
+This is the function or expression to be called when the *watchFn* changes.
+
+#### deepWatch
+
+It tells Angular to examine each property within the watched object for changes.
