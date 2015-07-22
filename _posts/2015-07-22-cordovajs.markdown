@@ -22,11 +22,38 @@ Applications execute within wrappers targeted to each platform.
 When adding a platform the /www folder will get copied to each platform.
 When we build, we actually do it for all the platforms installed.
 
-### Basic Components
+## Basic Components
 
 Apache Cordova applications rely on a common **config.xml** file that provides information about the app and specifies parameters affecting how it works, such as whether it responds to orientation shifts. This file adheres to the **W3C's Packaged Web App**, or **widget**, specification.
 
 A plugin interface is available for Cordova and native components to communicate with each other. This enables you to invoke native code from JavaScript.
+
+#### Core Components
+
+* cordova CLI
+* Embedded WebView
+* Plugin Interface
+* Storage
+
+#### Third Party Components
+
+* Accelerometer
+* BatteryStatus
+* Camera
+* Capture
+* Compass
+* Connection
+* Contacts
+* Device
+* Events
+* File
+* Fie Transfer
+* Geolocation
+* Globalization
+* InAppBrowser
+* Splashscreen
+* Status Bar
+* Vibration
 
 ### Development Paths
 
