@@ -11,6 +11,17 @@ Apache Cordova is an open-source mobile development framework. It allows you to 
 
 Applications execute within wrappers targeted to each platform.
 
+## Summary
+
+1. cordova create hello com.example.hello HelloWorld
+2. cordova platform add ios
+3. cordova plugin add cordova-plugin-device
+4. cordova build
+5. cordova emulate ios
+
+When adding a platform the /www folder will get copied to each platform.
+When we build, we actually do it for all the platforms installed.
+
 ### Basic Components
 
 Apache Cordova applications rely on a common **config.xml** file that provides information about the app and specifies parameters affecting how it works, such as whether it responds to orientation shifts. This file adheres to the **W3C's Packaged Web App**, or **widget**, specification.
