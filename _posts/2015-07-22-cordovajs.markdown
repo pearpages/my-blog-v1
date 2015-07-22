@@ -230,3 +230,8 @@ $ npm install -g ios-deploy
 # deploy the app on a connected iOS device:
 $ cordova run ios --device
 {% endhighlight %}
+
+## The config.xml file
+
+>  This platform-agnostic XML file is arranged based on the W3C's Packaged Web Apps (Widgets) specification, and extended to specify core Cordova API features, plugins, and platform-specific settings.
+
