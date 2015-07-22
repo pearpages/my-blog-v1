@@ -11,6 +11,12 @@ Apache Cordova is an open-source mobile development framework. It allows you to 
 
 Applications execute within wrappers targeted to each platform.
 
+#### Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ## Summary
 
 1. cordova create hello com.example.hello HelloWorld
@@ -122,6 +128,11 @@ This is the new default behavior. **Any plugins** you desire, even the core plug
 
 [List of plugins (plugins.cordova.io*)](http://plugins.cordova.io/#/)
 
+* **cross-platform workflow**, you use the cordova CLI utility to add plugins, as described in The Command-Line Interface. The CLI modifies plugins for all specified platforms at once.
+* **platform-centered workflow**, you use a lower-level Plugman command-line interface, separately for each targeted platform.
+
+[Plugman info](https://cordova.apache.org/docs/en/4.0.0/plugin_ref_plugman.md.html)
+
 ### Operations with plugins
 
 {% highlight bash %}
@@ -171,4 +182,51 @@ $ sudo npm install -g cordova@3.1.0-0.2.0
 # current installed
 $ npm info cordova
 $ cordova -v
+{% endhighlight %}
+
+## iOS
+
+### iOS WebViews
+
+[This guide shows how to embed a Cordova-enabled WebView component within a larger iOS application](http://cordova.apache.org/docs/en/5.0.0/guide_platforms_ios_webview.md.html#iOS%20WebViews)
+
+### iOS Plugins
+
+Each plugin class **must be registered** as a <feature> tag in the named application directory's **config.xml** file.
+
+Specify the plugin as a <feature> tag in your Cordova-iOS application's project's config.xml
+
+{% highlight xml %}
+<feature name="LocalStorage">
+    <param name="ios-package" value="CDVLocalStorage" />
+</feature>
+{% endhighlight %}
+
+### iOS Configuration
+
+{% highlight xml %}
+<preference name="EnableViewportScale" value="true"/>
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+<preference name="MediaPlaybackRequiresUserAction" value="true"/>
+<preference name="AllowInlineMediaPlayback" value="true"/>
+<preference name="BackupWebStorage" value="local"/>
+<preference name="TopActivityIndicator" value="white"/>
+<preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+<preference name="SuppressesIncrementalRendering" value="true"/>
+<preference name="GapBetweenPages" value="0"/>
+<preference name="PageLength" value="0"/>
+<preference name="PaginationBreakingMode" value="page"/>
+<preference name="PaginationMode" value="unpaginated"/>
+<preference name="UIWebViewDecelerationSpeed" value="fast" />
+<preference name="ErrorUrl" value="myErrorPage.html"/>
+{% endhighlight %}
+
+### Deploy tools
+
+{% highlight bash %}
+$ npm install -g ios sim
+$ npm install -g ios-deploy
+
+# deploy the app on a connected iOS device:
+$ cordova run ios --device
 {% endhighlight %}
