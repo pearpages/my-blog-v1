@@ -19,6 +19,11 @@ Applications execute within wrappers targeted to each platform.
 
 ## Summary
 
+There are two "paths" for developing an app with cordova:
+
++ The Command-Line Interface (CLI) way, which is multi-platform.
++ A platform-centered workflow
+
 1. cordova create hello com.example.hello HelloWorld
 2. cordova platform add ios
 3. cordova plugin add cordova-plugin-device
@@ -65,6 +70,39 @@ A plugin interface is available for Cordova and native components to communicate
 
 * Cross-platform (CLI) workflow
 * Platform-centered workflow
+
+## The config.xml
+
+* Core Elements
+* Global Preferences
+* Multi-Platform Preferences
+* Feature Element
+* The Platform Element. 
+
+#### Core Configuration Elements
+
+* widget
+* name
+* description
+* content
+* access
+* preference
+
+{% highlight xml %}
+<widget id="com.example.hello" version="0.0.1">
+        <name>HelloWorld</name>
+        <description>
+            A sample Apache Cordova application that responds to the deviceready event.
+        </description>
+        <author email="dev@callback.apache.org" href="http://cordova.io">
+            Apache Cordova Team
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+</widget>
+{% endhighlight %}
+
+#### 
 
 ## The Command-Line Interface
 
@@ -183,6 +221,35 @@ $ sudo npm install -g cordova@3.1.0-0.2.0
 $ npm info cordova
 $ cordova -v
 {% endhighlight %}
+
+## Storage
+
+#### Links
+[HTML 5 Features Storage](http://www.html5rocks.com/en/features/storage)
+[Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/)
+
+### Options
+
+* LocalStorage
+* WebSQL
+* IndexedDB
+* Plugin-Based Options
+    + [File API](https://github.com/apache/cordova-plugin-file)
+    + [Cordova plugins](http://plugins.cordova.io/#/)
+
+#### LocalStorage
+
+Also known as web storage, simple storage, or by its alternate session storage interface, this API provides synchronous key/value pair storage, and is available in underlying WebView implementations. Refer to the W3C spec for details.
+
+#### WebSQL
+
+**iOS** and **Android**
+
+This API is available in the underlying WebView. The Web SQL Database Specification offers more full-featured database tables accessed via SQL queries.
+
+#### IndexedDB
+
+This API is available in the underlying WebView. Indexed DB offers more features than LocalStorage but fewer than WebSQL.
 
 ## iOS
 
