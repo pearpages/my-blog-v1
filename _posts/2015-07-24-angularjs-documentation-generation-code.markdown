@@ -39,9 +39,9 @@ grunt package
 
 n the project you want to document you install Dgeni by running:
 
-{% highlight %}
-npm install dgeni --save-dev
-{% endihighlight %}
+{% highlight bash %}
+$ npm install dgeni --save-dev
+{% endhighlight %}
 
 This will install Dgeni and any modules that Dgeni depends upon.
 
@@ -97,7 +97,7 @@ module.exports = function log(){
 
 ### Processors
 
-{% highlight javascxript %}
+{% highlight javascript %}
 module.exports = function filterNgDocsProcessor(log){
         return {
                 $runAfter: ['tags-parsed'],
@@ -111,7 +111,7 @@ module.exports = function filterNgDocsProcessor(log){
                 }
         };
 }
-{% endhighlight $}
+{% endhighlight %}
 
 ## Running dgeni
 
