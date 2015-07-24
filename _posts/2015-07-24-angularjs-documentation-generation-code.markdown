@@ -11,13 +11,13 @@ This means that all the docs are stored inline in the source code and so are kep
 
 #### Links
 
-[JSDoc](http://usejsdoc.org/)
-[Writing AngularJS Documentation](https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation)
-[dgeni](https://github.com/angular/dgeni)
-[docular](https://github.com/Vertafore/docular)
-[How AngularJS is using Dgeni](https://github.com/angular/angular.js/tree/master/docs)
-[the dgeni-packages source, in particular the doc-processors](https://github.com/angular/dgeni-packages/)
-[Introduction video to dgeni](https://www.youtube.com/watch?v=PQNROxXajyQ&feature=youtu.be)
+* [JSDoc](http://usejsdoc.org/)
+* [Writing AngularJS Documentation](https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation)
+* [dgeni](https://github.com/angular/dgeni)
+* [docular](https://github.com/Vertafore/docular)
+* [How AngularJS is using Dgeni](https://github.com/angular/angular.js/tree/master/docs)
+* [the dgeni-packages source, in particular the doc-processors](https://github.com/angular/dgeni-packages/)
+* [Introduction video to dgeni](https://www.youtube.com/watch?v=PQNROxXajyQ&feature=youtu.be)
 
 #### Contents
 {:.no_toc}
