@@ -47,10 +47,10 @@ You can easily determine if you are in a state or parent of a state to adjust UI
 
 ## Links
 
-[Github](https://github.com/angular-ui/ui-router)
-Documentation:
-[API Reference](http://angular-ui.github.io/ui-router/site/#/api)
-[Guide](https://github.com/angular-ui/ui-router/wiki)
-[FAQs](https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions)
-[Sample Application](http://angular-ui.github.io/ui-router/sample/#/)
-[Setting up the ui-router](http://www.ng-newsletter.com/posts/angular-ui-router.html)
++ [Github](https://github.com/angular-ui/ui-router)
++ Documentation:
+        * [API Reference](http://angular-ui.github.io/ui-router/site/#/api)
+        *[Guide](https://github.com/angular-ui/ui-router/wiki)
++ [FAQs](https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions)
++ [Sample Application](http://angular-ui.github.io/ui-router/sample/#/)
++ [Setting up the ui-router](http://www.ng-newsletter.com/posts/angular-ui-router.html)
