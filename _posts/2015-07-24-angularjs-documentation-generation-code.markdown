@@ -19,6 +19,9 @@ This means that all the docs are stored inline in the source code and so are kep
 * [the dgeni-packages source, in particular the doc-processors](https://github.com/angular/dgeni-packages/)
 * [Introduction video to dgeni](https://www.youtube.com/watch?v=PQNROxXajyQ&feature=youtu.be)
 
+This is the most important link, clear example of how to do it:
+* [Dgeni example](https://github.com/petebacondarwin/dgeni-example)
+
 #### Contents
 {:.no_toc}
 
