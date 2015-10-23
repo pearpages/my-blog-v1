@@ -588,3 +588,79 @@ it('should ahve a title of Avengers', function (){
   expect(scope.vm.title).to.equal('Avengers');
 });
 
+## Annotations and Code Analysis via Gulp Task Automation
+
++ Task Automation
++ Gulp
++ Quick Setup
++ Annotations
++ Code Analysis
++ JSHint
+
+### The Value of Task Automation
+
++ Improve Quality
++ Deliver faster
++ Repeatable / Consistent
+
+**Grunt vs Gulp**
+
+Grunt -> Configuration over code; file based.
+
+Gulp -> Code over configuration; stream based.
+
+### Setting Up Gupl
+
+$ npm install gulp -g
+
++ Install gulp globally
++ Create package file
++ Install dependent packages
++ Code your tasks in gulpfile.js
+
+### Create package.json File
+
+$ npm init
+
+# for development
+$ npm install gulp --save-dev
+# production
+$ npm install gulp --save
+
+$ npm install gulp-ng-annotate gulp-jshint --save-dev
+
+### Gulp Tasks
+
+var gulp = require('gulp');
+var plug = require('gulp-load-plugins')();
+
+var source = [
+  './client/app/**/*module*.js',
+  './client/app/**/*.js',
+  '!./client/app/**/{,/*-spaghetti.js}'
+];
+
+gulp.task('ngAnnotateTest', function (){
+  //the annotation must go before uglify or won't get the names properly
+
+  return gulp
+    .src(source)
+    .pipe(plug.ngAnnotate({add:true, single_quotes:true}))
+    .pipe(plug.rename(function(path){
+      path.extname = '.annotated.js';
+    }))
+    .pipe(plug.uglify({mangle:true}))
+    .pipe(gulp.destination('./build'))
+});
+
+
+$ gulp --gulpfile small-gulp.gs ngAnnotateTest
+
+
+gulp.task('hint', function (){
+  return gulp
+    .src(source)
+    .pipe(plug.jshint('./.jshintrc'))
+    .pile(plug.jshint.reporter('jshint-stylish'));
+});
+
