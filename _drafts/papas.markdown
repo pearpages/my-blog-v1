@@ -544,6 +544,47 @@ Controller -> Factories
 + Through the view
 + Through the route
 
+**Through the route**
 
+resolve runs functions before the controller.
 
+function getRoutes(){
+  return [
+    {
+      url: '/',
+      config: {
+        templateUrl: '/app/dashboard/dashboard.html',
+        title: 'dashboard',
+        controller: 'Dashboard',
+        controllerAs: 'vm',
+        resolve{
+          message: function (){
+            toastr.warning('You resolved');
+            return {first: 'secret'};
+          },
+          mydata: function($q){
+            var deferred = $q.defer();
+            defferred.resolve({first: 'another secret'});
+            return defferred.promise;
+          }
+        },
+        settings: {
+          //...
+        }
+      }
+    }
+  ]
+}
+
+### Unit Testing
+
+scope = $rootScope.$new();
+controller = $controller('Avengers as vm', {
+  '$scope' : scope
+});
+
+it('should ahve a title of Avengers', function (){
+  $tootScope.$apply();
+  expect(scope.vm.title).to.equal('Avengers');
+});
 
