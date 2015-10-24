@@ -588,3 +588,13 @@ it('should ahve a title of Avengers', function (){
   expect(scope.vm.title).to.equal('Avengers');
 });
 
+## Exception Handling
+
++ Logging
++ Reporting
++ Diagnostics
++ Notifying the User
+
+## Using Team Style Guide
+
+
