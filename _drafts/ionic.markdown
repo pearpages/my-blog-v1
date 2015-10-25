@@ -26,3 +26,32 @@ $ sudo npm install ionic -g
 
 **install cordova**
 $ sudo npm install cordova -g
+
+### Starting a New Project
+
+$ ionic start [appname] [template]
+$ ionic start based blank
+
+### Run Ionic
+
+**in the browser**
+$ ionic serve
+
+**emulating**
+$ ionic build ios
+$ ionic emulate ios
+
+**in the device**
+$ ionic run ios
+
+### Ionic Templates
+
++ Blank
++ Tabs
++ Side Menu
++ Maps
+
+$ ionic start tabsApp tabs
+$ ionic start esApp sidemenu
+
+
