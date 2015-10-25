@@ -84,3 +84,57 @@ $ ionic start esApp sidemenu
 
 [http://ionicons.com](http://ionicons.com)
 
+### Angular UI Router
+
++ Routic framework for AngularJS
++ Organize into State Machines
++ Allows for Nested Views
++ 3 Ways to Activate a State
+  + ui-serf
+  + url
+  + $state.go()
+
+### State
+
++ Unique name
++ URL (Supports parameters)
++ Template / TemplateUrl
++ Controlelr (optional)
+
+$stateProvider.state("contacts",{
+   url: "/contacts",
+   tempalteUrl: "contacts.html" 
+});
+
+### Nestet States/Views
+
++ Angular UI Router Supports Nested States
++ Ues Dot Notation
++ Child Inhierits from Parent (URL)
++ Abstract
+  + Can have child states but not get activated itself
+  + Must contain their own <ui-view/> (<ion-nav-view/>)
+
+**code example** 
+$stateProvider
+    .state("foo", {
+        abstract: true,
+        url: "/foo",
+        templateUrl: "foo.html" // must contain <ui-view/>
+    })
+    .state("foo.bar",{
+        url: "/bar", //will be "foo/bar",
+        templateUrl: "bar.html"
+    })
+    .state("foo.baz", {
+        url: "/xxx", //will be "/foo/xxx"
+        templateUrl: "baz.html"
+    });
+
+### Activating States
+
++ <a href="#/foo/bar">Go</a>
++ <a ui-sref="foo.bar">Go</a>
++ $state.go("foo.bar")
+
+
