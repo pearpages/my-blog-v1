@@ -54,4 +54,33 @@ $ ionic run ios
 $ ionic start tabsApp tabs
 $ ionic start esApp sidemenu
 
+## Navitation And Routing
+
++ Headers and Footers
++ Tabs
++ Side Menu
++ Routing
+
+### Ionic Headers And Footers
+
+<ion-header-bar class="bar-positive">
+      <h1 class="title">Whatever</h1>
+</ion-header-bar>
+
+    <ion-content>
+    </ion-content>
+
+    <div class="bar bar-footer bar-positive">
+      <div class="title">My Footer</div>
+    </div>
+
+### Ionic Tabs
+
+<ion-tabs class="tabs-energize tabs-icon-top">
+    <ion-tab title="Dashboard" icon="ion-home" href="#"></ion-tab>
+    <ion-tab title="Dashboard" icon="ion-star" href="#"></ion-tab>
+    <ion-tab title="Dashboard" icon="ion-gear-a" href="#"></ion-tab>
+</ion-tabs>
+
+[http://ionicons.com](http://ionicons.com)
 
