@@ -153,6 +153,8 @@ $stateProvider
 + Toggles and Buttons
 + Ionic Popup
 
+### Lists
 
-
-
+<div class="list">
+      <a class="item" ng-repeat="league in leagues.leagues">{{league.name}}</a>
+    </div>
