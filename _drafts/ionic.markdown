@@ -137,4 +137,22 @@ $stateProvider
 + <a ui-sref="foo.bar">Go</a>
 + $state.go("foo.bar")
 
+### Animations
+
+<ion-nav-view name="mainContent" animation="slide-left-right"></ion-nav-view>
+
+###  Button Back
+
+<ion-nav-back-button class="button-clear button-icon icon ion-ios7-arrow"></ion-nav-back-button>
+
+## Ionic Components
+
++ Lists
++ Grid System
++ Cards
++ Toggles and Buttons
++ Ionic Popup
+
+
+
 
