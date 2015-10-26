@@ -210,7 +210,7 @@ Uses Flexbox
         </div>          
       </div>
 
-### Inoic Cards
+### Ionic Cards
 
 <div class="card">
       <div class="item item-divider item-energized">
@@ -224,3 +224,21 @@ Uses Flexbox
       </div>
     </div>
 
+### Ionic Toggle Controls
+
+<div class="item item-checkbox">
+      <h2>{{teamDetail.following ? "Following" : "Not Following"}}</h2>
+      <label class="checkbox">
+        <input type="checkbox" ng-model="teamDetail.following">
+      </label>
+    </div>
+
+    <div class="item item-checkbox">
+      <h2>{{teamDetail.following ? "Following" : "Not Following"}}</h2>
+      <label class="toggle toggle-energized">
+        <input type="checkbox" ng-model="teamDetail.following">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
