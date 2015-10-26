@@ -193,4 +193,34 @@ Uses Flexbox
 + Supports Column Offsets
 + Control of Vertical Alignment
 
+**example**
+
+<div class="row">
+        <div class="col-20">
+          <p>{{game.time | date:'M/d/yy'}}</p>
+          <p>{{game.time | date: 'shortTime'}}</p>
+        </div>
+
+        <div class="col col-center">
+          <h3>{{game.homeAway}} {{game.opponent}}</h3>
+          <p>{{game.location}}</p>
+        </div>
+        <div class="col-20">
+          <h4 class="positive">{{game.scoreDisplay}}</h4>
+        </div>          
+      </div>
+
+### Inoic Cards
+
+<div class="card">
+      <div class="item item-divider item-energized">
+        Home Team
+      </div>
+      <a class="item item-text-wrap item-icon-right" ng-href="#/app/teams/{{game.game.team1Id}}">
+        {{game.game.team1}}
+      </a>
+      <div class="item item-divider">
+        Score: {{game.game.team1Score}}
+      </div>
+    </div>
 
