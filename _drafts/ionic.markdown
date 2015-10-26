@@ -158,3 +158,39 @@ $stateProvider
 <div class="list">
       <a class="item" ng-repeat="league in leagues.leagues">{{league.name}}</a>
     </div>
+
+### List Dividers
+
+<div class="list">
+      <div ng-repeat="division in teams.teams">
+      <div class="item item-divider item-energized">{{division.divisionName}}</div>
+
+        <a class="item item-icon-right" ng-repeat="team in division.divisionTeams" href="#app/teams/{{team.id}}">{{team.name}}
+        <i class="icon icon-chevron-right icon-accessory"></i></a>
+      </div>
+    </div>
+
+
+Another Example
+
+<div class="list">
+      <div ng-repeat="division in standings.standings">
+        <div class="item item-divider item-energized">{{division.divisionName}}</div>
+
+        <a href="#/app/teams/{{team.id}}" class="item item-icon-right" ng-repeat="team in division.divisionStandings">
+          {{team.teamName}} ({{team.wins}}-{{team.losses}})
+          <i class="icon icon-chevron-right icon-accessory"></i>
+        </a>
+      </div>
+    </div>
+
+### Ionic Grids
+
+Uses Flexbox
+
++ Responsive
++ Supports Explicit Column Sizes
++ Supports Column Offsets
++ Control of Vertical Alignment
+
+
