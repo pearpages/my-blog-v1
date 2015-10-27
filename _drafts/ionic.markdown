@@ -242,3 +242,89 @@ Uses Flexbox
         </div>
       </label>
     </div>
+
+### Ionic Popup
+
+function toggleFollow(){
+      if(vm.following){
+        var confirmPopup = $ionicPopup.confirm({
+          title: "Unfollow?",
+          template: 'Are you sure you want to unfollow?'
+        });
+        confirmPopup.then(function(res){
+          if(res){
+            vm.following = !vm.following;
+          }
+        });
+      }else{
+        vm.following = !vm.following;
+      }
+    }
+
+## Data and Caching
+
++ HTTP
++ Promises
++ Loading
++ Caching (also off line escenarios)
++ Refreshing (pulling and releasing)
+
+## Using $http
+
+function getLeagues(callback){
+        $http.get('http://elite-schedule.net/api/leaguedata')
+          .success(function(data){
+            callback(data);
+          });
+    }
+
+### Using $q (promises)
+
+function getLeagues(){
+      var deferred = $q.defer();
+
+        $http.get("http://elite-schedule.net/api/leaguedata")
+          .success(function(data){
+            deferred.resolve(data);
+          })
+          .error(function(){
+            console.log("Error while making HTTP call.");
+            deferred.reject();
+          });
+
+          return deferred.promise;
+    }
+
+
+### $ionicLoading
+
+function getLeagues(){
+      var deferred = $q.defer();
+
+
+      $ionicLoading.show({
+        template: "Loading..."
+      });
+
+        $http.get("http://elite-schedule.net/api/leaguedata")
+          .success(function(data){
+            $ionicLoading.hide();
+            deferred.resolve(data);
+          })
+          .error(function(){
+            console.log("Error while making HTTP call.");
+            $ionicLoading.hide();
+            deferred.reject();
+          });
+
+          return deferred.promise;
+    }
+
+    ### Angular Cache
+
++ Angular-cache replacement for Angular's **$cacheFactory**
++ Configurable TTL
++ Configurable Storage Options (e.g., Local Storage)
++ Expiration Events
+
+### Manually Refreshing Data
