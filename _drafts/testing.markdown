@@ -2,6 +2,8 @@
 + Mind your dependencies
 + Sharpen your Environment Ax
 
+**There are no secrets with tests, but there are writing testable code! Properly managed dependencies!!**
+
 ### Why Test?
 
 Because writing the test is easier then running the application.
@@ -80,7 +82,64 @@ Control the dependencies. I am not going to look beyond the class I am testing.
 
 No Global Objects, only objects being past in.
 
-**Friendly (the dependency) does not have to be a mock**
+**Friendly (the dependency) does not have to be a mock**. You can perfectly create a situation for a test with a Class.
+
+### Write a test
+
+You have to know why they are written. **Can you run an implementation, given the test?!**
+
+**Executable Specs!!!**
+Specs are test with syntatctic sugar (... and sugar makes everything taste better).
+
++ Assume the code is yet to be written
++ Demonstrate a single behavior per spec
++ Tell a story
+
+Remove form your class dependencies with Filesystem or Database. Onply pass dependencies. Use Factories.
+
+We can consider two kind of objects that we deal with:
+
++ Value Objects
++ Service Objects
+
+Services are *beasts* that talk to another objects and should be mocked.
+
+#### Unit Testing Review
+
+* new operators are dangerous
+* Ask for what you need
+    - If you need it, then you must interact with it
+    - Law of Demeter
+* Global State is testibility nightmare
+* Doing work in construtor is dangerous
+
+**Example**
+You are essentially defining the API. You are doing the API first, implementation later.
+
+Class InboxSyncerSpec{
+    
+    @Test itShouldSyncMessagesFromPopSinceLastSync(){}
+
+    @Test itShouldCloseConnectionEvenWhenExceptionThrown(){}
+
+    //...
+}
+
+### Environment
+
+It must be easier to write a test, and see the results run, then to write the code an run the actual application.
+
+doing the right thing **<** doing the wrong thing
+
++ Set up your IDE to make running tests
++ Make sure your tets are fast
++ Spend time making your environment testable
+    * This may be expensive at first, but will pay dividends
++ There are no easy fixes
+
+Setting up a proper environment for your code is as important as writing testable code.
+
+If the environment is not friendly no one will write or run any tests.
 
 ### Glossary
 
