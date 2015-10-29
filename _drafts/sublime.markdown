@@ -1,3 +1,4 @@
+```
 Command P -> search for files
 Command Shift P -> Run commands
 
@@ -12,6 +13,7 @@ Command R -> find functions
 Command Shift L -> Select Different Lines Wit Cursors
 
 Command J -> Join Lines
+```
 
 ## Package Control
 
