@@ -664,3 +664,14 @@ gulp.task('hint', function (){
     .pile(plug.jshint.reporter('jshint-stylish'));
 });
 
+## Exception Handling
+
++ Logging
++ Reporting
++ Diagnostics
++ Notifying the User
+
+## Using Team Style Guide
+
+
+
