@@ -38,6 +38,9 @@ Shift Command F
 
 ## Fold
 
+Command K, Command 1
+Command K, Command 2
+
 ## Duplicate
 
 Command Shfit D
@@ -49,3 +52,8 @@ Command /
 ## Swap Lines
 
 Ctrl Command Up or Down
+
+## Snippets
+
+Tools > Snippets
+
