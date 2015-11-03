@@ -671,6 +671,17 @@ gulp.task('hint', function (){
 + Diagnostics
 + Notifying the User
 
+Use a file like exception-handler.js
+
+### Managing App Errors
+
++ XHR
++ Validation
++ Routing
++ Custom
++ Angular
++ Unexpected
+
 ## Using Team Style Guide
 
 
