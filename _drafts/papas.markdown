@@ -684,5 +684,8 @@ Use a file like exception-handler.js
 
 ## Using Team Style Guide
 
++ What to follow
++ Why your team chose it
++ How to implement it
 
-
+[papaStyleguide](http://jpapame/ngstyles)
