@@ -19,5 +19,7 @@
 + Green - Make Your Test Work
 + Refactor - Clean up your code without breaking your test
 
+SEE (Setup, Execute, Check Exepctations)
 
+AAA (Arrange, Act, Assert)
 
