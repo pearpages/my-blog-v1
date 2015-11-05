@@ -211,4 +211,122 @@ Two implementations:
         - optional controller
         - additional attached behavior
 
+### UI-Router
+
++ UI router
+    * Download UI router
+    * Set script tag for angular-ui-router.js index.html
+    * Set ui.router as a dependency
++ Layout view
+    * Identify where the views appear
+    * Add the ui-view directive
+    * or use data-ui-view
++ Routes
+    * Identify the route states
+    * define the routes in the code
+
+#### $stateProvider Service
+
+```
+(function (){
+    "use strict";
+    angular
+    .module('app',['common.services','ui.router','productResourceMock'])
+    .config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
+        $stateProvider
+            //products
+            .state('productList',{
+                url: '/products',
+                templateUrl: 'app/products/productListView.html',
+                controller: 'ProductListController as vm'
+            });
+            $urlRouterProvider.otherwise('/products');
+    }]
+    );
+})();
+```
+
+##### Defining a Default state
+
++ **$urlRouterProvider** Service
++ Watches **$location** for changes to the URL
++ When $location changes, it finds a matching state
++ And then activates that state
++ Used behind the scenes
++ Provdies an **otherwise()** method for defining a default URL
+
+```
+$urlRouterProvider.otherwise('/products');
+```
+
+### Activating a Route
+
++ set the URL
++ Call $state.go('productList')
++ Click a link a[ui-sref="productList"]
+
+## Routing to Multiple Views
+
++ Use Resolve to Preload Data
++ Define Nested Routing States for a Wizard
+
+### Resolve
+
++ A property attached to a route
++ Can provide the controller with data
++ Identifies dependencies
++ defined with key/value pairs
+
+```
+.state('productDetail',{
+    url: '/products/:productId',
+    templateUrl: 'app/products/productDetailView.html',
+    controller: 'ProductDetailController as vm',
+    resolve: {
+        //dependency productResource
+        productResource: "productResource",
+        product: function(productResource, $stateParams) {
+            var productId = $stateParams.productId;
+            return productResource.get({productId: productId}).$promise;
+        }
+    }
+});
+```
+
+### Nested Views
+
+#### Abstract State
+
++ Cannot be explicitly activated
++ Activation attempt throws an exception
++ Activated implicitly when child state is activated
+
+```
+.state('productEdit',{
+    abstract: true,
+    url: '/products/edit/:productId',
+    templateUrl: 'app/products/productEditView.html',
+    controller: 'ProductEditController as vm',
+    resolve: {
+        //dependency productResource
+        productResource: "productResource",
+        product: function(productResource, $stateParams) {
+            var productId = $stateParams.productId;
+            return productResource.get({productId: productId}).$promise;
+        }
+    }
+})
+.state('productEdit.info',{
+    url:'/info',
+    templateUrl: 'app/products/productEditInfoView.html'
+})
+.state('productEdit.price',{
+    url:'/price',
+    templateUrl: 'app/products/productEditPriceView.html'
+})
+.state('productEdit.info',{
+    url:'/tags',
+    templateUrl: 'app/products/productEditTagsView.html'
+})
+```
 
