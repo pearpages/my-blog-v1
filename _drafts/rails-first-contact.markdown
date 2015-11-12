@@ -3,6 +3,7 @@ layout: post
 title: "Rails"
 ---
 
+````
 $ rails new hello
 $ bundle install
 $ rails server
@@ -14,8 +15,10 @@ create app/views/salutation
 create test/functional/salutation_controller_test.rb
 create app/helpers/salutation_helper.rb
 create test/unit/helpers/salutation_helper_test.rb
+```
 
 creates:
+
 * controller
 * helper
 * view
@@ -28,11 +31,13 @@ app/views/salutation/hello.html.erb
 
 ## Route
 
+```
 config.routes.rb
 
 Hello::Application.routes.draw do
 	get ':controller(/:action(/:id(.:format)))'
 end
+```
 
 ## About the Folder Structure
 
