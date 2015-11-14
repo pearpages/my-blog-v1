@@ -1,1 +1,2 @@
-https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make
+
+[https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make]()
