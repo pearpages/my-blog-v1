@@ -1,4 +1,7 @@
 # pearpages.github.io
-My Blog
 
+My peronal Blog [pearpages.com](http://www.pearpages.com)
+
+```shell
 bundle exec jekyll serve
+```
