@@ -132,10 +132,12 @@ Increases testability, code reuse, maintainability
 
 ### Sorting Boxes
 
+```
 /app
 /content or /assets
 /scripts or /components or /bower_components or /vendor
 /test
+```
 
 **app**
 
@@ -144,11 +146,13 @@ Increases testability, code reuse, maintainability
 
 **feature example**
 
+```
 app/
     dashboard/
     layout/
     people/
     services/
+```
 
 #### The LIFT Principle
 
@@ -162,6 +166,8 @@ Following the order of importance
 #### Above the Fold
 
 **Controller**
+
+```javascript
 angular
     .module('app.my_module')
     .controller('my_controller',['common','dataservice',my_controller]);
@@ -173,6 +179,8 @@ function my_controller(common,dataservice){
 
     ////////// Implementation
 }
+``` 
+
 **Factory**
 
 angular
