@@ -71,3 +71,8 @@ File > Settings > Appearnce and Behavior > Scopes
 File > Settings > Build Execution Deployment > Debugger > Live Edit
 
 It needs Jetbrains IDE Support for Chrome
+
+
+## Javascript
+
+us -> 'use strict'
