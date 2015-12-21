@@ -76,3 +76,30 @@ It needs Jetbrains IDE Support for Chrome
 ## Javascript
 
 us -> 'use strict'
+
+Use right click to extract a function.
+
+Alt + Enter in a function with jsDoc to do refactory. For example change from multiple parameters to an object.
+
+### Navigate Javascript
+
+Right click for using goto or highlight the text and use Ctrl + B
+
+Also right click for using find usages or Alt + f7
+
+Show last files used: Shift Shfit
+
+### Language Injection
+
+To edit html inside javascript, or sql inside php, ... : Alt + Enter
+To check a regex aso Alt + Enter
+
+### Debugging
+
+Left click on the code to put a break point for the debugger. With right click we can add conditions for the break point.
+
+@see Panel
+@see Watchers
+
+### Live Templates
+
