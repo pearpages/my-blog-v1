@@ -103,3 +103,26 @@ Left click on the code to put a break point for the debugger. With right click w
 
 ### Live Templates
 
+Live templates are stored in the following location:
+
+* Windows: <your home directory>\.<product name><version number>\config\templates
+* Linux: ~/.<product name><version number>/config/templates
+* OS X: ~/Library/Preferences/<product name><version number>/templates
+
+```
+(function($inputVariables$) {
+    'use strict';
+    
+    $SELECTION$
+    
+    $END$
+})($inputVariables$);
+```
+
+## AngularJS
+
+* Writing Controllers
+* Using Routing
+* Data Binding
+* Directives
+
