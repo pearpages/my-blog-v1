@@ -126,3 +126,15 @@ Live templates are stored in the following location:
 * Data Binding
 * Directives
 
+### Introduction
+
+If the angular lib is inside the project. Webstorm will find it and start using autocomplete functionality.
+
+When creating files, typing Alt + Enter let you create phisically the file.
+
+To comment text
+
+### Writing Controllers
+### Using Routing
+### Data Binding
+### Directives
