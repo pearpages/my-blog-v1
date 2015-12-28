@@ -1,9 +1,12 @@
 # Mongo
 
+Mongo uses BSON format.
+
+## Config file
+
 + Specific data directory
 + Logging verbosity
 + Log file name and location
-
 
 ```
 mongod -f mongod.conf
@@ -20,6 +23,8 @@ logpath=/myfolder/mongo-server.log
 # how verbose the server will be logging
 verbose=VVVVV
 ```
+
+## Basic Commands
 
 ```
 mongo
@@ -50,6 +55,9 @@ Mongo accepts anything as an ID but an array
 
 When working with **_id**s, **insert** will prevent us of overwritting a value once is already created. Save, let us update a document once it's already existing. But in fact they are aweful for concurrency, so it's recomended to use **update** command.
 
+## Update
+
+Two concurrent updates will be executed one after the other. 
 
 ```
 db.foo.update(query,update,options);
@@ -59,5 +67,12 @@ db.foo.update(query,update,options);
 ```
 
 ```
-
+db.a.save({_id:1, x:10});
+db.a.update({_id:1}, {$inc: {x:1}}) //increments x by one
+db.a.find()
+// in the following two sentences we are able to touch properties of the document, but not overwritting it all
+db.a.update({_id:1}, {$set:{y:3}});
+db.a.update({_id:1}, {$inc:{x:1}});
+//unsetting a property of the document
+db.a.update({_id:1}, {$unset: {y: ''}}) // in this case '' it's arbitrary, any value would be correct
 ```
