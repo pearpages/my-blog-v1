@@ -1,5 +1,7 @@
 # Mongo
 
+[Mongo Docs](https://docs.mongodb.org/manual/)
+
 Mongo uses BSON format.
 
 ## Config file
@@ -140,4 +142,48 @@ var mod = {
 db.a.findAndModifiy(mod);
 mod.update.$set.touched = false;
 mod.new = true; // now we are asking to get the modifiet version of the object
+```
+
+## Finding Documents
+
+```
+db.foo.find(query, projection); //documents, fields (otherwise all the document will be shown)
+```
+
+```javascript
+db.animals.find({_id: 1});
+db.animals.find({_id:1}, {_id:1}) //show only id
+db.animals.find({_id: {$gt:5}}, {_id:1}) //fing id greater than 5
+db.animals.find({_id: {$gt:2, $lt:4}}, {_id:1})
+db.animals.find({_id: {$not: {$gt:2}}}, {_id:1})
+db.animals.find({_id: {$in: [1,3]}}, {_id:1}) //values in 1 or 3, shoing id only
+db.animals.find({_id: {$nin: [1,3]}}, {_id:1}) //values NOT in 1 or 3
+```
+
+### And
+
+```javascript
+db.animals.find({animal: 'bird', tags: 'ocean'}, {name:1}) //both tags and animal
+```
+
+### Arrays
+
+```javascript
+db.animals.find({tags: 'cute'}, {name:1})
+db.animals.find({tags: {$in: ['cute','ocean']}}, {name:1})
+db.animals.find({tags: {$all: ['cute','ocean']}}, {name:1}) //if must be cute and ocean
+```
+
+### Nested information
+
+```javascript
+db.animals.find({"info.canFly": true}).pretty()
+db.animals.find({"info.canFly": {$exists: true}}, {name:1}) //exists works better for null values
+```
+
+### Showing hiding fields
+
+```javascript
+db.animals.find({_id:1},{_id:1,name:1}) //show
+db.animals.find({_id:1}, {_id:0,name:0,info:0}) //not showing id,name,info
 ```
