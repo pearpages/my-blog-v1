@@ -97,6 +97,8 @@ var quizSchema = new Schema({
 }
 ```
 
+
+
 ### Allowed Data Types
 
 - String
