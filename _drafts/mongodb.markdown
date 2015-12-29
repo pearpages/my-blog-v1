@@ -230,6 +230,8 @@ db.animals.findOne({_id:1})
 
 ## Indexing
 
+It's very important to **use indexes**.
+
 * Regular (B-Tree)
 * Geo (for proximity)
 * Text
@@ -268,4 +270,28 @@ db.animals.dropIndex("name_1")
 ```javascript
 db.animals.ensureIndex({"info.color": 1})
 db.animals.ensureIndex({tags:1}) //we can also create indexes for arrays
+```
+
+### Unique
+
+```javascript
+db.animals.ensureIndex({name:1},{unique:true})
+```
+
+### Sparse
+
+Sparse indexes only contain entries for documents that have the indexed field, even if the index field contains a null value. The index skips over any document that is missing the indexed field. The index is “sparse” because it does not include all documents of a collection.
+
+```javascript
+db.animals.count()
+db.animals.count({"info.color": {$exists:true}})
+db.animals.ensureIndex({"info.color":1},{sparse:true})
+```
+
+### Compound Indexes
+
+They are useful if the queries match the index definition from left fo right!
+
+```javascript
+db.animals.ensureIndex({tags:1,name:1})
 ```
