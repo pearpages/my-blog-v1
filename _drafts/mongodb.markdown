@@ -213,3 +213,17 @@ db.animals.find({},{name:1,"info.type":1}).sort({"info.type":1, "name": 1})
 ```javascript
 db.animals.find({},{_id:1}).sort({_id:-1}).limit(3);
 ```
+
+### Skip
+
+Useful for pagination
+
+```javascript
+db.animals.find({},{_id:1}).sort({_id:-1}).skip(1).limit(2);
+```
+
+### findOne
+
+```javascript
+db.animals.findOne({_id:1})
+```
