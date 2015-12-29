@@ -183,7 +183,33 @@ db.animals.find({"info.canFly": {$exists: true}}, {name:1}) //exists works bette
 
 ### Showing hiding fields
 
+**_id always shows implicitly.**
+
 ```javascript
 db.animals.find({_id:1},{_id:1,name:1}) //show
 db.animals.find({_id:1}, {_id:0,name:0,info:0}) //not showing id,name,info
+```
+
+## Cursor
+
+```javascript
+var c = db.animals.find({},{name:1})
+c.size()
+c.hasNext()
+c.forEach(function(d){print(d.name)})
+```
+
+### Sort
+
+```javascript
+db.animals.find({},{name:1}).sort({name:1}) //ascending
+db.animals.find({},{name:1}).sort({name:-1}) //descending
+
+db.animals.find({},{name:1,"info.type":1}).sort({"info.type":1, "name": 1})
+```
+
+### Limit
+
+```javascript
+db.animals.find({},{_id:1}).sort({_id:-1}).limit(3);
 ```
