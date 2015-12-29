@@ -227,3 +227,45 @@ db.animals.find({},{_id:1}).sort({_id:-1}).skip(1).limit(2);
 ```javascript
 db.animals.findOne({_id:1})
 ```
+
+## Indexing
+
+* Regular (B-Tree)
+* Geo (for proximity)
+* Text
+* Hashed
+* TTL (expiring documents)
+
+```javascript
+db.foo.ensureIndex(keys, options)
+
+//keys: which fields, in what order
+//options: name? build now? unique? sparse? ttl? language?
+```
+
+```javascript
+db.system.indexes.find({ns:'test.animals'},{key:1})
+```
+
+```javascript
+db.animals.find({name:cat}).explain()
+```
+
+```javascript
+db.animals.ensureIndex({name:1})
+```
+
+### Drop Index
+
+There's always an **_id**, all the _ids have an **index**.
+
+```javasript
+db.animals.dropIndex("name_1")
+```
+
+### Indexing nested fields and arrays
+
+```javascript
+db.animals.ensureIndex({"info.color": 1})
+db.animals.ensureIndex({tags:1}) //we can also create indexes for arrays
+```
