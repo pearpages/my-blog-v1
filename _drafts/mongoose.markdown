@@ -202,3 +202,43 @@ query.exec(function (err,doc) {
 // By id ... return every field but impediment...
 var query = Standup.findById(id, '-impediment');
 ```
+
+## Comparison Operators
+
+- $gt *greater than*
+- $gte *greater than or equal to*
+- $in *exisits in*
+- $lt *less than*
+- $lte *less than or equal to*
+- $ne  *not equal to*
+- $nin *does not exist*
+
+```javascript
+Customer.find({discount: {$gte:10}, function (err,results) {
+	if (err) throw err;
+	console.log(results);
+});
+```
+
+```javascript
+// discount could be also a nested value
+Customer.where('discount').gte(10).lt(20).exec(function (err,results) {
+	if(err) throw err;
+	console.log(results);
+});
+```
+
+## Updateing and Removing Documents
+
+Model.update(conditions,update[,options][,callback])
+
+```javascript
+var Standup = require('../models/standup.server.model.js');
+
+var condition = {memberName: 'Mary'};
+var update =  {impediment: 'None - Mary no longer works here!'};
+
+Standup.update(condtion,update, function (err,numberAffected, rawResponse) {
+	// HAndle error or raw results here...
+});
+```
