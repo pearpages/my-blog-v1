@@ -326,6 +326,56 @@ var customerSchema = new Schema({
 customerSchema.path('city').required(true, 'Error message here');
 ```
 
-```javascript
+### Enum
 
+```javascript
+// String - Match Validator Example
+var reMatch = /[a-zA-Z]/;
+var customerSchema = new Schema({
+	name: { type: String,
+	required: true,
+	match: reMatch},
+
+	//...
+});
 ```
+
+### Match
+
+```javascript
+// String - Enum Validator Example
+var impediments = ['none','minor','blocking','severe'];
+
+var standupSchema = new Schema({
+	//...
+	impediment: { type: String,
+	required: true,
+	enum: impediments}
+});
+```
+
+### Numbers
+
+```javascript
+// Customers must receive at least a 5% discount
+var customerSchema = new Schema({
+	name: String,
+	//...
+	discount: {type: Number, min: 5}
+});
+
+// Customers not allowed more than 60% discount
+var customerSchema = new Schema({
+	name: String,
+	//...
+	discount: {type: Number, max: 60}
+});
+
+// Customers allowed a discount between 5% and 60% only
+var customerSchema = new Schema({
+	name: String,
+	//...
+	discount: {type: Number, min:5, max: 60}
+});
+```
+
