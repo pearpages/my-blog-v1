@@ -416,6 +416,8 @@ newPerson.save(function (err) {
 
 #### Custom Validators
 
+The return values must be either **true** or **false**.
+
 ```javascript
 // Custom validation - method signature = validate(obj, [errorMsg])
 var sizeValidator = [
@@ -442,5 +444,23 @@ newPerson.save(fucntion (err) {
 	if (err) return handleError(err);
 	// saved the person document!
 })
+```
+
+## Handling Errors
+
+We can also change the built in validators:
+
+```javascript
+var msg = module.exports = exports = {};
+
+msg.general = {};
+msg.general.default = "Validator...";
+msg.general.required = "Path...";
+
+//...
+```
+
+```
+{PATH} {VALUE} {TYPE} {MIN} {MAX}
 ```
 
