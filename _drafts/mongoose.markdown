@@ -379,3 +379,68 @@ var customerSchema = new Schema({
 });
 ```
 
+## Middleware
+
+Middleware are functions which give us execution control
+
+- init
+- validate
+- save
+- remove
+
+### Save
+
+```
+Save -> Default Applied -> Validation -> Error
+```
+
+```javascript
+// Middleware execution flow example...
+var personSchema = new Schema({
+	firstName: {type: String, required: true},
+	lastName: {type: String, required: true},
+	status: {type: String, required: true, default: 'Alive'}
+});
+
+// Build a model form the person schema
+var Person = new mongoose.model('Person', personSchema);
+
+// new document instance of a Person model
+var newPerson = new Person({firstName: 'John', lastName: 'Doe'});
+
+// Save the document... Internal validation (required) kicks off now
+newPrson.ave(function (err) {
+	// saved the person document!
+});
+```
+
+#### Custom Validators
+
+```javascript
+// Custom validation - method signature = validate(obj, [errorMsg])
+var sizeValidator = [
+	function (val) {
+		return (val.length > 0 && val.length <= 50)
+	},
+	// Custom error text...
+	'String must be ...' ];
+
+var personSchema = new Schema({
+	firstName: {type: String, required: true, validate: sizeValidator},
+	lastName: {type: String, required: true, validate: sizeValidator},
+	status: { type: String, required: true, default: 'Alive'}
+});
+
+// Build a model form the person schema
+var Person = new mongoose.model('Person', personSchema);
+
+// New document instance of a Person model
+var newPerson = new Person({firstName: 'John', lastName: 'Doe'});
+
+// Save the document... and validate
+newPerson.save(fucntion (err) {
+	if (err) return handleError(err);
+	// saved the person document!
+})
+```
+
