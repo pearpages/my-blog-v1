@@ -286,3 +286,46 @@ Standup.remove({createdOn: {$gte: gteDate}}, function (err) {
 - upsert (false)
 - select
 
+## Validation 
+
+- Built-in Validators
+- Custom Validators
+- Handling Errors
+- Middleware
+
+### Schema Type
+
+All of them  have **required** but
+
+**String** has
+
+- enum
+- match
+
+**Number** has
+
+- min
+- max
+
+```javascript
+// option 1
+// Required Validator Example
+var customerSchema = new Schema({
+	name: {type: String, required: true},
+	address: String,
+	city: String,
+	state: String,
+	country: String,
+	zipCode: Number,
+	createdOn: Date,
+	isActive: Boolean
+});
+
+// option 2
+// After the schema is defined - via the path API
+customerSchema.path('city').required(true, 'Error message here');
+```
+
+```javascript
+
+```
