@@ -1,5 +1,7 @@
 # Mongoose
 
+Mongoose is more an object modeling tool than a mapper!
+
 ## Why?
 
 * Validation
@@ -132,3 +134,18 @@ customerSchema.add({discountCode: String});
 
 var DiscountedCust = mongoose.model('DiscountCust', customerSchema);
 ```
+
+### Saving the model
+
+```javascript
+// build Quiz model from schema
+var Quiz = mongoose.model('Quiz', quizSchema);
+
+// document instance of a model
+var quiz1 = new Quiz({...});
+
+// abbreviated...
+
+quiz1.save(callback);
+```
+
