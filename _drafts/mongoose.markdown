@@ -464,3 +464,100 @@ msg.general.required = "Path...";
 {PATH} {VALUE} {TYPE} {MIN} {MAX}
 ```
 
+```javascript
+var entry = new Standup({
+	//...
+});
+
+// validate now...
+entry.schema
+.path('memberName')
+.validate(function (value) {
+	return value != 'None'
+}, 'You must select a team name.');
+```
+
+More validators
+
+```javascript
+var memberNameValidator = [
+	function (val) {
+		return (val.length > 0 && val.toLocaleLowerCase() != 'none')
+	},
+	// Custom error text
+	'Select a valid member name'
+];
+
+var requiredStringValidator = [
+	function (val) {
+		var testVal = val.trim();
+		return (testVal.length > 0)
+	},
+	// custom error text
+	'{PATH} cannot be empty'
+];
+```
+
+We can just put the validation inside the schema
+
+```javascript
+// Notes Schema definition
+var standupSchema = new Schema({
+    memberName: {
+        type: String,
+        required: true,
+        validate: memberNameValidator
+    },
+    project: {
+        type: String,
+        required: true,
+        validate: requiredStringValidator
+    },
+    workYesterday: {
+        type: String,
+        required: true
+        validate: requiredStringValidator
+    },
+    workToday: {
+        type: String,
+        required: true,
+        validate: requiredStringValidator
+    },
+    impediment: {
+        type: String,
+        required: true,
+        validate: requiredStringValidator
+    },
+    createdOn: {
+        type: Date,
+        default: Date.now
+    }
+});
+```
+
+**Saving the model**
+
+```javascript
+// controller action
+exports.create = function(req, res) {
+    var entry = new Standup({
+        memberName: req.body.memberName,
+        project: req.body.project,
+        workYesterday: req.body.workYesrday,
+        workToday: req.body.workToday,
+        impediment: req.body.impediment
+    });
+
+    entry.save(function (err) { //the callback is used to handle errors
+    	if(err) {
+    		var errMsg = 'Sorry, there was an error saving the stand-up meeting note' + err;
+    		res.render('newnote', {title: 'Blah - error', message: errMsg});
+    	} else {
+    		console.log('Stand-up meeting note was saved!');
+    		// redirect to the home page to display list of notes...
+    		res.redirect(301, '/');
+    	}
+    }); 
+
+};
+```
