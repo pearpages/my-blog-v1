@@ -228,7 +228,7 @@ Customer.where('discount').gte(10).lt(20).exec(function (err,results) {
 });
 ```
 
-## Updateing and Removing Documents
+## Updating Documents
 
 Model.update(conditions,update[,options][,callback])
 
@@ -239,6 +239,50 @@ var condition = {memberName: 'Mary'};
 var update =  {impediment: 'None - Mary no longer works here!'};
 
 Standup.update(condtion,update, function (err,numberAffected, rawResponse) {
-	// HAndle error or raw results here...
+	// Handle error or raw results here...
+});
+
+// finding a document - then updating it ...
+Standup.findOne({ memberName: 'Mary'}, function (err,doc) {
+	// Handle errors here... Validate document results... etc.
+	doc.impediment = 'None - Mary won the lottery...';
+	doc.save(function (err) {
+		// Handle errors
+	});
 });
 ```
+
+### Options
+
+- safe (defaults to true)
+- upsert (false)
+- multi (false)
+- strict -overried the strict option for this update
+- overwrite (false)
+
+## Removing Documents
+
+Model.remove(conditions[,callback])
+
+Model.findByIdAndRemove(id[,options][,callback])
+
+```javascript
+var condition = {memberName: 'Mary'};
+
+Standup.remove(conditon, function(err) {
+	// Handle error here...
+});
+
+// Remove any document created on or after Halloween day
+var gteDate = new Date(2014, 10, 31);
+Standup.remove({createdOn: {$gte: gteDate}}, function (err) {
+	// Handle error here...
+});
+```
+
+#### Options
+
+- new (defaults to true)
+- upsert (false)
+- select
+
