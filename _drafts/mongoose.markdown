@@ -1,5 +1,8 @@
 # Mongoose
 
+[Mongo Tools](http://docs.mongodb.org/ecosystem/tools/administration-interfaces)
+[MEAN.JS](meanjs.org)
+
 Mongoose is more an object modeling tool than a mapper!
 
 ## Why?
