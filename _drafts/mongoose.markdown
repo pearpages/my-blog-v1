@@ -149,3 +149,56 @@ var quiz1 = new Quiz({...});
 quiz1.save(callback);
 ```
 
+## Quering
+
+```javascript
+var Standup = require('../models/standup.server.model.js');
+
+// No callback... deferred execution
+var query = Standup.find();
+
+// With callback... Executes immediately
+Standup.find(function (err,results) {
+	// handle the error... or results here
+});
+
+// With callback and query conditions
+Standup.find({memberName: 'David'}, function (err, results)) {
+	// handle the error... or results here
+}
+```
+
+### Limit returned fields
+```javascript
+// Limit the returned fields...
+Standup.find({memberName: 'Mary'}, 'memberName impediment'),
+	function(err,results) {
+		//handle the error... or results here
+	});
+```
+
+### Find one
+
+```javascript
+// No callback... No conditins...
+var query = Standup.findOne();
+query.exec(function(err,results) {
+	//handle the error.... or results here
+});
+
+// With conditions...
+var query = Standup.findOne({memberName: 'Mark'});
+```
+
+### Find by ID
+
+```javascript
+// By Id... No condtions...
+var query = Standup.findById(id);
+query.exec(function (err,doc) {
+	// handle the error or results here
+});
+
+// By id ... return every field but impediment...
+var query = Standup.findById(id, '-impediment');
+```
