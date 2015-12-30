@@ -97,8 +97,6 @@ var quizSchema = new Schema({
 }
 ```
 
-
-
 ### Allowed Data Types
 
 - String
@@ -108,3 +106,29 @@ var quizSchema = new Schema({
 - Mixed (Object)
 - ObjectId (Object)
 - Array (Array -Object-)
+
+## Creating a Model
+
+```javascript
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var customerSchema = new Schema({
+	name: String,
+	address: String,
+	city: String,
+	state: String,
+	country: String,
+	zipCode: Number,
+	createdOn: Date,
+	isActive: Boolean
+});
+
+// Build a model from the customer schema....
+var Customer = mongose.model('Customer', customerSchema); // if the collection is not provided in the method, Customers in mongodb will be used as a name
+
+// Add a custom property to the schema...
+customerSchema.add({discountCode: String});
+
+var DiscountedCust = mongoose.model('DiscountCust', customerSchema);
+```
