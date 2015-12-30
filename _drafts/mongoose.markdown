@@ -409,7 +409,7 @@ var Person = new mongoose.model('Person', personSchema);
 var newPerson = new Person({firstName: 'John', lastName: 'Doe'});
 
 // Save the document... Internal validation (required) kicks off now
-newPrson.ave(function (err) {
+newPerson.save(function (err) {
 	// saved the person document!
 });
 ```
