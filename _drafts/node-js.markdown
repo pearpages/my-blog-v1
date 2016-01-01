@@ -1,0 +1,1 @@
+In Node.js, some of the principles applied come directly from its creator, **Ryan Dahl**, from all the people who contributed to the core, from charismatic  gures in the community, and some of the principles are inherited from the **JavaScript** culture or are in uenced by the **Unix** philosophy.
