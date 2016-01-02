@@ -546,3 +546,47 @@ var d = new Date("2015-03-25T12:00:00Z");
 > Omitting T or Z in a date-time string can give different result in different browser.
 
 ---
+
+## Javascript Date Methods
+
+* getDate()	*Get the day as a number (1-31)*
+* getDay()	*Get the weekday as a number (0-6)*
+* getFullYear()	*Get the four digit year (yyyy)*
+* getHours()	*Get the hour (0-23)*
+* getMilliseconds()	*Get the milliseconds (0-999)*
+* getMinutes()	*Get the minutes (0-59)*
+* getMonth()	*Get the month (0-11)*
+* getSeconds()	*Get the seconds (0-59)*
+* getTime()	*Get the time (milliseconds since January 1, 1970)*
+
+* setDate()	*Set the day as a number (1-31)*
+* setFullYear()	*Set the year (optionally month and day)*
+* setHours()	*Set the hour (0-23)*
+* setMilliseconds()	*Set the milliseconds (0-999)*
+* setMinutes()	*Set the minutes (0-59)*
+* setMonth()	*Set the month (0-11)*
+* setSeconds()	*Set the seconds (0-59)*
+* setTime()	*Set the time (milliseconds since January 1, 1970)*
+
+> If adding days, shifts the month or year, the changes are handled automatically by the Date object.
+
+### Compare Dates
+
+```javascript
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+    text = "Today is before January 14, 2100.";
+} else {
+    text = "Today is after January 14, 2100.";
+}
+document.getElementById("demo").innerHTML = text;
+```
+
+[Date Reference](http://www.w3schools.com/jsref/jsref_obj_date.asp)
+
+---
+
