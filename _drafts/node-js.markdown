@@ -98,4 +98,32 @@ Promises states:
     - Fulfilled
     - Rejected
 
+```
+promise.then([onFulfilled], [onRejected])
+```
+
+### Without a promise
+
+```javascript
+asyncOperation(arg, function(err, result) {
+     if(err) {
+         //handle error
+  }
+  //do stuff with result
+});
+```
+
+### With a promise
+
+```javascript
+asyncOperation(arg)
+     .then(function(result) {
+       //do stuff with result
+     }, function(err) {
+       //handle error
+     });
+```
+
+
+
 

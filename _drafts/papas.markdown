@@ -529,6 +529,7 @@ Controller -> Factories
 + Easier to reach the parent scope with $parent.$parent chaining
 + Remove unexpected behavior
 
+```html
 <div ng-controller="Shell as shell">
   {{shell.name}}
   <div ng-controller="Customer as customer">
@@ -538,6 +539,7 @@ Controller -> Factories
     </div>
   </div>
 </div>
+```
 
 ### Instantiation Controllers
 
