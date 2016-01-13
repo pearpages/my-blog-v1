@@ -34,3 +34,49 @@ git config --global user.email "hello@pearpages.com"
 git config --unset core.autocrlf
 ```
 
+## Working locally
+
+```
+git init
+```
+
+### Add files
+
+ ```
+# only modified
+ git add -u
+ 
+ # modified and new
+ git add --all
+ git add -A
+ 
+ git commit -m "files changed"
+ 
+ git log
+ 
+ # comparing with the last cmomit
+ git diff dd68210..a234c4 
+ 
+ # The lataest commit is called HEAD
+ git diff HEAD
+ # the prior the latest one
+ git diff HEAD~1 
+ # before the prior of the latest one
+ git diff HEAD~2
+ ```
+ 
+ ### Undoing Changes
+ 
+ ```
+ # Undoing one file
+ git checkout README.txt
+ 
+ # Undoing all changes
+ git chekcout .
+ 
+ # All changes back to the HEAD (the last commit)
+ git reset --hard 
+ ```
+ 
+ 
+ 
