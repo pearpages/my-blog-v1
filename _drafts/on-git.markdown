@@ -126,3 +126,41 @@ git log --oneline --graph
 git shortlog -sne
 ```
 
+### Viewing Commits
+
+```
+git show HEAD
+git show HEAD~1
+
+git log --oneline
+git show 5642626
+
+git remote
+git remote -v
+```
+
+### Git Protocols
+
+- http
+- https
+- git
+- ssh
+- file
+
+```
+[remote "origin"]
+url = https://github.com/pearpages/ionic-ticketing-tool.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+remote = origin
+merge = refs/heads/master
+```
+
+```
+git branch
+
+# display remote branches
+git branch -r
+
+git tag
+```
