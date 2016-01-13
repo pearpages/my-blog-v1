@@ -219,3 +219,41 @@ Tagging gives us stable points
 git push --tags
 ```
 
+## Branching, Merging and Rebasing
+
+### Visualizing Branches
+
+```
+git log --graph --oneline --all --decorate
+
+# We can create alias in git
+git config --global alias.lga "log --graph --oneline --all --decorate"
+```
+
+### Creating Branches
+
+```
+git branch feature1
+git checkout feature1
+
+# create branch keeping not staged files
+git branch -b feature1
+```
+
+### Differences betwee branches and tags
+
+Tags always stay on the same commit
+
+### Renaming and deleting branches
+
+```
+# renaming is the same than moving
+git branch -m fix1 bug1234
+```
+
+```
+# deleting the branch
+git branch -d bug1234
+```
+
+
