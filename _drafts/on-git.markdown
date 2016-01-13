@@ -65,17 +65,20 @@ git init
  git diff HEAD~2
  ```
  
- ### Undoing Changes
+### Undoing Changes
  
  ```
  # Undoing one file
  git checkout README.txt
  
- # Undoing all changes
+ # Undoing all changes in the files but not removing the staged
  git chekcout .
  
- # All changes back to the HEAD (the last commit)
+ # All changes back to the HEAD (the last commit) losing the staged
  git reset --hard 
+ 
+ # Goes back to one commit before the last one (HEAD) but keeps the staged files
+ git reset soft HEAD~1
  ```
  
  
