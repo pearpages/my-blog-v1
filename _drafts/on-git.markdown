@@ -104,3 +104,25 @@ logs
 *.tmp
 ```
 
+## Working Remotely
+
+### Cloning
+
+```
+git clone https://github.com/pearpages/guess-the-number
+
+# See the log in one line
+git log --oneline
+```
+
+### Log 
+
+```
+# Count lines
+git log | wc -l
+
+git log --oneline --graph
+
+git shortlog -sne
+```
+
