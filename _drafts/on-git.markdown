@@ -71,15 +71,36 @@ git init
  # Undoing one file
  git checkout README.txt
  
- # Undoing all changes in the files but not removing the staged
+ # Undoing all changes in the files but not removing the staged or discarding
  git chekcout .
  
- # All changes back to the HEAD (the last commit) losing the staged
+ # All changes back to the HEAD (the last commit) losing the staged and therefore discarding
  git reset --hard 
  
  # Goes back to one commit before the last one (HEAD) but keeps the staged files
  git reset soft HEAD~1
  ```
  
+### Discarding changes
  
- 
+```
+# what are we going to discard?
+git clean -n 
+
+# discard changes
+git clean -f
+
+# discard all changes to the last commit (HEAD)
+git reset --hard
+```
+
+### .gitignore
+
+Ignoring files and folders
+
+```
+node_modules
+logs
+*.tmp
+```
+
