@@ -256,4 +256,14 @@ git branch -m fix1 bug1234
 git branch -d bug1234
 ```
 
+### Recovering deleted commits
+
+You can use this technique, the reflog one, until 30 days of the commit. Than you lose the changes.
+
+```
+git reflog
+git branch bug1234 5a78c8b
+```
+
+### Stashing Changes
 
