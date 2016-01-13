@@ -164,3 +164,32 @@ git branch -r
 
 git tag
 ```
+
+### Fetching from a remote
+
+```
+git remove -v
+git remote add origin https://github.com/pearpages/ionic-ticketing-tool.git
+git fetch
+# If there's more than one remote repository
+get fetch origin
+
+# checking the log of the remote master
+git log origin/master
+
+git merge origin/master
+```
+
+### Pulling from a remote
+
+```
+git fetch
+git merge origin/master
+```
+
+is the same than doing 
+
+```
+git pull origin master
+```
+
