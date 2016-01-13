@@ -267,3 +267,26 @@ git branch bug1234 5a78c8b
 
 ### Stashing Changes
 
+```
+git stash
+git stash list
+git stash apply
+# it's the same than apply but gets rid of it in the list
+git stash pop
+
+git stash drop
+git stash branch feature2
+```
+
+### Merging Branches
+
+**kdiff3** is a merging tool that can be used.
+
+```
+git merge feature1
+git branch -d feature1
+
+git merge feature2_additional
+git diff --cached
+git commit -m "merged"
+```
