@@ -193,3 +193,20 @@ is the same than doing
 git pull origin master
 ```
 
+### Pushing to a remote
+
+```
+git push origin master
+```
+
+### Creating and verifying tags
+
+```
+git tag v1.0
+
+# signed tag
+git tag -s v2.0 
+
+# check signature of tag
+git tag -v v.20
+```
