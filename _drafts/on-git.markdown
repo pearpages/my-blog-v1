@@ -208,5 +208,14 @@ git tag v1.0
 git tag -s v2.0 
 
 # check signature of tag
-git tag -v v.20
+git tag -v v2.0
 ```
+
+### Pushing Tags to a Remote
+
+Tagging gives us stable points
+
+```
+git push --tags
+```
+
