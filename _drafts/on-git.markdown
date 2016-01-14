@@ -168,7 +168,7 @@ git tag
 ### Fetching from a remote
 
 ```
-git remove -v
+git remote -v
 git remote add origin https://github.com/pearpages/ionic-ticketing-tool.git
 git fetch
 # If there's more than one remote repository
