@@ -290,3 +290,27 @@ git merge feature2_additional
 git diff --cached
 git commit -m "merged"
 ```
+
+### Rebasing
+
+```
+git rebase master
+```
+
+### Cherry picking changes
+
+Apply only a specific commit
+
+```
+git cherry-pick 6fa4324
+```
+
+### Creating a remote branch
+
+We can do it just pushing the changes
+
+### Deleting a remote branch
+
+```
+git push origin :my-branch-to-delete
+```
