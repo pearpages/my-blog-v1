@@ -24,3 +24,10 @@ The main feature of Typescript is that makes the code, above all, more maintaina
 - Define interfaces
 - function support (lambdas)
 - Intellisense and syntax checking
+
+### Typescript Compiler
+
+```
+tsc first.ts
+```
+
