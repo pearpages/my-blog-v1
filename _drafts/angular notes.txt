@@ -1,5 +1,6 @@
 #yo, to install a generator4
 yo
+yo doctor
 
 #bower commands
 $bower list
