@@ -25,9 +25,36 @@ The main feature of Typescript is that makes the code, above all, more maintaina
 - function support (lambdas)
 - Intellisense and syntax checking
 
-### Typescript Compiler
+### Typescript Features
 
 ```
 tsc first.ts
 ```
 
+TypeScript
+
+```typescript
+class Greeter {
+    greeting: string;
+    construct (message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+```
+
+Translation to Javascript
+
+```javascript
+var Greeter = (function (){
+    function Greeter(message) {
+        this.greeting = message;
+    }
+    Greeter.prototype.greet = function () {
+        return "Hello, " + this.greeting;
+    }
+    return Greeter;
+    })();
+```
