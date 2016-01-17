@@ -58,3 +58,21 @@ var Greeter = (function (){
     return Greeter;
     })();
 ```
+
+## Syntax, Keywords and Code Hierarchy
+
+|Keyword|Description|
+|:---|:---|
+|**class**|Container for members such as properties and functions|
+|**constructor**|Provides initialization functionality in a class|
+|**exports**|Export a member from a module|
+|**extends**|Extend a class or interface|
+|**implements**|Implement an interface|
+|****||
+|****||
+|****||
+|****||
+|****||
+|****||
+|****||
+|****||
