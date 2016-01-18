@@ -1,4 +1,6 @@
 
+[http://www.typescriptlang.org](http://www.typescriptlang.org)
+
 ## Why?
 
 The main feature of Typescript is that makes the code, above all, more maintainable.
@@ -76,3 +78,24 @@ var Greeter = (function (){
 |**=>**|Arrow syntax used with definitions and functions|
 |**<typeName>**|<> characters use to cast/convert between types|
 |**:**|Separator between variable/parameter names and types|
+
+### Hierarchy
+
+```
+Module
+Class --> Interface
+Fields, Constructor, Properties, Functions
+
+```
+
+### Tool / Framework Support
+
+```
+Node.js
+Sublime
+Emacs
+Vi
+Visual Studio
+TypeScript Playground // a web page
+```
+
