@@ -129,3 +129,77 @@ window.onload = function () {
     car.stop();
 }
 ```
+
+## Typing, Variables and Functions
+
+### Grammar, Declarations, and Annotations
+
+```typescript
+var an1; // any type
+var num1: number; // type annotation
+var num2: number  = 2; // type annotation
+var num3 = 3; // type inference
+var num4 = num3 + 100; // type inference
+var str1 = num1 + 'some string'; // Error!
+```
+
+```typescript
+init : (s: string, p: string, c: string) => void = function (startButton, pauseButton, clearButton) {
+    //...
+};
+```
+
+### Ambient Declarations
+
+```typescript
+declare var document;
+```
+
+```typescript
+/// <reference path="jquery.d.ts" />
+declare var $;
+```
+
+```typescript
+/// <reference path="typings/knockout-2.2.d.ts />"
+declare var ko;
+
+module whatever {
+    var name = ko.observable('John Papa');
+    var id = ko.observable(1);
+}
+```
+
+### Any and Primitive Types
+
++ any
++ number
++ boolean
++ string
++ array
++ indexer
++ null
++ undefined
+
+### Object Types
+
++ functions
++ class
++ module
++ interface
++ literal types
+
+```typescript
+// ? means optional
+var squereIt = function (rect: {
+    h: number;
+    w?: number;
+    }) {
+        if(rect.w === undefined) {
+            return rect.h * rect.h;
+        }
+        return rect.h * rect.w;
+    };
+```
+
+### Functions 
