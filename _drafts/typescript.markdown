@@ -1,5 +1,5 @@
 
-[http://www.typescriptlang.org](http://www.typescriptlang.org)
+[Typescript: http://www.typescriptlang.org](http://www.typescriptlang.org)
 
 ## Why?
 
