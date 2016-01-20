@@ -203,3 +203,18 @@ var squereIt = function (rect: {
 ```
 
 ### Functions 
+
+```typescript
+var myFunc = function (h: number, w: number) {
+    return h * w;
+}
+```
+
+```typescript
+var myFunc = (h: number, w: number) => h * w;
+```
+
+```typescript
+var greetMe: (msg: string) => void;
+```
+
