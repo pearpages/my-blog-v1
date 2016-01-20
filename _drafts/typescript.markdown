@@ -586,3 +586,52 @@ class Truck extends Auto {
     }
 }
 ```
+
+## Using Interfaces
+
+Interfaces provide a way to enforce a "contract".
+
+```typescript
+interface IEngine {
+    start(callback: (startStatus: bool, engineType: string) => void): void;
+    stop(callback: (stopStatus: bool, engineType: string) => void): void;
+}
+
+interface IAutoOptions {
+    engine: IEngine;
+    basePrice: number;
+    state: string;
+    make?: string;
+    model?: string;
+    year?: string;
+}
+
+class Engine implements IEngine {
+    constructor(public horsePower: number, public engineType: string) {}
+
+    start(callback: (startStatus: bool, engineType: string) => void) { 
+        window.setTiemout(() => {callback(true, this.engineType);
+            }, 1000);
+    }
+
+    stop(callback: (callback: (stopStatus: bool, engineType: string) => void) {
+        window.setTimeout(() => {callback(true, this.engineType);
+            },1000);
+    }
+}
+``` 
+
+### Using Interface as a Type
+
+```typescript
+class Auto {
+    engine: IEngine; // interface as a type
+    basePrice: number;
+    // ...
+
+    constructor(data: IAutoOptions) {
+        this.engine = data.engine;
+        this.basePrice = data.basePrice;
+    }
+}
+```
