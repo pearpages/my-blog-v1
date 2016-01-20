@@ -475,5 +475,22 @@ car.start();
 
 ### Property Limitations
 
+Propertes are only available when compiling to ES5: ```tsc.exe --target ES5 YourFile.ts```
+
+## Casting Types and Definition Files
+
+### Casting
+
 ```typescript
+var table: HTMLTableElement = 
+<HTMLTableElement>document.createElement('table');
 ```
+
+### Type Definition Files
+
+*lib.d.ts* file is built-in out of the box for the DOM and JavaScript
+
+[https://github.com/borisyankov/DefintelyType](https://github.com/borisyankov/DefintelyType)
+
+## Estending Types
+
