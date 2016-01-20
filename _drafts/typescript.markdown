@@ -218,3 +218,68 @@ var myFunc = (h: number, w: number) => h * w;
 var greetMe: (msg: string) => void;
 ```
 
+```typescript
+module utilities {
+    var squareItSimple = (h: number,w: number) => h * w;
+}
+```
+
+```typescript
+var helloWorld: (name?: string) => void;
+```
+
+```typescript
+module utilities{
+    var squareIt: (rect: {h: number; w?: number;}) => number;
+
+    squareIt = function(rect) {
+        if (rect.w !== undefined) {
+            return rect.h * rect.w;
+        }
+        return rect.h * rect.h;
+    };
+
+    var rectA = {h: 7};
+    var rectB = {h: 7, w: 12};
+
+    console.log(squareIt(rectA));
+    console.log(squareIt(rectB));
+}
+```
+
+### Interfaces
+
+```typescript
+module utilities {
+    
+    interface SquareFunction {
+        (x: number): number;
+    }
+
+    var squareItBasic : SquareFunction = (num: number) => num * num;
+
+    interface Rectangle {
+        h: number;
+        w? : number;
+    }
+
+    var squareIt: (rect: Rectangle) => number;
+
+    squareIt = function(rect) {
+        if (rect.w !== undefined) {
+            return rect.h * rect.w;
+        }
+        return rect.h * rect.h;
+    };
+
+    var rectA = {h: 7};
+    var rectB = {h: 7, w: 12};
+
+    console.log(squareIt(rectA));
+    console.log(squareIt(rectB));
+}
+```
+
+```typescript
+
+```
