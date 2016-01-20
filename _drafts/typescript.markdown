@@ -350,3 +350,64 @@ module ratings {
     console.log(s.calcRating());
 }
 ```
+
+### Ambient Declarations for external references
+
+files ```*.d.ts```
+
+## Classes and Interfaces
+
+### Defining Classes
+
+Classes in Javascript are just **containters** to encapsulate functionality.
+
+- Fields
+- Constructors
+- Properties
+- Functions
+
+#### Properties
+
+Properties act as filters and can have get or set blocks.
+
+Propertes are only available when compiling to ES5: tsc.exe --target ES5 YourFile.ts
+
+```typescript
+class Car {
+    constructor(public engine: string) {}
+}
+```
+
+```typescript
+class Car {
+    // Fields
+    engine: string;
+
+    // Properties
+    private _engine: string;
+
+    // Constructor
+    constructor(engine: string) {
+        this.engine = engine;
+    }
+
+    // Functions
+    start() {
+        return "Started " + this.engine;
+    }
+
+    stop() {
+        return "Stopped " + this.engine;
+    }
+
+    get engine(): string {
+        return this._engine;
+    }
+
+    set engine(value: string) {
+        if (value == undefined) throw 'Supply an Egine!';
+        this._engine = value;
+    }
+}
+```
+
