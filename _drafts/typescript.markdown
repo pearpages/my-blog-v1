@@ -438,3 +438,42 @@ class Car {
 var engine = new Engine(300, 'V8');
 var car = new Car(engine);
 ```
+
+### Defining Classes
+
+```typescript
+class Engine {
+    constructor(public horsePower: number,public engineType: string) {}
+}
+
+class Car {
+    private _engine: Engine;
+
+    constructor(engine: Engine) {
+        this.engine = engine;   
+    }
+
+    get engine(): Engine {
+        return this._engine;
+    }
+
+    set engine(value: Engine) {
+        if (value == undefined) throw 'Plase supply an engine';
+        this._engine = value;
+    }
+
+    start() : void{
+        console.log('Car engine started ' + this._engine.engineType);
+    }
+}
+
+var engine = new Engine(300,'V8');
+var car = new Car(engine);
+console.log(car.engine.engineType);
+car.start();
+```
+
+### Property Limitations
+
+```typescript
+```
