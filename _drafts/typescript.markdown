@@ -411,3 +411,30 @@ class Car {
 }
 ```
 
+### Complex Types
+
+```typescript
+class Engine {
+    constructor(public horsePower: number, public engineType: string) {}
+}
+
+class Car {
+    private _engine: Engine;
+
+    constructor(engine: Engine) {
+        this.engine = engine; // complex type
+    }
+
+    get engine(): string {
+        return this._engine;
+    }
+
+    set engine(value: string) {
+        if (value == undefined) throw 'Supply an Engine!';
+        this._engine = value;
+    }
+}
+
+var engine = new Engine(300, 'V8');
+var car = new Car(engine);
+```
