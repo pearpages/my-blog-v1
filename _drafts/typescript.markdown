@@ -492,5 +492,97 @@ var table: HTMLTableElement =
 
 [https://github.com/borisyankov/DefintelyType](https://github.com/borisyankov/DefintelyType)
 
-## Estending Types
+## Extending Types
 
+```typescript
+class ChildClass extends ParentClass {
+    constructor() {
+        super(); // the base class constructor
+    }
+}
+```
+
+```typescript
+class Auto {
+    engine: Engine;
+    constructor(engine: Engine) {
+        this.engine = engine;
+    }
+}
+
+class Truck extends Auto {
+    fourByFour: bool;
+    constructor(engine: Engine, fourByFour: bool) {
+        super(engine);
+
+        this.fourByFour = fourByFour;
+    }
+}
+```
+
+### Example
+
+```typescript
+class Engine {
+    constructor(public horsePower: number, public engineType: string) {}
+
+    start(callback: (startStatus: bool, engineType: string) => void) {
+        window.setTimeout( () => {
+            callback(true,this.engineType);
+            }, 1000);
+    }
+
+    stop(callback: (stopStatus: bool, engineType: string) => void) {
+        window.setTimeout( () => {
+            callback(true, this.engineType);
+            }, 1000);
+    }
+}
+
+class Accessory {
+    constructor(public accessoryNumber: number, public title: string) {}
+}
+
+class Auto {
+    private _basePrice: number;
+    private _engine: Engine;
+    make: String;
+    model: String;
+    accessoryList: string;
+
+    constructor(basePrice: number, engine: Engine, make: string, model: string) {
+        this.engine = engine;
+        this.basePrice = basePrice;
+        this.make = make;
+        this.model = model;
+    }
+
+    calculateTotal(): number {
+        var taxRate = .08;
+        return this.basePrice + (taxRate * this.basePrice);
+    }
+
+    // addAccessories(new Accessory(), new Accessory())
+    addAccessories(...accessories: Accessory[]) {
+        this.accessoryList = '';
+        for(var i = 0; i < accessories.length; i++) {
+            var ac = accessories[i];
+            this.accessoryList += ac.accessoryNumber + ' ' + ac.title + '<br/>';
+        }
+    }
+
+    // ...
+
+}
+
+class Truck extends Auto {
+    bedLength: string;
+    fourByFour: bool;
+
+    constructor(basePrice: number, engine: Engine, make: string, model: string, bedLength: string, fourByFour: bool) {
+        super(basePrice, engine, make, model);
+        this.bedLength = bedLength;
+        this.fourByFour = fourByfour;
+    }
+}
+```
