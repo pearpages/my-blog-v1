@@ -635,3 +635,49 @@ class Auto {
     }
 }
 ```
+
+### Casting Interfaces
+
+```typescript
+var myEngine = <Engine>auto.engine;
+console.log(myEngine.horsePower.toString());
+```
+
+### Extending and Interface
+
+```typescript
+interface IAutoOptions {
+    engine: IEngine;
+    basePrice: number;
+    state: string;
+    make?: string;
+    model?: string;
+    year?: number;
+}
+
+interface ITruckOptions extends IAutoOptions {
+    bedLength?: string;
+    fourByFour: bool;
+}
+```
+
+#### Using and Extended Interface
+
+```typescript
+class Truck extends Auto {
+    private _bedLength: string;
+    fourByFour: bool;
+
+    constructor(data: ITruckOptions) {
+        super(data);
+        this.bedLength = data.bedLength;
+        this.fourByFour = data.fourByFour;
+    }
+}
+```
+
+Interfaces are also very useful to use for parameter objects.
+
+```typescript
+
+```
