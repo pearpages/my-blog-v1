@@ -757,3 +757,13 @@ module Shapes { //extending shapes module defined above
 var circle = new Shapes.Circle(20); // The same 
 ```
 
+### Extending Modules and Importing Shortcuts
+
+#### Shortchuts
+
+```typescript
+import Utils = App.Tools;
+
+// instead of var log = new App.Tools.Utils.Logger();
+var log = new Utils.Logger();
+```
