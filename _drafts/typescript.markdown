@@ -721,3 +721,39 @@ class Truck extends Auto {
 }
 ```
 
+## Modules 
+
+If we define the same module in different files, they both will share the information contained inside them. But anything outside the module definition won't.
+
+```typescript
+module dataserveice {
+    // code  
+};
+```
+
+### Exporting Internal Modules
+
+Check the *Module Pattern* and *Revealing Module Pattern*
+
+```typescript
+module Shapes{
+    export class Rectangle {
+        constructor(public height: number, public width: number) {
+            // ...
+        }
+    }
+}
+
+var myRectangle = new Shapes.Rectangle(2,4); // Rectangle it is accessible because of the 'export' keyword
+
+module Shapes { //extending shapes module defined above
+    export class Circle {
+        constructor (public radius: number) {
+            // ...
+        }
+    }
+}
+
+var circle = new Shapes.Circle(20); // The same 
+```
+
