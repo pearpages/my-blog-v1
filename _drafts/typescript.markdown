@@ -679,5 +679,45 @@ class Truck extends Auto {
 Interfaces are also very useful to use for parameter objects.
 
 ```typescript
+interface IAutoOptions {
+    basePrice: number;
+    engine: IEngine;
+    state: string;
+    make: string;
+    model: string;
+    year: number;
+}
 
+class Whatever {
+
+    // ...
+
+    constructor(options: IAutoOptions) {
+        this.engine = options.engine;
+        this.basePrice = options.basePrice;
+        this.state = options.state;
+        this.make = options.make;
+        this.model = options.model;
+        this.year = options.year;
+    }
+}
 ```
+
+```typescript
+interface ITruckOptions extends IAutoOptions {
+    bedLength: string;
+    fourByFour: bool;   
+}
+
+class Truck extends Auto {
+    bedLength: string;
+    fourByFour: bool;
+
+    constructor(options: ITruckOptions) {
+        super(options);
+        this.bedLength = options.bedLength;
+        this.fourByFour = options.fourByFour;
+    }
+}
+```
+
