@@ -848,5 +848,21 @@ export class Greeter {
 }
 ```
 
-### Module Dependencies
+## TypeScript Modules
+
+- More maintainable and re-usable for large projects
+- Extendable
+- Control accessibility
+- Organize your code across multiple files
+- More maintainable for large projects
+
+### Internal Modules
+
+- Development time references for the tools and type checking
+- Must sequence <script> tags properly
+
+### External Modules
+
+- Modules that use the CommonJS or AMD conventions
+- Dependency resolution using require.js (http://requirejs.org)
 
