@@ -771,7 +771,7 @@ var log = new Utils.Logger();
 ### Organizing Internal Modules
 
 + Modules separated across files
-+ Must load them in the proper sequence
++ Must load them in the proper sequence <- !!!
 + Reference them: ```/// <reference path="shapes.ts" />```
 
 #### Separation
@@ -798,4 +798,55 @@ module ShapeMaker {
     var rect = new Shapes.Rectangle(2,4);
 }
 ```
+
+### External Modules and Dependency Resolution
+
+- Separately loadable modules
+- Exported entities can be imported into other modules ```import viewmodels = module('viewmodels');```
+- CommonJS or AMD Conventions [http://requirejs.org/](http://requirejs.org/)
+
+### AMD
+
+AMD is a module approach which works better with Browsers.
+
+- Asynchronous Module Definition
+    - Manage Dependencies
+    - Loads them asynchronously
+- Loads modules in sequence
+    - Based on defined dependencies
+    - Who requires who?
+- require.js
+
+#### Loading Module Dependencies with Require.js
+
+main.ts
+```typescript
+require(['bootstrapper'],
+    (bootstrapper) => {
+    boostrapper.run();
+});
+```
+
+boostrapper.ts
+```typescript
+import gt = module('greeter');
+
+export function run() {
+    var el = document.getElementById('content');
+    var greeter = new gt.Greeter(el),
+    greeter.start();
+}
+```
+
+greeter.ts
+```typescript
+export class Greeter {
+    start() {
+        this.timerToken = setInterval( () => 
+        this.span.innerText = new Date().toUTCString(), 500);
+    }
+}
+```
+
+### Module Dependencies
 
