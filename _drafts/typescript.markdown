@@ -767,3 +767,35 @@ import Utils = App.Tools;
 // instead of var log = new App.Tools.Utils.Logger();
 var log = new Utils.Logger();
 ```
+
+### Organizing Internal Modules
+
++ Modules separated across files
++ Must load them in the proper sequence
++ Reference them: ```/// <reference path="shapes.ts" />```
+
+#### Separation
+
+**Example**
+
+shapes.ts
+```typescript
+modules Shapes {
+    export class Rectangle {
+        constructor (
+            public height: number, public width: number) {
+
+        }
+    }
+}
+``` 
+
+shapemaker.ts
+```typescript
+/// <reference path="shapes.ts" />
+
+module ShapeMaker {
+    var rect = new Shapes.Rectangle(2,4);
+}
+```
+
