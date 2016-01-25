@@ -47,3 +47,35 @@ cat.speak();
 
 ## Object Properties
 
+- value
+- writable
+- enumerable
+- configurable
+
+### Accessing
+
+```javascript
+var car = {doors:4, color: 'blue'};
+
+console.log(car.doors);
+console.log(car['doors']);
+```
+
+### Writable
+
+```javascript
+Object.defineProperty(cat, 'name', {writable:false});
+
+cat.name = 'John'; // does not change the name property
+```
+
+But it the property 'points' to an object, this object can still change. Then we need to do:
+
+```javascript
+var cat = {
+	name:'Fluffy',
+	color: 'White',
+	attributes: {attr1: 'abc', attr2: 'abc'}
+}
+Object.freeze(cat.attributes);
+```
