@@ -1,5 +1,7 @@
 
-## Object literal
+## Objects
+
+### Object literal
 
 ```javascript
 var cat = {name: 'Fluffy', color: 'white'};
@@ -11,7 +13,7 @@ cat.speak = function () {
 };
 ```
 
-## Constructor Functions
+### Constructor Functions
 
 ```javascript
 function Cat(name,color) {
@@ -25,7 +27,7 @@ var cat = new Cat('Fluffy','White'); // this is the obect that we create context
 Cat(); // this is the window or node context
 ```
 
-## ECMAScript 6 constructor
+### ECMAScript 6 constructor
 
 ```javascript
 class Cat {
@@ -42,3 +44,6 @@ class Cat {
 var cat = new Cat('Fluffy','White');
 cat.speak();
 ```
+
+## Object Properties
+
