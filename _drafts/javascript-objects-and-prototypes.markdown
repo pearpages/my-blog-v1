@@ -97,4 +97,7 @@ for (var popertyName in cat) {
 ```javascript
 Object.defineProperty(cat, 'name', {enumerable:false});
 Object.keys(cat); // name shouldn't be part of it
+
+// it is not enumerable it doesn't show in stringify either
+JSON.stringify(cat); // stringify ignores functions
 ```` 
