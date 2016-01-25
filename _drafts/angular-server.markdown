@@ -5,6 +5,8 @@
 
 ## $resource
 
+We can use $resource for get calls that not are necesseraly *resourceful*.
+
 The next example does server side logic in the client side, it is **Bad practice**. It is just an example.
 
 Factory and Service
@@ -184,3 +186,6 @@ app.config(function($httpProvider, $provide) {
 
 ## Restangular
 
+It's a substitute for $resource.
+
+It has a dependency with *lodash*.
