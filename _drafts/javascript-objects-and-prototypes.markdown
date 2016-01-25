@@ -79,3 +79,22 @@ var cat = {
 }
 Object.freeze(cat.attributes);
 ```
+
+### Enumerable
+
+```javascript
+Object.keys(cat);
+```
+
+We can use ```// for... in``` to loop through object properties.
+
+```javascript
+for (var popertyName in cat) {
+	console.log(cat[propertyName]);
+}
+```
+
+```javascript
+Object.defineProperty(cat, 'name', {enumerable:false});
+Object.keys(cat); // name shouldn't be part of it
+```` 
