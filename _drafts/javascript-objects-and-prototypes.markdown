@@ -112,7 +112,7 @@ Object.defineProperty(car, 'doors', {configurable: true}); // this does not work
 delete(car.doors); // won't work either
 ```
 
-## Getters and Setters
+### Getters and Setters
 
 ```javascript
 Object.defineProperty(cat, 'fullName',
@@ -133,4 +133,58 @@ console.log(cat.fullName);
 console.log(cat.name.first);
 console.log(cat.name.last);
 ```
+
+## JavaScript Prototypes and Inheritance
+
+```javascript
+'use strict';
+
+var arr = ['red','blue','green'];
+
+Object.defineProperty(arr, 'last', {get: function() {
+	return this[this.length-1];
+}});
+
+var last = arr.last;
+
+var arr2 = ['one','two','three'];
+display(arr2.last); // undefined
+```
+
+But if we use
+
+```javascript
+'use strict';
+
+var arr = ['red','blue','green'];
+
+Object.defineProperty(Array.prototype, 'last', {get: function() { // Array.prototype
+	return this[this.length-1];
+}});
+
+var last = arr.last; // gets last
+
+var arr2 = ['one','two','three'];
+console.log(arr2.last); // shows last
+```
+
+### Prototype
+
+Functions have **prototype**.
+
+Objects have **__proto__**.
+
+#### Function's prototype
+
+A function's prototype is the object **instance** that will become the prototype for all obects created using this function as a constructor.
+
+#### Object's prototype
+
+An object's prototype is the object **instance** from which the object is inherited.
+
+#### Examples
+
+```javascript
+```
+
 
