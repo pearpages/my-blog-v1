@@ -319,6 +319,8 @@ console.log(fluffy instanceof Animal); // true
 
 ### Creating Prototypes with Classes
 
+Everything learned before still applies to classes, but some minor differences. Like the constructor is not a function but a class.
+
 ```javascript
 'use strict';
 
@@ -327,7 +329,7 @@ class Animal {
 		this.voice = voice || 'grunt';
 	}
 
-	speak() {
+	speak() { // the function is no enumerable
 		console.log(this.voice);
 	}
 }
@@ -343,4 +345,6 @@ class Cat extends Animal {
 
 var fluffy = new Cat('Fluffy','white');
 fluffy.speak();
+
+console.log(fluffy.constructor); // shows a class
 ```
