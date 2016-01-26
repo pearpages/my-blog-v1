@@ -101,3 +101,12 @@ Object.keys(cat); // name shouldn't be part of it
 // it is not enumerable it doesn't show in stringify either
 JSON.stringify(cat); // stringify ignores functions
 ```` 
+
+### Configurable
+
+Once we change the property configurable to false it is impossible to put it to true back again.
+
+```javascript
+Object.defineProperty(car, 'doors', {configurable: false});
+Object.defineProperty(car, 'doors', {configurable: true}); // this does not work because of the prior sentence
+```
