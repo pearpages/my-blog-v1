@@ -292,18 +292,19 @@ console.log(fluffy.__proto__.__proto__.__proto__);
 ```javascript
 'use strict';
 
-function Animal() {
-	
+function Animal(voice) {
+	this.voice = voice || 'grunt';
 }
 
 Animal.prototype.speak = function () {
-	console.log('Grunt');
+	console.log(this.voice);
 };
 
 Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat; // otherwise it would show the constructor being Animal
 
 function Cat(name,color) {
-	Animal.call(this); // parent constructor
+	Animal.call(this, 'Meow'); // parent constructor
 	this.name = name;
 	this.color = color;
 }
@@ -311,4 +312,7 @@ function Cat(name,color) {
 var fluffy = new Cat('Fluffy','white');
 
 fluffy.speak();
+
+console.log(fluffy instanceof Cat); // true
+console.log(fluffy instanceof Animal); // true
 ```
