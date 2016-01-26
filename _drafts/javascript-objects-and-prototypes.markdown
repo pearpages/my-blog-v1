@@ -276,3 +276,39 @@ console.log(muffin.age); // 10
 
 // Why? Because of the pointers. They point to different objects when we do the Cat.prototype = {age: 5}, whe should have used Cat.prototype.age = 5 !!!
 ```
+
+### Multiple Levels of Inheritance
+
+All objects inherit from *Object* object.
+
+```javascript
+console.log(fluffy.__proto__);
+console.log(fluffy.__proto__.__proto__);
+console.log(fluffy.__proto__.__proto__.__proto__);
+```
+
+### Prototypapl Inheritcance Chains
+
+```javascript
+'use strict';
+
+function Animal() {
+	
+}
+
+Animal.prototype.speak = function () {
+	console.log('Grunt');
+};
+
+Cat.prototype = Object.create(Animal.prototype);
+
+function Cat(name,color) {
+	Animal.call(this); // parent constructor
+	this.name = name;
+	this.color = color;
+}
+
+var fluffy = new Cat('Fluffy','white');
+
+fluffy.speak();
+```
