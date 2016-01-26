@@ -202,7 +202,7 @@ display(cat.prototype);
 display(fluffy.__proto__); / both also display the same
 ```
 
-## Instance vs Prototype Properties
+### Instance vs Prototype Properties
 
 ```javascript
 function Cat(name,color) {
@@ -245,3 +245,34 @@ var muffin = new Cat('Muffin','brown');
 Object.keys(muffin); // name, color, getDescription
 ```
 
+### Changing a Function's Prototype
+
+Not always the object instances get the changes of the function prototype of their constructor function. See the following.
+
+```javascript
+'use strict';
+
+function Cat(name,color) {
+	this.name = name;
+	this.color = color;
+}
+
+Cat.prototype.age = 4;
+
+var fluffy = new Cat('Fluffy','white');
+var muffin = new Cat('Muffin','brown');
+
+Cat.prototype = {age: 5};
+
+console.log(fluffy.age); // 4 instead of 5
+console.log(muffin.age); // 4 instead of 5
+
+// But
+
+fluffy.__proto__.age = 10;
+
+console.log(fluffy.age); // 10
+console.log(muffin.age); // 10
+
+// Why? Because of the pointers. They point to different objects when we do the Cat.prototype = {age: 5}, whe should have used Cat.prototype.age = 5 !!!
+```
