@@ -185,6 +185,23 @@ An object's prototype is the object **instance** from which the object is inheri
 #### Examples
 
 ```javascript
+function Cat(name,color) {
+	this.name = name;
+	this.color = color;
+}
+
+var fluffy = new Cat('Fluffy','White');
+
+console.log(Cat.prototype); // empty
+console.log(fluffy.__proto__) // empty, is the same as the above
+console.log(Cat.prototype === fluffy.__proto__) // true
+
+Cat.prototype.age = 3;
+
+display(cat.prototype);
+display(fluffy.__proto__); / both also display the same
+
+
 ```
 
 
