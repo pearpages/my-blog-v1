@@ -200,8 +200,48 @@ Cat.prototype.age = 3;
 
 display(cat.prototype);
 display(fluffy.__proto__); / both also display the same
-
-
 ```
 
+## Instance vs Prototype Properties
+
+```javascript
+function Cat(name,color) {
+	this.name = name;
+	this.color = color;
+}
+
+var fluffy = new Cat('Fluffy','white');
+
+console.log(fluffy.hasOwnProperty('age')); // false
+
+for(var prop in fluffy){
+	console.log('prop'); // shows name,color,age
+}
+
+Cat.prototype.age = 3;
+
+var muffin = new Cat('Muffin','brown');
+muffin.age = 5;
+
+console.log(fluffy.hasOwnProperty('age')); // true, because we've added it
+
+console.log(fluffy.age); // 3
+console.log(muffin.age); // 5
+```
+
+If we put the function as part of the function
+
+```javascript
+function Cat(name,color) {
+	this.name = name;
+	this.color = color;
+	this.getDescription = function () {
+		return this.name + ' ' + this.color;
+	};
+}
+
+var muffin = new Cat('Muffin','brown');
+
+Object.keys(muffin); // name, color, getDescription
+```
 
