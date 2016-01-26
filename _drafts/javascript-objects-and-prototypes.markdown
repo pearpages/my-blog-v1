@@ -109,4 +109,28 @@ Once we change the property configurable to false it is impossible to put it to 
 ```javascript
 Object.defineProperty(car, 'doors', {configurable: false});
 Object.defineProperty(car, 'doors', {configurable: true}); // this does not work because of the prior sentence
+delete(car.doors); // won't work either
 ```
+
+## Getters and Setters
+
+```javascript
+Object.defineProperty(cat, 'fullName',
+	{
+		get: function() {
+			return this.name.first + ' ' + this.name.last
+		},
+		set: function(value) {
+			var nameParts = value.split(' ');
+			this.name.first = nameParts[0];
+			this.name.last = nameParts[1];
+		}
+	}
+});
+
+cat.fullName = 'Muffin Top';
+console.log(cat.fullName);
+console.log(cat.name.first);
+console.log(cat.name.last);
+```
+
