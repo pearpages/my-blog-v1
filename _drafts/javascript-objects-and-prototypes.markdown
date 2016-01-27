@@ -334,7 +334,6 @@ class Animal {
 	}
 }
 
-
 class Cat extends Animal {
 	constructor(name,color) {
 		super('Meow');
