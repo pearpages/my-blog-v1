@@ -70,7 +70,7 @@ AngularJS controllers have two primary duties in an application:
 
 Business logic that needs to be available to multiple controllers should not be placed in the controller but should instead be placed in AngularJS non-REST services.
 
-{% highlight javascript %}
+```javascript
 angular.module('addonsControllers',[])
     .controller('AddonsCtrl',['$scope','checkCreds','$location','AddonsList','$http','getToken',function AddonsCtrl($scope, checkCreds, $location, AddonsList, $http, getToken){
         if(checkCreds !== true){
@@ -90,7 +90,7 @@ angular.module('addonsControllers',[])
 
         $scope.addonsActiveClass = "active";
     }]);
-{% endhighlight %}
+```
 
 ## Rest Services
 

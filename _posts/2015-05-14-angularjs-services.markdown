@@ -19,12 +19,12 @@ categories: web javascript angularjs
 
 The **factory** way is the most commonly used method.
 
-{% highlight javascript %}
+```javascript
 angular.module('someServices',['ngResource'])
     .service('serviceLorem',[...])
     .provider('providerLorem',[...])
     .factory('factoryLorem'[...])
-{% endhighlight %}
+```
 
 ## Business Logic
 
@@ -45,7 +45,7 @@ It is also the job of the AngularJS application to direct the user to a login pa
 
 The $resource object is by far the easiest way to call REST services.
 
-{% highlight javascript %}
+```javascript
 'use strict';
 
     angular.module('myApp',[])
@@ -57,13 +57,13 @@ The $resource object is by far the easiest way to call REST services.
             delete: {method: 'DELETE', cache:false, isArray:false}
             });
         }]);
-{% endhighlight %}
+```
 
 ## Controller
 
 Theoretically we don't know when the REST service call will return results, but when it does, either the success callback function or the error callback function will be called.
 
-{% highlight javascript %}
+```javascript
     angular.module('myApp',[])
         .controller('myController',['$scope','$routeParams','myFactory',function($scope,$routeParams,myFactory){
             var id = $routeParams.id;
@@ -79,11 +79,11 @@ Theoretically we don't know when the REST service call will return results, but 
             );
         }]);
 
-{% endhighlight %}
+```
 
 ## Other Examples
 
-{% highlight javascript %}
+```javascript
 angular.module('myModule',[])
     .factory('User',['$resource',function ($resource){
         return $resource("./server/user/:id", {},{
@@ -93,22 +93,22 @@ angular.module('myModule',[])
         delete: {method: 'DELETE', cache: false, isArray: false}
         });
     }]);
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```javascript
 angular.module('myModule',[])
     .factory('UserList',['$resource',function ($resource){
         return $resource("./server/userList", {},{
         get: {method: 'GET', cache: false, isArray: true}
     });
     }]);
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```javascript
 angular.module('myModule',[])
     .factory('User',['$resource',function ($resource){
         return $resource("./server/login", {}, {
         login: {method: 'POST', cache: false, isArray: false}
         });
     }]);
-{% endhighlight %}
+```

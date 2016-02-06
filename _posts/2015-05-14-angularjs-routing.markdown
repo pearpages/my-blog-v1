@@ -11,7 +11,7 @@ Simple example about routing and vars through the url.
 
 Check the  **.when('/added-user/:user/:city'**
 
-{% highlight javascript %}
+```javascript
 //app.js
 angular.modlule('routerApp',['ngRoute'])
     .config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
@@ -29,13 +29,13 @@ angular.modlule('routerApp',['ngRoute'])
                 controller: 'AddedUserCtrl'
             });
     }]);
-{% endhighlight %}
+```
 
 ## controllers.js 
 
 Pay attention to the **$routeParams**
 
-{% highlight javascript %}
+```javascript
 //controllers.js
 angular.module('routerApp',[])
     .controller('AddedUserCtrl',['$scope','$routeParams', function($scope,$routeParams){
@@ -44,13 +44,13 @@ angular.module('routerApp',[])
         $scope.city = $routeParams.city;
 
     }]);
-{% endhighlight %}
+```
 
 ## added-user.html
 
-{% highlight html %}
+```javascript
 //added-user.html
 <div>User: {{name}}</div>
 <div>City: {{city}}</div>
-{% endhighlight %}
+```
 

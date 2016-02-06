@@ -88,7 +88,7 @@ A plugin interface is available for Cordova and native components to communicate
 * access
 * preference
 
-{% highlight xml %}
+```xml
 <widget id="com.example.hello" version="0.0.1">
         <name>HelloWorld</name>
         <description>
@@ -100,7 +100,7 @@ A plugin interface is available for Cordova and native components to communicate
         <content src="index.html" />
         <access origin="*" />
 </widget>
-{% endhighlight %}
+```
 
 #### 
 
@@ -112,13 +112,13 @@ A plugin interface is available for Cordova and native components to communicate
 
 ### Create the app
 
-{% highlight bash %}
+```bash
 $ cordova create hello com.exeample.hello HelloWorld -d
 # -d is for showing the progress
 # hello is the folder that should not exist
 # com.example.hello provides the project with a reverse domain-style identifier
 # HelloWorld is the application display title
-{% endhighlight %}
+```
 
 Its *www* subdirectory hosues the application's home page, along with various resources (css,js, img, ...). These assets will be stored on the device's local filesystem, not served remotely.
 
@@ -128,12 +128,12 @@ The **config.xml** file contains important metadata needed to generate and distr
 
 These commands affect the *platforms* directory.
 
-{% highlight bash %}
+```bash
 $ cordova platform add ios
 
 $ cordova platform ls
 # to check the current platforms
-{% endhighlight %}
+```
 
 The **www source** directory is reproduced (copied) within each platform's subdirectory, appearing for example in platforms/ios/www or platforms/android/assets/www. 
 
@@ -146,16 +146,16 @@ The files in this directory are routinely overwritten when preparing application
 By default, the cordova create script generates a skeletal web-based application whose home page is the project's **www/index.html** file. 
 Edit this application however you want, but any initialization should be specified as part of the **deviceready event handler**, referenced by default from www/js/index.js.
 
-{% highlight bash %}
+```bash
 $ cordova build
-{% endhighlight %}
+```
 
 ## Emulate 
 
-{% highlight bash %}
+```bash
 # you have to previously do the installation and config
 $ cordova emulate ios
-{% endhighlight %}
+```
 
 ## Add Plugin Features
 
@@ -173,7 +173,7 @@ This is the new default behavior. **Any plugins** you desire, even the core plug
 
 ### Operations with plugins
 
-{% highlight bash %}
+```bash
 # search
 $ cordova plugin serach bar code
 
@@ -194,11 +194,11 @@ $ cordova plugin add cordova-plugin-console@latest
 $ cordova plugin add cordova-plugin-console@0.2.1
 $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
 $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
-{% endhighlight %}
+```
 
 ## Help commands
 
-{% highlight bash %}
+```bash
 $ cordova help
 $ cordova # same
 
@@ -207,11 +207,11 @@ $ cordova run --help
 
 # info about the cordova installed
 $ cordova info
-{% endhighlight %}
+```
 
 ## Updating Cordova
 
-{% highlight bash %}
+```bash
 $ sudo npm update -g cordova
 
 # specific version
@@ -220,7 +220,7 @@ $ sudo npm install -g cordova@3.1.0-0.2.0
 # current installed
 $ npm info cordova
 $ cordova -v
-{% endhighlight %}
+```
 
 ## Storage
 
@@ -263,15 +263,15 @@ Each plugin class **must be registered** as a <feature> tag in the named applica
 
 Specify the plugin as a <feature> tag in your Cordova-iOS application's project's config.xml
 
-{% highlight xml %}
+```xml
 <feature name="LocalStorage">
     <param name="ios-package" value="CDVLocalStorage" />
 </feature>
-{% endhighlight %}
+```
 
 ### iOS Configuration
 
-{% highlight xml %}
+```xml
 <preference name="EnableViewportScale" value="true"/>
 <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
 <preference name="MediaPlaybackRequiresUserAction" value="true"/>
@@ -286,17 +286,17 @@ Specify the plugin as a <feature> tag in your Cordova-iOS application's project'
 <preference name="PaginationMode" value="unpaginated"/>
 <preference name="UIWebViewDecelerationSpeed" value="fast" />
 <preference name="ErrorUrl" value="myErrorPage.html"/>
-{% endhighlight %}
+```
 
 ### Deploy tools
 
-{% highlight bash %}
+```bash
 $ npm install -g ios sim
 $ npm install -g ios-deploy
 
 # deploy the app on a connected iOS device:
 $ cordova run ios --device
-{% endhighlight %}
+```
 
 ## The config.xml file
 

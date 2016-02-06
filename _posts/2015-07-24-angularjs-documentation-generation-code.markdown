@@ -32,9 +32,9 @@ This is the most important link, clear example of how to do it:
 
 The flavour of jsdoc used by AngularJS is called ngdoc and is parsed by a Node.js utility called Dgeni. The documentation is best built using grunt:
 
-{% highlight javascript %}
+```javascript
 grunt package
-{% endhighlight %}
+```
 
 > This will generate all the AngularJS distribution files and also the documentation. Look for them inside /build/docs.
 
@@ -42,9 +42,9 @@ grunt package
 
 n the project you want to document you install Dgeni by running:
 
-{% highlight bash %}
+```bash
 $ npm install dgeni --save-dev
-{% endhighlight %}
+```
 
 This will install Dgeni and any modules that Dgeni depends upon.
 
@@ -78,29 +78,29 @@ Everything in dgeni is an injectable component created by a **factory function**
 
 **processors**, **services**, **config** and **templates** are grouped into **packages**.
 
-{% highlight javascript %}
+```javascript
 var p = new Package('docPackage',['jsdoc']).
         .factory(require('./services/myService')
         .config(function(templateFinder){
                 templateFinder.tempateFolders = ['./templates'];
         });
-{% endhighlight %}
+```
 
 ### Defining servicies
 
 Simply export a factory function from a module.
 
-{% highlight javascript %}
+```javascript
 module.exports = function log(){
         return function(message){
                 console.log(message);
         };
 };
-{% endhighlight %}
+```
 
 ### Processors
 
-{% highlight javascript %}
+```javascript
 module.exports = function filterNgDocsProcessor(log){
         return {
                 $runAfter: ['tags-parsed'],
@@ -114,11 +114,11 @@ module.exports = function filterNgDocsProcessor(log){
                 }
         };
 }
-{% endhighlight %}
+```
 
 ## Running dgeni
 
-{% highlight javascript %}
+```javascript
 var Dgeni = require('dgeni');
 var myPackage = require('./myPackage');
 var dgeni = new Dgeni([myPackage]);
@@ -126,7 +126,7 @@ var dgeni = new Dgeni([myPackage]);
 dgeni.generate().then(function (){
         //...
 });
-{% endhighlight %}
+```
 
 ## dgeni-packages
 

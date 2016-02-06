@@ -23,7 +23,7 @@ Javascript allows an array to contain a **mixture of values**.
 
 ## Array Literals
 
-{% highlight javascript %}
+```javascript
 var empty = [];
 
 var numbers = [
@@ -35,63 +35,63 @@ numbers[1]; //'one'
 
 empty.length; //0
 numbers.length; //10
-{% endhighlight %}
+```
 
 ## Length
 
-{% highlight javascript %}
+```javascript
 var myArray = [];
 myArray.length; //0
 
 myArray[1000000] = true;
 myArray.length // 1000001
 
-{% endhighlight %}
+```
 
 The length can be set explicitly. Making the length larger does not allocate more space for the array. Making the length smaller will cause all properties with a subscript that is greater than or equal to the new length to be deleted.
-{% highlight javascript %}
+```javascript
 var numbers = ['one','two']
 
 numbers[numbers.length] = 'new'; // 'one','two','new'
 //or
 numbers.push('another'); //'one','two','new','another'
-{% endhighlight %}
+```
 
 ## Delete
 
-{% highlight javascript %}
+```javascript
 //delete 1 element from position 2
 var numbers = [1,2,3,4];
 numbers.splice(2,1); // 1,2,4
 
 numbers.length = 2; //1,2
-{% endhighlight %}
+```
 
 ## Enumeration
 
-{% highlight javascript %}
+```javascript
 var i;
 for (i = 0; i < myArray.length; i += 1) {
         document.writeln(myArray[i]);
 }
-{% endhighlight %}
+```
 
 ## Checking if is Array
 
 In the same window or frame.
 
-{% highlight javascript %}
+```javascript
 var is_array = function (value) {
         //we check if it's falsy because typeof null give us 'object'
         return value && 
         typeof value === 'object' &&
         value.constructor === Array;
 };
-{% endhighlight %}
+```
 
 In a different window or same.
 
-{% highlight javascript %}
+```javascript
 var is_array = function (value) {
         return value &&
         typeof value === 'object' &&
@@ -99,7 +99,7 @@ var is_array = function (value) {
         typeof value.splice === 'function' &&
         !(value.propertyIsEnumerable('length'));
 };
-{% endhighlight %}
+```
 
 ## Methods
 

@@ -51,12 +51,12 @@ nodemon and grunt plugin
 
 Embed tests in the page itself.
 
-{% highlight bash %}
+```bash
 #save it in the package.json, only dev environment
 npm install --save-dev mocha
 #save it in the package.json
 npm install --save mocha
-{% endhighlight %}
+```
 
 ### chai assertion library
 
@@ -108,14 +108,14 @@ npm install --save mocha
 * res.render //content
 * req.query, req.session, req.cookie/req.signedCookies
 
-{% highlight javascript %}
+```javascript
 app.get('/greeting', function(req, res){ res.render('about', {
                 message: 'welcome',
                 style: req.query.style,
                 userid: req.cookie.userid,
                 username: req.session.username,
 }); });
-{% endhighlight %}
+```
 
 ## Other pages and concepts
 * themeforest

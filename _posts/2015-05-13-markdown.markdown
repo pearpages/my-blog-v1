@@ -14,14 +14,14 @@ For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https:
 
 ## Headers
 
-{% highlight PHP %}
+```php
 # H1
 ## H2
 ### H3
 #### H4
 ##### H5
 ###### H6
-{% endhighlight %}
+```
 
 # H1
 
@@ -39,10 +39,10 @@ For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https:
 
 ## Text
 
-{% highlight PHP %}
+```php
 *emphasis*
 **bold**
-{% endhighlight %}
+```
 
 *emphasis*
 
@@ -52,7 +52,7 @@ For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https:
 
 ## Lists
 
-{% highlight PHP %}
+```php
 1. blah
     1. bleh
     2. bloh
@@ -64,7 +64,7 @@ For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https:
         + bluh
 * bleh
 * bloh
-{% endhighlight %}
+```
 
 1. blah
     1. bleh
@@ -82,16 +82,16 @@ For a complete Cheatsheet check this link [Markdown Cheatsheet by adam-p](https:
 
 ## Separator
 
-{% highlight PHP %}
+```php
 ---
-{% endhighlight %}
+```
 
 ---
 
 ## Code
 
-{% highlight PHP %}
+```php
 <?php
 echo 'Hello World!';
-{% endhighlight %}
+```
 

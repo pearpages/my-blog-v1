@@ -10,7 +10,10 @@ github_username:  pearpages
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+
+kramdown:
+    input: GFM
+highlighter: rouge
 timezone: Europe/Madrid
 excerpt_separator: "" 
 gems:

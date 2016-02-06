@@ -36,7 +36,7 @@ A Jasmine test double offers features like these:
 * Stub a return value
 * Pass a call to the underlying function
 
-{% highlight javascript %}
+```javascript
 jasmine.spyOn(objectUnderTest,'someFunction')
 .and
 .returnValue('stubbed value');
@@ -49,7 +49,7 @@ var callArgs = objectUnderTest.someFunction.call.argsFor(0);
 console.log(callArgs); //['param1','param2']
 console.log(objectUnderTest.someFunction.count); //2
 console.log(objectUnderTest.someFunction()); //'stubbed value'
-{% endhighlight %}
+```
 
 ## Builder pattern
 
@@ -57,7 +57,7 @@ console.log(objectUnderTest.someFunction()); //'stubbed value'
 
 We create a **single** consistent object.
 
-{% highlight javascript %}
+```javascript
 var carBuilder = function (){
         var _resultCar = {
         	id: 1,
@@ -83,7 +83,7 @@ var carBuilder = function (){
 var myCar = carBuilder.setOwner('James')
 .setDateTime(new Date())
 .build();
-{% endhighlight %}
+```
 
 ## Javascript testing frameworks
 
@@ -98,19 +98,19 @@ var myCar = carBuilder.setOwner('James')
 * expect
 * toBeTruthy
 
-{% highlight javascript %}
+```javascript
 describe('when testing karma', function (){
         it('should report a successful test', function (){
                 expect(true).toBeTruthy();
         });
 });
-{% endhighlight %}
+```
 
 ### Angular mocks
 
 > The ngMock module provides support to inject and mock Angular services into unit tests. In addition, ngMock also extends various core ng services such that they can be inspected and controlled in a synchronous manner within test code.
 
-{% highlight Bash %}
+```bash
 $ bower install angular-mocks
-{% endhighlight %}
+```
 

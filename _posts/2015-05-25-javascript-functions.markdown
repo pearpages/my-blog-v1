@@ -41,11 +41,11 @@ A function literal has four parts:
 * set of parameters
 * set of statements
 
-{% highlight javascript %}
+```javascript
 function optionalNameOfTheFunction(param1, param2){
  //statements 
 }
-{% endhighlight %}
+```
 
 An inner function also enjoys access to the parameters and variables of the functions it is nested within. The function object created by a function literal contains **a link to that outer context**. This is called *closure*.
 
@@ -66,7 +66,7 @@ There are four patterns of invocation in Javascript. The patterns differ in how 
 
 When a function is stored as a property of an object, we call it *method*.
 
-{% highlight javascript %}
+```javascript
 var myObject = {
         value:0,
         increment: function(inc){
@@ -75,7 +75,7 @@ var myObject = {
 };
  myObject.increment(); //1
  myObject.increment(3); //4
-{% endhighlight %}
+```
 
 The binding of this to the object happens at **invocation time**.
 
@@ -85,19 +85,19 @@ Methods that get their object context from this are called *pubic methods*.
 
 When a function is invoked with this pattern, **this** is bound to the global object.
 
-{% highlight javascript %}
+```javascript
 function add(param1, param2){
         return param1 + param2;
 }
 
 var sum = add(3,6); //9
-{% endhighlight %}
+```
 
 A consequence of this error is that a method cannot employ an inner function to help it do its work because the inner function does not share the method's acceses to the object as it its **this** is bound to the wrong value.
 
 By convention, we use **that**
 
-{% highlight javascript %}
+```javascript
 //no problem with this
 var myObject = {
         value:2,
@@ -118,7 +118,7 @@ myObject.double = function (){
 };
 myObject.double();
 console.log(myObject.getValue()); //4
-{% endhighlight %}
+```
 
 ### The Constructor Invocation Pattern
 
@@ -126,7 +126,7 @@ Objects can inherit properties directly from other objects. The language is **cl
 
 If a function is invoked with the **new** prefix, then a new object will be created with a hidden link to the value of the function's *prototype* member, and *this* will be bound to that new object.
 
-{% highlight javascript %}
+```javascript
 var Quo = function (string){
         this.status = string;
 }
@@ -140,7 +140,7 @@ var myOtherQuo = new Quo("more confused");
 
 console.log(myQuo.getStatus());
 console.log(myOtherQuo.getStatus());
-{% endhighlight %}
+```
 
 Functions that are intended to be used with the **new** prefix are called **constructors**. By convention, they are kept in variables with **capitalized** name.
 
@@ -154,7 +154,7 @@ It lets us construct an array of arguments to sue to invoke a function. It also 
 
 The first parameter is the value of *this* the second are the arguments.
 
-{% highlight javascript %}
+```javascript
 function add (param1,param2){
         return param1 + param2;
 }
@@ -162,9 +162,9 @@ function add (param1,param2){
 var array = [3,4];
 var sum = add.apply(null,array); //sum is 7
 
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```javascript
 var Quo = function (string){
         this.status = string;
 }
@@ -180,12 +180,12 @@ var statusObject = {
 var status = Quo.prototype.getStatus.apply(statusObject); // 'OK'
 
 
-{% endhighlight %}
+```
 
 ## Arguments
 
 A bonus parameter that is available to functions when they are invoked is the *arguments* array (in fact it is an array-like object, it lacks all of the array  methods but length).
-{% highlight javascript %}
+```javascript
 
 var sum = function (){
         var i, sum 0;
@@ -196,7 +196,7 @@ var sum = function (){
 };
 
 console.log(sum(4,8,15,16,23,42)); //108
-{% endhighlight %}
+```
 
 ## Return
 
@@ -207,7 +207,7 @@ then this (the new object) is returned instead.
 
 ## Exceptions
 
-{% highlight javascript %}
+```javascript
 var add = function (a, b) {
         if (typeof a !== 'number' || typeof b !== 'number') {
                 throw {
@@ -228,7 +228,7 @@ var try_it = function ( ) {
 
 try_it( );
 
-{% endhighlight %}
+```
 
 ## Augmenting Types
 
@@ -237,14 +237,14 @@ JavaScript allows the basic types of the language to be augmented. This also wor
 By augmenting the basic types, we can make significant improvements to the expressiveness of the language. Because of the dynamic nature of JavaScript's prototypal inheritance, all values are immediately endowed with the new methods, even values that were created before the methods were created.
 
 One defensive technique is to add a method only if the method is known to be missing:
-{% highlight javascript %}
+```javascript
         // Add a method conditionally.
         Function.prototype.method = function (name, func) {
                 if (!this.prototype[name]) {
                         this.prototype[name] = func;
                 }
         };
-{% endhighlight %}
+```
 
 ## Recursion
 
@@ -264,7 +264,7 @@ Inner functions get access to the parameters and variables of the functions they
 
 In the following example we are not assigning a function, we are assigning the result of invoking that function. The inner function has a longer lifetime than its outer function.  *Value* variable is always available to *increment* and *getValue* methods, but the function's scope keeps it hidden from the rest of the program.
 
-{% highlight javascript %}
+```javascript
 //We are not assigining a function to *myObject*. We are assigning the result of invoking that function
 var myObject = function (){
         var value = 0;
@@ -278,7 +278,7 @@ var myObject = function (){
                 }
         };
 }();
-{% endhighlight %}
+```
 
 The function returns an object containing two methods, and those methods continue to enjoy the privilege of access to the value variable.
 
@@ -286,12 +286,12 @@ The function returns an object containing two methods, and those methods continu
 
 We pass a function parameter to the send_request_asynchronously function that will be called when the response is available.
 
-{% highlight javascript %}
+```javascript
 request = prepare_the_request( );
 send_request_asynchronously(request, function (response) {
         display(response);
 });
-{% endhighlight %}
+```
 
 ## Module
 

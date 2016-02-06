@@ -67,7 +67,7 @@ The simple types of Javascript are
 
 ### Object Literals
 
-{% highlight javascript %}
+```javascript
 var empty_object = {};
 
 var stooge = {
@@ -89,19 +89,19 @@ var flight = {
 		city: "Los Angeles"
 	}
 };
-{% endhighlight %}
+```
 
 ### Retrieval
-{% highlight javascript %}
+```javascript
 //Both ways are correct but the second one is preferred
 var var1 = stooge['first-name'];
 var var2 = flight.deaprture.IATA;
-{% endhighlight %}
+```
 
 ### Default Values
-{% highlight javascript %}
+```javascript
 var status = flight.status || "unknown";
-{% endhighlight %}
+```
 
 Attempting to retrieve values from *undefined* will trhow a **TypeError** exception.
 
@@ -128,15 +128,15 @@ Usually it's very helpfu to use **typeof**. But scare must be taken because any 
 
 It returns true if the object has a particular property. The *hasOwnProperty* does not look at the prototype chain.
 
-{% highlight javascript %}
+```javascript
 myObject.hasOwnProperty('propertyName');
-{% endhighlight %}
+```
 
 ### Enumeration
 
 The for in statement can loop over all of the property names in an object. The enumeration will include all of the properties **including functions and prototype properties**. If you want to filter out these values you have to use the **hasOwnProperty**.
 
-{% highlight javascript %}
+```javascript
 var propertyName;
 for(propertyName in myObject){
 	if(typeof myObject[propertyName] !== 'function' && myObject.hasOwnProperty(propertyName)){
@@ -144,10 +144,10 @@ for(propertyName in myObject){
 	}
 	
 }
-{% endhighlight %}
+```
 
 If we want a specific order whe need an **array**.
-{% highlight javascript %}
+```javascript
 var i;
 var properties = [
 	'first-name',
@@ -158,7 +158,7 @@ var properties = [
 for(i = 0; i < properties.length; i +=1 ){
 	document.writeln(properties[i] + ': ' myObject[properties[i]]);
 }
-{% endhighlight %}
+```
 
 ### Delete
 
@@ -166,17 +166,17 @@ The delete operator can be used to remove a property from an object.
 
 Removing a property from an object may allow a property from the prototype linkage to shine through.
 
-{% highlight javascript %}
+```javascript
 delete myObject.propertyOne;
-{% endhighlight %}
+```
 
 ### Global Abatement
 
 One way to minimize the use of global bariables is to create a single global variable for your application:
 
-{% highlight javascript %}
+```javascript
 var MYAPP = {};
-{% endhighlight %}
+```
 
 ## Methods
 

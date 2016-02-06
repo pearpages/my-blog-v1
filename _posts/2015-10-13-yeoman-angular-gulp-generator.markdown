@@ -21,7 +21,7 @@ Lets you quickly set up a project with:
 
 ### Install & Run
 
-{% highlight bash %}
+```bash
 # Installing yeoman, gulp and bower
 $ npm install -g yo gulp bower
 
@@ -30,7 +30,7 @@ $ npm install -g generator-gulp-angular
 
 # run
 yo gulp-angular
-{% endhighlight %}
+```
 
 ## Yo options
 `yo gulp-angular --help` or `yo gulp-angular -h` for help. All options are not required. If not provided, default values will be used.

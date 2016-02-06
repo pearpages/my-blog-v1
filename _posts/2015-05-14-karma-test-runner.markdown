@@ -15,7 +15,7 @@ Karma will be located under the *node_modules* folder within our project. Any ot
 
 Karma requires a configuration file named *karma.conf.js*
 
-{% highlight javascript %}
+```javascript
 module.exports = function (config){
         config.set({
             basePath: '../',
@@ -27,4 +27,4 @@ module.exports = function (config){
             plugins: []
         });
 }
-{% endhighlight %}
+```

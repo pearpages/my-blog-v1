@@ -34,9 +34,9 @@ When running in debug mode, Symfony runs slower, but your changes are reflected 
 > A bundle is nothing more than a directory that houses everything related to a specific feature, including PHP classes, configuration, and even stylesheets and JavaScript files.
 
 example
-{% highlight Bash %}
+```bash
 $ php app/console generate:bundle --namespace=Acme/DemoBundle --format=yml
-{% endhighlight %}
+```
 
 Behind the scenes:
 
@@ -47,17 +47,17 @@ Behind the scenes:
 
 By default, the routing configuration file in a Symfony application is located at *app/config/routing.yml*.
 
-{% highlight YAML %}
+```yaml
 # src/Acme/DemoBundle/Resources/config/routing.yml
 random:
     path:     /random/{limit}
     defaults: { _controller: AcmeDemoBundle:Random:index }
-{% endhighlight %}
+```
 
 
 ## Create the Controller
 
-{% highlight PHP %}
+```php
 <?php
 // src/Acme/DemoBundle/Controller/RandomController.php
 namespace Acme\DemoBundle\Controller;
@@ -73,11 +73,11 @@ class RandomController
         );
     }
 }
-{% endhighlight %}
+```
 
 ## Create the template
 
-{% highlight php %}
+```php
 <?php
 // src/Acme/DemoBundle/Controller/RandomController.php
 namespace Acme\DemoBundle\Controller;
@@ -102,16 +102,16 @@ class RandomController extends Controller
         // );
     }
 }
-{% endhighlight %}
+```
 
 Paying attention to:
-{% highlight php %}
+```php
 <?php
 return $this->render(
             'AcmeDemoBundle:Random:index.html.twig',
             array('number' => $number)
         );
-{% endhighlight %}
+```
 
 **AcmeDemoBundle:Random:index.html.twig**
 
@@ -119,16 +119,16 @@ return $this->render(
 
 > /path/to/BundleName/Resources/views/ControllerName/TemplateName
 
-{% highlight php %}
+```php
 <!-- src/Acme/DemoBundle/Resources/views/Random/index.html.php -->
 <?php $view->extend('::base.html.php') ?>
 
 Number: <?php echo $view->escape($number) ?>
-{% endhighlight %}
+```
 
 
 
-{% highlight php %}
+```php
 <!-- app/Resources/views/base.html.php -->
 <!DOCTYPE html>
 <html>
@@ -144,7 +144,7 @@ Number: <?php echo $view->escape($number) ?>
         <?php $view['slots']->output('javascripts') ?>
     </body>
 </html>
-{% endhighlight %}
+```
 
 ## The Directory Structure
 
@@ -183,12 +183,12 @@ The front controller file (**app.php** in this example) is the actual PHP file t
 
 The class name and path to the file have to follow the same pattern:
 
-{% highlight php %}
+```php
 Class Name:
     Acme\DemoBundle\Controller\RandomController
 Path:
     src/Acme/DemoBundle/Controller/RandomController.php
-{% endhighlight %}
+```
 
 ## What is a bundle?
 
@@ -198,7 +198,7 @@ A bundle is simply a structured set of files within a directory that implement a
 
 ## Creating a Bundle
 
-{% highlight php %}
+```php
 <?php
 // src/Acme/TestBundle/AcmeTestBundle.php
 namespace Acme\TestBundle;
@@ -208,11 +208,11 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 class AcmeTestBundle extends Bundle
 {
 }
-{% endhighlight %}
+```
 
 ### Registering the Bundle
 
-{% highlight php %}
+```php
 <?php
 // app/AppKernel.php
 public function registerBundles()
@@ -226,13 +226,13 @@ public function registerBundles()
 
     return $bundles;
 }
-{% endhighlight %}
+```
 
 ### Creating the Bundle automatically
 
-{% highlight Bash %}
+```bash
 $ php app/console generate:bundle --namespace=Acme/TestBundle
-{% endhighlight %}
+```
 
 This does
 
@@ -253,11 +253,11 @@ But you still have to **register** the bundle!
 
 ## Default Configuration Dump
 
-{% highlight Bash %}
+```bash
 $ app/console config:dump-reference FrameworkBundle
 # The extension alias (configuration key) can also be used:
 $ app/console config:dump-reference framework
-{% endhighlight %}
+```
 
 ## Environments
 
@@ -267,16 +267,16 @@ $ app/console config:dump-reference framework
 
 > Since the prod environment is optimized for speed; the configuration, routing and Twig templates are compiled into flat PHP classes and cached. When viewing changes in the prod environment, **you'll need to clear these cached files** and allow them to rebuild:
 
-{% highlight php %}
+```php
 $ php app/console cache:clear --env=prod --no-debug
-{% endhighlight %}
+```
 
 > The **test** environment is used when running automated tests and **cannot be accessed directly through the browser**.
 
 ### Configuration
 
 The **AppKernel** class is responsible for actually loading the configuration file of your choice.
-{% highlight YAML %}
+```yaml
 # app/config/config_dev.yml
 imports:
     - { resource: config.yml }
@@ -286,4 +286,4 @@ framework:
     profiler: { only_exceptions: false }
 
 # ...
-{% endhighlight %}
+```

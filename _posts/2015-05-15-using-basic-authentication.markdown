@@ -17,7 +17,7 @@ All moden browsers store cookies mapped to a particular domain. Cookie access is
 
 ## Factory
 
-{% highlight javascript %}
+```javascript
 angular.module('yoAngBlogApp')
  .factory('Credentials', ['$cookies',function ($cookies) {
 
@@ -59,11 +59,11 @@ angular.module('yoAngBlogApp')
     }
   };
 }]);
-{% endhighlight %}
+```
 
 ## Controller
 
-{% highlight javascript %}
+```javascript
 angular.module('myApp')
   .controller('NewPostCtrl',['$scope','$http','$location','Credentials','blogPost',function ($scope,$http,$location,Credentials,myResource) {
     
@@ -77,4 +77,4 @@ angular.module('myApp')
             console.log('Error: ' + errorResponse);
             });
   }]);
-{% endhighlight %}
+```

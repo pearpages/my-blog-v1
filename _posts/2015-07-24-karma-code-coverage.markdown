@@ -26,11 +26,11 @@ Karma can generate code coverage using awesome Istanbul. If you want to generate
 
 The preprocessor configures which files should be tested for coverage.
 
-{% highlight javascript %}
+```javascript
 preprocessors = {
   'www/js/**/*.js': 'coverage'
 };
-{% endhighlight %}
+```
 
 ### Important
 
@@ -40,9 +40,9 @@ preprocessors = {
 
 To activate the coverage reporter add this to your configuration file.
 
-{% highlight javascript %}
+```javascript
         reporters = ['coverage'];
-{% endhighlight %}
+```
 
 This will create a coverage report for every browser that the tests are run in. In addition, it will create a JSON file that outputs the intermediate data.
 
@@ -50,29 +50,29 @@ This will create a coverage report for every browser that the tests are run in. 
 
 The reporter defaults to the following values.
 
-{% highlight javascript %}
+```javascript
 coverageReporter = {
   type : 'html',
   dir : 'coverage/'
 }
-{% endhighlight %}
+```
 
 ## Other
 
 To make it work I needed to change the **karma.conf.js**.
 
-{% highlight javascript %}
+```javascript
 // the plugins I am pusing
 plugins: [
       "karma-phantomjs-launcher",
       "karma-jasmine",
       "karma-coverage"
     ],
-{% endhighlight %}
+```
 
 Obviously installing everything
 
-{% highlight bash %}
+```bash
 $ npm install -g istanbul
 $ npm install -g karma-coverage
-{% endhighlight %}
+```

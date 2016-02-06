@@ -21,11 +21,11 @@ categories: javascript angularjs
 
 "Book" resource example
 
-{% highlight javascript %}
+```javascript
 angular.module('myApp.services').factory('Book', function($resource) {
   return $resource('/api/entries/:id'); // Note the full endpoint address
 });
-{% endhighlight %}
+```
 
 Methods from the resource
 
@@ -35,7 +35,7 @@ Methods from the resource
 * remove()
 * delete()
 
-{% highlight javascript %}
+```javascript
 angular.module('myApp.controllers',[]);
  
 angular.module('myApp.controllers').controller('ResourceController',function($scope, Entry) {
@@ -55,7 +55,7 @@ angular.module('myApp.controllers').controller('ResourceController',function($sc
     //data saved. do something here.
   }); //saves an entry. Assuming $scope.entry is the Entry object  
 });
-{% endhighlight %}
+```
 
 ## get()
 
@@ -83,15 +83,15 @@ The second argument is a callback which is executed when the data arrives from t
 * $delete()
 * $remove()
 
-{% highlight javascript %}
+```javascript
 $scope.book = new Book(); //this object now has a $save() method
 $scope.book.$save(function() {
   //data saved. $scope.entry is sent as the post body.
 });
-{% endhighlight %}
+```
 
 ** $update() **
-{% highlight javascript %}
+```javascript
 angular.module('myApp.services').factory('Book', function($resource) {
   return $resource('/api/books/:id', { id: '@_id' }, {
     update: {
@@ -99,13 +99,13 @@ angular.module('myApp.services').factory('Book', function($resource) {
     }
   });
 });
-{% endhighlight %}
+```
 
 Setting it to **@_id** means whenever we will call methods like **$update()** and **$delete()** on the resource instance, the value of **:id** will be set to the _id property of the instance. This is useful for **PUT** and **DELETE** requests. Also note the third argument. This is a hash that allows us to add any custom methods to the resource class. If the method issues a non-GET request it's made available to the $resource instance with a **$** prefix.
 
 Assuming we are in the controller
 
-{% highlight javascript %}
+```javascript
 $scope.book = Book.get({ id: $scope.id }, function() {
   // $scope.book is fetched from server and is an instance of Book
   $scope.book.data = 'something else';
@@ -113,7 +113,7 @@ $scope.book = Book.get({ id: $scope.id }, function() {
     //updated in the backend
   });
 });
-{% endhighlight %}
+```
 
 It does:
 
@@ -123,7 +123,7 @@ It does:
 
 ## $delete()
 
-{% highlight javascript %}
+```javascript
 $scope.book = Book.get({ id: $scope.id }, function() {
   // $scope.book is fetched from server and is an instance of Book
   $scope.book.data = 'something else';
@@ -131,6 +131,6 @@ $scope.book = Book.get({ id: $scope.id }, function() {
     //gone forever!
   });
 });
-{% endhighlight %}
+```
 
 It follows the same steps as above, except the request type is DELETE instead of PUT.

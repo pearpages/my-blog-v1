@@ -9,7 +9,7 @@ Protractor is a **Node.js-based** framework, just like Karma.
 
 Protractor is build on top of **WebDriverJS**. The Protractor team recomends installing it **globally** on your system.
 
-{%highlight javascript %}
+```javascript
 npm install -g protractor
 //g for globally
 
@@ -18,11 +18,11 @@ webdriver-manager update
 
 //start the Selenium Server that WebDriverJS usese to run Protractor test scripts
 webdriver-manager start
-{% endhighlight %}
+```
 
 ## conf.js
 
-{%highlight javascript %}
+```javascript
 exports.config = {
 	seleniumAddress: 'http//localhost:4444/wd/hub',
 	specs: ['blog-spec.js']
@@ -32,6 +32,6 @@ exports.config = {
 
 //then we run
 protractor conf.js
-{% endhighlight %}
+```
 
 Protractor can be integrated with *continous integration* (CI) build systems like Travis CI and Jenkins.

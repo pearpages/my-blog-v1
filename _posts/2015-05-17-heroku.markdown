@@ -20,37 +20,37 @@ author: Pere Pages
 
 I am going to create an app. I use my nickname as a namespace.
 
-{% highlight bash %}
+```bash
 #create remote
 heroku create pearpages-test-app
 #deploy the code, same code for pushing changes
 git push heroku master
-{% endhighlight %}
+```
 
 ## Run and instance and open it
 
-{% highlight  bash %}
+```bash
 heroku ps:scale web=1
 heroku open
 #view logs
 heroku logs
-{% endhighlight %}
+```
 
 ## Define a Procfile
 
 > Use a Procfile, a text file in the root directory of your application, to explicitly declare what command should be executed to start your app.
 
-{% highlight  bash %}
+```bash
 web: node index.js
-{% endhighlight %}
+```
 
 > This declares a single process type, **web**, and the command needed to run it.
 
 ## Run the app locally
 
-{% highlight  bash %}
+```bash
 foreman start web
-{% endhighlight %}
+```
 
 > Just like Heroku, Foreman examines the **Procfile** to determine what to run.
 
@@ -58,15 +58,15 @@ foreman start web
 
 When the console starts, it has nothing loaded other than the *Nodee.js* standard library. From here you can ```require``` some of your application files.
 
-{% highlight  bash %}
+```bash
 heroku run node
-{% endhighlight %}
+```
 
 ## How to Create an Angular App Using Yeoman and Deploy It to Heroku
 
 The point here is to tell heroku to run an static server. This is the key code to accomplish this:
 
-{% highlight javascript %}
+```javascript
 var gzippo = require('gzippo');
 var express = require('express');
 var morgan = require('morgan');
@@ -75,7 +75,7 @@ var app = express();
 app.use(morgan('dev'));
 app.use(gzippo.staticGzip("" + __dirname + "/dist"));
 app.listen(process.env.PORT || 5000);
-{% endhighlight %}
+```
 
 Read the follow post to understand it:
 

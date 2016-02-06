@@ -9,7 +9,7 @@ categories: javascript angularjs
 
 Two or more controllers can be applied to the same element, and we can use **controller as** to identify each controller.
 
-{% highlight html %}
+```javascript
 <form ng-submit="user.submit()" ng-controller="AddUserCtrl as user">
     
     <div>
@@ -25,7 +25,7 @@ Two or more controllers can be applied to the same element, and we can use **con
     </div>
 
 </form>
-{% endhighlight %}
+```
 ### Directives
 
 * ng-submit
@@ -37,24 +37,24 @@ Automatically prevents the brower from doing its defualt *METHOD* action when it
 
 ## The Controller
 
-{% highlight javascript %}
+```javascript
 app.controller('AddUserCtrl',['$scope','$location',function($scope,$location){
     $scope.sumbit = function(){
         $location.path('/addedUser/' + $scope.name + '/' + $scope.city);
     };
 }]);
-{% endhighlight %}
+```
 
 ## Validate a form
 
 Disable a button because the form is not valid
 
-{% highlight javascript %}
+```javascript
 <form name="addUserForm" ng-controller="myController">
 ...
 <button ng-click="addUser()" ng-disabled="!addUserForm.$valid">Submit</button>
 </form>
-{% endhighlight %}
+```
 
 ## $watch
 
@@ -62,11 +62,11 @@ When not only the users  update a particular input we might need to keep track o
 
 You can call **$watch()** with an expression to observe and a callback that gets invoked whenever the expression changes.
 
-{% highlight javascript %}
+```javascript
 $scope.$watch('myObject.myValue', myCallback);
 
 //$watch(watchFn, watchAction, deepWatch)
-{% endhighlight %}
+```
 
 * watchFn
 * watchAction

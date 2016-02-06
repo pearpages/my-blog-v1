@@ -32,7 +32,7 @@ Because Browsers ara agressive about loading images parallel to other content. A
 
 **ng-class** examples
 
-{% highlight html %}
+```javascript
 <style>
     .warning{
         background-color: yellow;
@@ -49,9 +49,9 @@ Because Browsers ara agressive about loading images parallel to other content. A
     <button ng-click="showError()">Simulate Error</button>
     <button ng-click="showWarning()">Simulate Warning</button>
 </div>
-{% endhighlight %}
+```
 
-{% highlight javascript %}
+```javascript
 function HeaderController($scope){
     $scope.isError = false;
     $scope.isWarning = false;
@@ -68,7 +68,7 @@ function HeaderController($scope){
         $scope.isError = false;
     };
 }
-{% endhighlight %}
+```
 
 ## Creating Directives
 
@@ -94,7 +94,7 @@ For e.g. myAppCalendar
 ### Code Example
 
 #### Directive
-{% highlight javascript %}
+```javascript
 angular.module('myApp')
   .directive('myMenu', function () {
     return {
@@ -104,9 +104,9 @@ angular.module('myApp')
         scope.label = attrs.menuTitle;
     }};
   });
-{% endhighlight %}
+```
 
 #### In the View
-{% highlight html %}
+```javascript
 <div blg-menu menu-title="AngularJS Blog"></div>
-{% endhighlight %}
+```

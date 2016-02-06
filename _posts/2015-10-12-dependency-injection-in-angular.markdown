@@ -32,7 +32,7 @@ As we write components dependent upon other objects or libraries, **we will desc
 
 ## Example
 
-{% highlight javascript %}
+```javascript
 //Constructor
 function SomeClass(greeter){
     this.greeter = greeter;
@@ -40,7 +40,7 @@ function SomeClass(greeter){
 SomeClass.prototype.greetName = function (name){
     this.greeter.greet(name);
 }
-{% endhighlight %}
+```
 
 In order to get that **greeter** instance into **SomeClass**, the creator of **SomeClass** is responsible for passing in the **SomeClass** dependencies when it's created.
 
@@ -50,7 +50,7 @@ Angular uses the **$injector** for managing lookups and instantiation of depende
 
 When any of our modules boot up at run time, the **injector** is responsible for actually instantiating 
 
-{% highlight javascript %}
+```javascript
 angular.module('myApp', [])
     .factory('greeter', function (){
         return {
@@ -63,21 +63,21 @@ angular.module('myApp', [])
             greeter.greet("Hello!");
     };
     });
-{% endhighlight %}
+```
 
-{% highlight html %}
+```javascript
 <div ng-app="myApp">
     <div ng-controller="MyController">
         <button ng-click="sayHello()">Hello</button>
     </div>
 </div>
-{% endhighlight %}
+```
 
 Behind the scenes.
 
 Nowhere in the below example did we describe how to find the greeter; it simply *works*, as the injector takes care of finding and loaing it for us.
 
-{% highlight javascript %}
+```javascript
 //Load the app with the injector
 var injector = angular.injector(['ng','myApp']);
 
@@ -87,15 +87,15 @@ var scope = injector.get('$rootScope').$new();
 
 //Load the controller, ppassing in a scope which is how angular does it at runtime
 var MyController = $controller('MyController',{$scope: scope});
-{% endhighlight %}
+```
 
 ## How the $injector works
 
 AngularJS ueses an **annotate** function to pull properties off of the passed-in array during instantiation.
 
-{% highlight javascript %}
+```javascript
 injector.annotate(function($q,greeter) {});
-{% endhighlight %}
+```
 
 ## Annotation
 
@@ -117,12 +117,12 @@ With this annotation style, order is important, as the *$inject* aray must match
 
 It allows us to pass an array of arguments instead of a function when defining an Angular object. The elements inside this aray are the list of injectable dependencies as trings, the last argument being the function definition of the object.
 
-{% highlight javascript %}
+```javascript
 angular.module('myApp')
     .controller('MyController',['$scope','greeter',function ($scope,greeter){
     //...
     }]);
-{% endhighlight %}
+```
 
 ## $inject API
 

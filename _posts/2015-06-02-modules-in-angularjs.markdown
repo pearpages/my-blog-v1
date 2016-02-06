@@ -58,7 +58,7 @@ I think there's more room for flexibility with respect to organizing HTML, CSS a
 
 ### Big Project Structure
 
-{% highlight bash %}
+```bash
 /app
   /img         # application-level images
   /css         # application-level css styles
@@ -84,11 +84,11 @@ I think there's more room for flexibility with respect to organizing HTML, CSS a
 
   / ...                # other application-level folders
   index.html
-{% endhighlight %}
+```
 
 ### Alternative enterprise project organization (simplified)
 
-{% highlight bash %}
+```bash
 /app
   /img         # application-level images
   /css         # application-level css styles
@@ -112,11 +112,11 @@ I think there's more room for flexibility with respect to organizing HTML, CSS a
 
   / ...                # other application-level folders
   index.html
-{% endhighlight %}
+```
 
 ### Middle project organization (without modules)
 
-{% highlight bash %}
+```bash
 /app
   /img            # application's images
   /css            # application's css styles
@@ -127,11 +127,11 @@ I think there's more room for flexibility with respect to organizing HTML, CSS a
   /views          # application's views (htmls)
   / ...           # other component folders
   index.html
-{% endhighlight %}
+```
 
 ### Simple project organization (just like a seed)
 
-{% highlight bash %}
+```bash
 /app
   /img            # application's images
   /css            # application's css styles
@@ -140,4 +140,4 @@ I think there's more room for flexibility with respect to organizing HTML, CSS a
   /views          # application's views (htmls), e.g. partials
   / ...           # other component folders
   index.html
-{% endhighlight %}
+```
