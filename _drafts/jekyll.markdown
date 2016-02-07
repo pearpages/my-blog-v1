@@ -48,6 +48,46 @@ And then just run
 bundle install
 ```
 
+#### Github flavored markdown (GFM)
+
+In the file *_config.yml*
+
+```
+markdown: kramdown
+kramdown:
+    input: GFM
+```
+
+## Front Matter
+
+Front matters are tags that are parsed and can be used in the *_layouts* using  *_liquid*.
+
+```
+---
+layout: default
+---
+
+<p><i>{{ page.summary }}</i></p>
+
+```
+
+Common tags are:
+
+- layout
+- title
+- featured_image
+- comments
+- tags
+- summary
+
+## CNAME file
+
+You can create a *CNAME* file and just write your domain url there.
+
+```
+www.my-awesome-blog.com
+```
+
 ## Installing Jekyll without github pages
 
 ```bash
