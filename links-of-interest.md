@@ -6,5 +6,5 @@ permalink: /links-of-interest
 
 ## Styles
 
-[Bootswatch](https://bootswatch.com/)
-[Bootsnipp](http://bootsnipp.com/)
+* [Bootswatch](https://bootswatch.com/)
+* [Bootsnipp](http://bootsnipp.com/)
