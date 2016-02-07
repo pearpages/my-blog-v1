@@ -79,6 +79,7 @@ Common tags are:
 - comments
 - tags
 - summary
+- permalink
 
 ## CNAME file
 
