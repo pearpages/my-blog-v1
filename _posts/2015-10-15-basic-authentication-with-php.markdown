@@ -9,7 +9,7 @@ It is possible to use the header() function to send an "Authentication Required"
 
 An example script fragment which would force client authentication on a page is as follows:
 
-``` php
+```php
 <?php
 if (!isset($_SERVER['PHP_AUTH_USER'])) {
     header('WWW-Authenticate: Basic realm="My Realm"');
@@ -17,10 +17,9 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     echo 'Text to send if user hits Cancel button';
     exit;
 } else {
-    echo "<p>Hello {$_SERVER['PHP_AUTH_USER']}.</p>";
-    echo "<p>You entered {$_SERVER['PHP_AUTH_PW']} as your password.</p>";
+    echo "<p>Hello ".$_SERVER['PHP_AUTH_USER']."</p>";
+    echo "<p>You entered ".$_SERVER['PHP_AUTH_PW']." as your password.</p>";
 }
-?>
 ```
 
 

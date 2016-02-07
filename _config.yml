@@ -9,12 +9,20 @@ twitter_username: pearpages
 github_username:  pearpages
 
 # Build settings
+permalink: pretty
 markdown: kramdown
-
+github: [metadata]
 kramdown:
     input: GFM
+    hard_wrap: false
 highlighter: rouge
 timezone: Europe/Madrid
 excerpt_separator: "" 
 gems:
   - jekyll-sitemap
+lsi: false
+safe: true
+incremental: false
+
+gist:
+   noscript: false
