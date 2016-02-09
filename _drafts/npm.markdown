@@ -90,6 +90,50 @@ npm i lodash -S # it is also the same
 npm install karma --save-dev
 ```
 
+### Installing a specific version
+
+0.0.x are usually just patches and fixes that don't change any functionality.
+
+#### Minor Release
+
+0.x.0 are new functionalities added.
+
+#### Major Release
+
+```
+1.9.0 would mean new functionality, nothing broken yet.
+```
+
+x.0.0 are major changes that break the distribution, something that is not backwards compatible.
+
+#### General cases
+
+- Installing last version
+- Instaling a specific version
+
+#### Examples
+
+```bash
+npm install underscore@1.8.2
+npm install underscore@1.8.x
+npm install underscore@1.x
+npm install underscore@">1.1.0"
+npm install underscore@">=1.1.0"
+npm install underscore@">=1.1.0 < 1.4.0"
+npm install underscore@1.8.2 --save --save-exact
+```
+
+The first means that the version is 1.8.3 but can be updated with the most recent (major release).
+
+The second that we want only the latest version of the minor release.
+
+```json
+"dependencies": {
+    "underscore": "^1.8.3",
+    "karma": "~1.5.2"
+}
+```
+
 ## Listing installed packages
 
 ```bash
@@ -110,4 +154,13 @@ npm list --depth 0 --prod true
 ```bash
 npm uninstall <package> # but it will still be in the dependencies
 npm uninstall <package> --save
+npm uninstall -g # if it's been previously installed globally
+```
+
+## Updating packages
+
+```bash
+npm update
+npm update --dev
+npm update --prod
 ```
