@@ -792,8 +792,8 @@ var log = new Utils.Logger();
 
 shapes.ts
 
-```typescript
-modules Shapes {
+``` typescript
+module Shapes {
     export class Rectangle {
         constructor (
             public height: number, public width: number) {
