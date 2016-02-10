@@ -49,7 +49,7 @@ npm help <command> # This opens a web page with the info of the command
 npm help-search <what-to-search>
 ```
 
-## Package.json
+### Package.json
 
 Type of projects:
 
@@ -66,7 +66,7 @@ npm init
 npm init -y # with all the default values
 ```
 
-### Setting default values
+#### Setting default values
 
 These are kept in the **.npmrc** of the user directory.
 
@@ -77,7 +77,7 @@ npm get init-author-name
 npm config delete init-author-name
 ```
 
-## npm install
+### npm install
 
 ```bash
 npm install <package>
@@ -90,15 +90,15 @@ npm i lodash -S # it is also the same
 npm install karma --save-dev
 ```
 
-### Installing a specific version
+#### Installing a specific version
 
 0.0.x are usually just patches and fixes that don't change any functionality.
 
-#### Minor Release
+##### Minor Release
 
 0.x.0 are new functionalities added.
 
-#### Major Release
+##### Major Release
 
 ```
 1.9.0 would mean new functionality, nothing broken yet.
@@ -106,12 +106,12 @@ npm install karma --save-dev
 
 x.0.0 are major changes that break the distribution, something that is not backwards compatible.
 
-#### General cases
+##### General cases
 
 - Installing last version
 - Instaling a specific version
 
-#### Examples
+##### Examples
 
 ```bash
 npm install underscore@1.8.2
@@ -134,7 +134,7 @@ The second that we want only the latest version of the minor release.
 }
 ```
 
-## Listing installed packages
+### Listing installed packages
 
 ```bash
 npm list
@@ -149,7 +149,7 @@ npm list --depth 0 --dev true
 npm list --depth 0 --prod true
 ```
 
-## Removing a Package
+### Removing a Package
 
 ```bash
 npm uninstall <package> # but it will still be in the dependencies
@@ -157,10 +157,19 @@ npm uninstall <package> --save
 npm uninstall -g # if it's been previously installed globally
 ```
 
-## Updating packages
+### Updating packages
 
 ```bash
 npm update
 npm update --dev
 npm update --prod
+```
+
+## Publish a package
+
+1. Signup in npm web page
+2. Login
+
+```bash
+npm adduser
 ```
