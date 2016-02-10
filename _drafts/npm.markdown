@@ -1,4 +1,4 @@
----
+ ---
 layout: post
 title: "NPM Playbook"
 categories: Javascript NPM
@@ -49,7 +49,7 @@ npm help <command> # This opens a web page with the info of the command
 npm help-search <what-to-search>
 ```
 
-## Package.json
+### Package.json
 
 Type of projects:
 
@@ -77,7 +77,7 @@ npm get init-author-name
 npm config delete init-author-name
 ```
 
-## npm install
+### npm install
 
 ```bash
 npm install <package>
@@ -90,7 +90,7 @@ npm i lodash -S # it is also the same
 npm install karma --save-dev
 ```
 
-### Installing a specific version
+#### Installing a specific version
 
 0.0.x are usually just patches and fixes that don't change any functionality.
 
@@ -134,7 +134,7 @@ The second that we want only the latest version of the minor release.
 }
 ```
 
-## Listing installed packages
+### Listing installed packages
 
 ```bash
 npm list
@@ -149,7 +149,7 @@ npm list --depth 0 --dev true
 npm list --depth 0 --prod true
 ```
 
-## Removing a Package
+### Removing a Package
 
 ```bash
 npm uninstall <package> # but it will still be in the dependencies
@@ -157,10 +157,20 @@ npm uninstall <package> --save
 npm uninstall -g # if it's been previously installed globally
 ```
 
-## Updating packages
+### Updating packages
 
 ```bash
 npm update
 npm update --dev
 npm update --prod
+```
+
+## Publishing a Package
+
+Registiring to [npm](https://www.npmjs.com)
+
+Setting up your npm user in the system
+
+```bash
+npm adduser
 ```
