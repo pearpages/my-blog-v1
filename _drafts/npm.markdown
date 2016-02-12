@@ -1,4 +1,4 @@
----
+ ---
 layout: post
 title: "NPM Playbook"
 categories: Javascript NPM
@@ -165,11 +165,13 @@ npm update --dev
 npm update --prod
 ```
 
-## Publish a package
+## Publishing a Package
 
-1. Signup in npm web page
-2. Login
+Registiring to [npm](https://www.npmjs.com)
+
+Setting up your npm user in the system
 
 ```bash
 npm adduser
 ```
+
