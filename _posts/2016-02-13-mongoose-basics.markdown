@@ -1,4 +1,15 @@
-# Mongoose
+---
+layout: post
+title: "Mongoose Basics"
+categories: javascript mongodb mongoose
+date:  2016-02-13 20:55:22
+---
+
+#### Contents
+
+{:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 [Mongo Tools](http://docs.mongodb.org/ecosystem/tools/administration-interfaces)
 [MEAN.JS](meanjs.org)
