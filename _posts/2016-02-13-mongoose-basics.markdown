@@ -2,7 +2,7 @@
 layout: post
 title: "Mongoose Basics"
 categories: javascript mongodb mongoose
-date:  2016-02-13 20:55:22
+date:  2016-02-13 19:55:22
 ---
 
 #### Contents
