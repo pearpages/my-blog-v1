@@ -507,19 +507,32 @@ Developer creates Request -> Action API Key Timestamp -> Developer Signs Request
     + Actions
 
 ```json
-"totalResults": 1598,
-"links":[
-{"href":"http://localhost:8863/api/v1/games?page=1","rel":"prevPage"},
-{"href":"http://localhost:8863/api/v1/games?page=3","rel":"nextPage"},
-{"href":"http://localhost:8863/api/v1/games","rel":"insert"}
-],
+{
+  "totalResults": 1598,
+  "links":[
+    {"href":"http://localhost:8863/api/v1/games?page=1","rel":"prevPage"},
+    {"href":"http://localhost:8863/api/v1/games?page=3","rel":"nextPage"},
+    {"href":"http://localhost:8863/api/v1/games","rel":"insert"}
+  ],
   "results":[...]
+}
 ```
 
-
-
+```json
+{
+  "links": [
+  {"href":"http://myDomain.com/api/v1/Games/2","rel":"self"}
+  {"href":"http://myDomain.com/api/v1/Games/2/rating","rel":"rating"}
+  ],
+  "id":2,
+  "name": "Final Fantasy",
+  "description":"Final Fantasy"
+}
+```
 
 ### Standard HATEOAS Formats
+
+
 
 ### HAL
 
