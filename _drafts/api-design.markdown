@@ -489,6 +489,10 @@ Developer creates Request -> Action API Key Timestamp -> Developer Signs Request
 
 ## Hypermedia
 
+Going for HATEOAS HAL is the right choice right now.
+
+If the users are internal or your API is trivial, using hypermedia may be more a ceremony than useful.
+
 ### REST and HATEOAS
 
 * Are links for APIs
