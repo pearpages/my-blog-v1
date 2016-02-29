@@ -87,3 +87,38 @@ Stateless
 |---|---|---|---|---|
 | /customers | List | New Item | Status Code Only | Status Code Only* |
 | /customers/123 | Item| Status Code Only* | Updated Item| Satus Code Only |
+
+#### Update Example
+
+** Headers **
+
+```
+// Method PUT
+User-Agent: Fiddler
+Host: localhost:8863
+Content-Type: application/json
+```
+
+** Request Body **
+
+```
+{"id":"1","name":"Pere Pages"}
+```
+
+** Response **
+
+```
+HTTP/1.1 200 OK
+```
+
+### Status Codes
+
+| Code | Description | Code | Description |
+|---|---|---|---|
+| 200 | OK | 400 | Bad Request |
+| 201 | Created | 401 | Not Authorized |
+| 202 | Accepted | 403 | Forbidden |
+| 302 | Found | 404 | Not Found |
+| 304 | Not Modified | 405 | Method Not Allowed |
+| 307 | Temp Redirect | 409 | Conflict |
+| 308 | Perm Redirect | 500 | Internal Error |
