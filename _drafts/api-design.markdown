@@ -548,6 +548,35 @@ Accept: application/json;profile=http://wilderminds.com/orders
 
 ### HAL
 
+HAL: Hypertext Application Language
 
+* A lean Hypermedia type
+* Plain-old Formats (JSON or XML) to inlcude resources and links
+  - application/hal+json
+  - application/hal+xml
+  - application/hal+json;profile=http://wilderminds.com/orders
+
+```
+{
+  "_links:"{
+    "self": {"href":"/games"},
+    "next":{"href":"/games?page=2"},
+    "find":{"href":"/games{?query}","templated":true}
+  },
+  "totalCount":100,
+  "_embedded": {
+    "games": [
+     {"_links": {
+        "self":{"href":"/games/123"}
+      },
+      "price": 30.00,
+      "currency": "USD",
+      "name":"Halo 3"
+    }
+    ]
+  }
+}
+```
 
 ### Collection + JSON
+
