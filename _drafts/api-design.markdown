@@ -429,4 +429,63 @@ Versioning with Custom Content Types is easier, but adds complexity. Including V
 
 ## Web Apis Security
 
+* SSL is almost always appropiate
+* Cros domain security
+* Authorization and Authentication
+
+### Cross Domain Security
+
+* Support JSONP as a format
+* Enable Cross-origin Resource Sharing (CORS)
+  * Requires some handshaking 
+
+### Who should you Authenticate
+
+#### Who is calling the API?
+
+* Server-to-Server Authentication
+  - API Keys and Shared Screts
+* User Proxy Authentication
+  - OAuth or Similar
+* Direct User Authentication (your own apps)
+  - Cookies or token
+
+#### Definitions
+
++ Credential (A fact that describes an identity - email, id, password ...)
++ Authentication (validate a set of credentials to identify an entity)
++ Authorization (verification that an entity has rights to access a resource or action)
+
+### Working with API keys
+
+For non-user specific usage.
+
+**How it works**
+
+```
+Developer Signs Up for API -> API Issues API key and Shared Secret
+
+Developer creates Request -> Action API Key Timestamp -> Developer Signs Request with Shared Secret -> Developer Sends Request + Signature to Service -> Service Loks up Shared Secret Via API Key -> Service Signs Request With Shared Secret -> Service Verifies Same Signature and Within Timeout -> Executes Request or Returns Error
+```
+
+### User Security
+
+* 1st party API -> Piggybacking on web security is acceptable
+* 3rd party API -> OAuth
+
+### OAuth
+
++ Allows you to accept user credentials
++ Ten trust a 3rd party with a token that represents the API developer
++ The developer never receives user credentials
+
+| Developer | API | User |
+|---|---|---|
+| Requests API Key | Supplies API Key and Shared Secret | |
+| Requests Request Token | Validates and Returns Token | |
+| Redirects to API's Auth URI | Displays Authorization UI | User Confirms Authoriation |
+| | Redirects Back To Developer | |
+| Request Access Tocken Via OAuth & Request Token | Returns Access Token (With Timeout) | |
+| Ues API with Acccess Token until Timeout | | |
+
 ## Hypermedia
