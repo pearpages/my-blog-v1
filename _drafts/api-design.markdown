@@ -332,6 +332,26 @@ http://myDomain.com/api/beginWorldDomination?isVolcanoLairRequired=true
 
 ## Versioning
 
+### Why?
+
+* Once you publish an API, it's set in stone
+  * Publishing an API is not a trivial move
+  * Users/Customers rely on the API not changing, but requirements will change
+  * Need a way to evolve the API without breaking existing clients
+  * API Versioning is not Product Versioning
+
+### Examples
+
+* Tumblr (URI path): 'http://api.tumblr.com/v2/user'
+* Netflix (URI parameter): 'http://api.netfilix.com/catalog/titles/series/7002464?v=1.5'
+* GitHub API (Content Negotiation): 'Content Type: application/vnd.github.1.param+json'
+* Azuere (Request Header): 'x-ms-version: 2011-08-18'
+
+### URI Path
+### URI Parameter
+### Content Negotiation
+### Request Headers
+
 ## Web Apis Security
 
 ## Hypermedia
