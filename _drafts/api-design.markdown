@@ -90,7 +90,7 @@ Stateless
 
 #### Update Example
 
-** Headers **
+**Headers**
 
 ```
 // Method PUT
@@ -99,13 +99,13 @@ Host: localhost:8863
 Content-Type: application/json
 ```
 
-** Request Body **
+**Request Body**
 
 ```
 {"id":1,"name":"Pere Pages"}
 ```
 
-** Response **
+**Response**
 
 ```
 HTTP/1.1 200 OK
@@ -155,7 +155,7 @@ HTTP/1.1 200 OK
   * 'http://myDoomain/api/Customers?format=json'
   * 'http://myDoomain/api/Customers?format=jsonp&callback=foo'
 
-** Accept Header **
+**Accept Header**
 
 ```
 GET /api/games2 HTTP/1.1
@@ -189,7 +189,7 @@ Single results should be simple objects
 
 * Wrap the collection around a single object which can contain information about the set.
 
-** Collection Example **
+**Collection Example**
 
 ```json
 {
@@ -214,7 +214,7 @@ Single results should be simple objects
   * For PUT, use If-Match
   * Use status code if it doesn't match (412 Precondition failed)
 
-** Example **
+**Example**
 
 ```
 // The ETag shows a version number for the Entity
@@ -234,7 +234,7 @@ ETag: W/"4894526782065"
 Content-Length: 639
 ```
 
-** If-None-Match example **
+**If-None-Match example**
 
 ```
 // The reponse will have 304 if the entity hasn't changed
@@ -244,7 +244,7 @@ Host: localhost:8863
 If-None-Match: "489302392098"
 ```
 
-** If-Match example **
+**If-Match example**
 
 ```
 // PUT /api/games/2 HTTP/1.1
@@ -262,14 +262,13 @@ If-Match: "4893023942098"
 * Can use different page sizes too
   * Limit size of page to limit sever load
 
-
-** Paging URI example **
+**Paging URI example**
 
 ```
 http://myDomain.com/api/games?page=5&pageSize=50
 ```
 
-** Paging Result example **
+**Paging Result example**
 
 ```
 {
@@ -288,7 +287,7 @@ http://myDomain.com/api/games?page=5&pageSize=50
   * Can use PATCH HTTP Verb
   * Update of partial is possible with ETag support
 
-** Update using Patch example **
+**Update using Patch example**
 
 ```
 PATCH /api/games/2 HTTP/1.1
@@ -306,7 +305,7 @@ Content-Length: 192
 }
 ```
 
-** Requesting parts example **
+**Requesting parts example**
 
 ```
 http://myDomain.com/api/games/123?fields=id,name,price,imageUrl
@@ -322,7 +321,7 @@ Non resource calls.
   * **Should be completely functional**
   * Don't use them as an excuse to build a PRC API
 
-** Functional Call example **
+**Functional Call example**
 
 ```
 http://myDomain.com/api/calculateTax?state=GA&total=149.99
@@ -360,9 +359,9 @@ http://myDomain.com/api/v1/Customers?type=Current&id=123
 http://myDomain.com/api/vs/CurrentCustomers/123
 ```
 
-+ ** Pro(s) **
++ **Pro(s)**
   + Simple to segregate old APIs for backwards compatibility
-+ ** Con(s) **
++ **Con(s)**
   + Requires lots of client changes as you version
   + Increases the size of URIS to maintain
 
@@ -382,7 +381,7 @@ Instead of using standard MIME types, use custom. Can include informatin in Acce
 
 Standard indicates you can use **"vnd."** as starting point (meaning vendor).
 
-** Examples **
+**Examples**
 
 ```
 GET /api/customer/123
@@ -489,3 +488,4 @@ Developer creates Request -> Action API Key Timestamp -> Developer Signs Request
 | Ues API with Acccess Token until Timeout | | |
 
 ## Hypermedia
+
