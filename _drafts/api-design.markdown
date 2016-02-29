@@ -374,7 +374,28 @@ Being an optional parameter, being withut it would always point to the latest ve
 
 ### Content Negotiation
 
+Instead of using standard MIME types, use custom. Can include informatin in Accept Header for format too.
 
+Standard indicates you can use **"vnd."** as starting point (meaning vendor).
+
+** Examples **
+
+```
+GET /api/customer/123
+HOST: http://...
+Accept: application/vnd.myapp.v1.customer
+
+GET /api/customer/123
+HOST: http://...
+Accept: application/vnd.myapp.v1.customer.json
+```
+
++ **Pro(s)**
+  + Packages API and Resource Versioning in one
+  + Removes versioning from API so clients don't have to change
++ **Con(s)**
+  + Adds complexity - adding headers ins't esasy on all platforms
+  + Can encourage incread versioning which causes more code churning
 
 ### Request Headers
 
