@@ -215,6 +215,7 @@ Single results should be simple objects
   * Use status code if it doesn't match (412 Precondition failed)
 
 ** Example **
+
 ```
 // The ETag shows a version number for the Entity
 HTTP/1.1 200 OK
@@ -244,6 +245,7 @@ If-None-Match: "489302392098"
 ```
 
 ** If-Match example **
+
 ```
 // PUT /api/games/2 HTTP/1.1
 // It will retgurn HTTP/1.1 412 Precondition failed if the entity has changed
@@ -253,3 +255,27 @@ If-Match: "4893023942098"
 ```
 
 ### Paging
+
+* Lists should always support paging
+  * Query String parameters to request paging information
+  * Object wrapper to indicate next/prev links
+* Can use different page sizes too
+  * Limit size of page to limit sever load
+
+
+** Paging URI example **
+
+```
+http://myDomain.com/api/games?page=5&pageSize=50
+```
+
+** Paging Result example **
+
+```
+{
+	"totalREsults": 1958,
+	"nextPage" : "http://myDomain/api/games/?page=3",
+	"prevPage" : "http://myDomain/api/games/?page=1",
+	"results" : [...]
+}
+```
