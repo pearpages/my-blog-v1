@@ -279,3 +279,43 @@ http://myDomain.com/api/games?page=5&pageSize=50
 	"results" : [...]
 }
 ```
+
+### Partial Items
+
+* Allow for request of partial items
+  * Query String is a common pattern for requesting parts
+* Updating of Partial Items
+  * Can use PATCH HTTP Verb
+  * Update of partial is possible with ETag support
+
+** Update using Patch example **
+
+```
+PATCH /api/games/2 HTTP/1.1
+Accept: application/json
+If-Match: "1234567890"
+Host: localhost:8863
+Content-Length: 192
+
+{
+"id": 2,
+"name": "Super Mario Bros",
+"price" : 150.0,
+"imageUrl" : "...",
+...
+}
+```
+
+** Requesting parts example **
+
+```
+http://myDomain.com/api/games/123?fields=id,name,price,imageUrl
+```
+
+### Non-Resource APIs
+
+## Versioning
+
+## Web Apis Security
+
+## Hypermedia
