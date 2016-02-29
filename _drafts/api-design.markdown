@@ -556,7 +556,7 @@ HAL: Hypertext Application Language
   - application/hal+xml
   - application/hal+json;profile=http://wilderminds.com/orders
 
-```
+```json
 {
   "_links:"{
     "self": {"href":"/games"},
@@ -580,3 +580,51 @@ HAL: Hypertext Application Language
 
 ### Collection + JSON
 
+* Supports standard for reading and writing of collections
+  - Defines standard way of communicationg lists and individual items
+  - Includes UI elements in messages
+  - Ues MIME Type:
+    + application/vnd.collection+json
+  - Uses Profile Media Type too:
+    + application/vnd.collection+json;profile=http://foo.com/bar
+* Good for simple, machine driven lists
+  - But probably too verbose for real data-driven REST
+  - Including UI elements sets scene for automatinc code
+    + But you just end up paying for it in lage payloads
+
+```json
+{
+  "collection": {
+    "version":"1.0",
+    "href":"http://example.org/friends/",
+    "links": [
+      {"rel": "feed", "href": "http://example.org/friends/rss"}
+    ],
+    "items":[
+      {
+        "href":"http://example.org/friends/jdoe",
+        "data":[
+          {"name":"full-name","value":"J.Doe","prompt":"Full Name"},
+          {"name":"email","value":"jdoe@example.org","prompt":"Email"},
+        ]
+      }
+    ],
+    "links": [
+      {"rel":"blog","href":"http://examples.org/blogs/jdoe","prompt":"Blog"}
+    ],
+    "queries": [
+      {"rel":"search","href":"http://example.org/friends/search","prompt":"Search",
+      "data": [{"name":"search","value":""}]
+    }
+    ],
+    "template": {
+      "data":[
+      {"name":"full-name","value":"","prompt":"Full Name"},
+      {"name":"email","value":"","prompt":"Email"},
+      {"name":"blog","value":"","prompt":"Blog"},
+      {"name":"avatar","value":"","prompt":"Avatar"}
+      ]
+    }
+  }
+}
+``` 
