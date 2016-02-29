@@ -332,6 +332,10 @@ http://myDomain.com/api/beginWorldDomination?isVolcanoLairRequired=true
 
 ## Versioning
 
+Versioning with URI components are more common.
+
+You must version your API.
+
 ### Why?
 
 * Once you publish an API, it's set in stone
@@ -398,6 +402,30 @@ Accept: application/vnd.myapp.v1.customer.json
   + Can encourage incread versioning which causes more code churning
 
 ### Request Headers
+
+Should be a header value that is only of value to your API. Common use of Date instead of number.
+
+```
+GET /api/customer/123
+HOST: http://...
+x-MyApp-Version: 2.1
+
+GET /api/customer/123
+HOST: http://...
+x-MyApp-Version: 2015-09-12
+```
+
++ **Pro(s)**
+  + Separates Versioning from API call signatures
+  + Not tied to resource versioning (e.g. Content Type)
++ **Con(s)**
+  + Adds complexity - adding headers ins't easy on all platforms
+
+### Resource Versioning
+
+Structures and constraints change.
+
+Versioning with Custom Content Types is easier, but adds complexity. Including Version in resource body pollutes the data.
 
 ## Web Apis Security
 
