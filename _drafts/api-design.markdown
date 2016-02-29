@@ -102,7 +102,7 @@ Content-Type: application/json
 ** Request Body **
 
 ```
-{"id":"1","name":"Pere Pages"}
+{"id":1,"name":"Pere Pages"}
 ```
 
 ** Response **
@@ -174,4 +174,33 @@ Host: localhost:8863
 | ATOM | application/xml+atom |
 
 * Requires callback query parameter too: ```http://mydomain/api/Customers?callback=foo```
+
+### Designing Results
+
+#### Single Results
+
+Single results should be simple objects
+* Member names (naming shouldn't expose server details)
+  * just be consistent!
+    * camelCasing
+    * _underscore
+
+#### Collections
+
+* Wrap the collection around a single object which can contain information about the set.
+
+** Collection Example **
+
+```json
+{
+	"numberResults": 345,
+	"results": [
+	{"id": 1,"name": "Pere Pages"},
+	{"id": 2,"name": "John Smith"},
+	{"id": 3,"name": "Andrew Williams"},
+	]
+}
+```
+
+### ETags (Entit Tags)
 
