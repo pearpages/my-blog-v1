@@ -489,3 +489,38 @@ Developer creates Request -> Action API Key Timestamp -> Developer Signs Request
 
 ## Hypermedia
 
+### REST and HATEOAS
+
+* Are links for APIs
+  - Links are to help developers know how to use the API
+  - API becomes self-describing
+  - Links become the Application State
+  - Hypermedia As the Engine of Application State (HATEOAS)
+
+### Links
+
+* Links should help developer use the API
+  - Common scenarios:
+    + Paging
+    + Creating New Items
+    + Retrieving Associations
+    + Actions
+
+```json
+"totalResults": 1598,
+"links":[
+{"href":"http://localhost:8863/api/v1/games?page=1","rel":"prevPage"},
+{"href":"http://localhost:8863/api/v1/games?page=3","rel":"nextPage"},
+{"href":"http://localhost:8863/api/v1/games","rel":"insert"}
+],
+  "results":[...]
+```
+
+
+
+
+### Standard HATEOAS Formats
+
+### HAL
+
+### Collection + JSON
