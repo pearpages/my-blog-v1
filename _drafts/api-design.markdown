@@ -204,3 +204,50 @@ Single results should be simple objects
 
 ### ETags (Entit Tags)
 
+* Header to support smart server caching
+  * Strong and Weak Caching Support
+  * Returned in the Response
+* Client should sent ETag back to see if new version is available
+  * Request with If-None-Match
+  * Use 304 to indicate that it hasn't changed
+* Cliend Should Send ETag back to see if new version is available
+  * For PUT, use If-Match
+  * Use status code if it doesn't match (412 Precondition failed)
+
+** Example **
+```
+// The ETag shows a version number for the Entity
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Date: Thu, 30 March 2015 08:23:45 GMT
+ETag: "4894526782065"
+Content-Length: 639
+```
+
+```
+// Weak ETag, weak cache
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Date: Thu, 30 March 2015 08:23:45 GMT
+ETag: W/"4894526782065"
+Content-Length: 639
+```
+
+** If-None-Match example **
+
+```
+// The reponse will have 304 if the entity hasn't changed
+GET /api/games/2 HTTP/1.1
+Accept: application/json, text/xml
+Host: localhost:8863
+If-None-Match: "489302392098"
+```
+
+** If-Match example **
+```
+// PUT /api/games/2 HTTP/1.1
+// It will retgurn HTTP/1.1 412 Precondition failed if the entity has changed
+Accept: application/json, text/xml
+Host: localhost: 8863
+If-Match: "4893023942098"
+```
