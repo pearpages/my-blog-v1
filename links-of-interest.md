@@ -3,6 +3,11 @@ layout: page
 title: "Links of interest"
 permalink: /links-of-interest
 ---
+## Generators
+
+* [Markdown Tables](http://www.tablesgenerator.com/markdown_tables)
+* [Lipsum](http://lipsum.com/)
+* [Name Generator](http://random-name-generator.info/)
 
 ## Git
 
@@ -12,9 +17,3 @@ permalink: /links-of-interest
 
 * [Bootswatch](https://bootswatch.com/)
 * [Bootsnipp](http://bootsnipp.com/)
-
-## Generators
-
-[Markdown Tables](http://www.tablesgenerator.com/markdown_tables)
-[Lipsum](http://lipsum.com/)
-[Name Generator](http://random-name-generator.info/)
