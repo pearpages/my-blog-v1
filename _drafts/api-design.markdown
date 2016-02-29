@@ -122,3 +122,16 @@ HTTP/1.1 200 OK
 | 304 | Not Modified | 405 | Method Not Allowed |
 | 307 | Temp Redirect | 409 | Conflict |
 | 308 | Perm Redirect | 500 | Internal Error |
+
+* Use HTTP Status Codes (minimum 200,400,500)
+  * 200 "It worked"
+  * 400 "You did bad"
+  * 500 "We did bad"
+* Probably
+  * 201 Created
+  * 304 Not Modified
+  * 404 Not Found
+  * 401 Unauthorized
+  * 403 Forbidden
+
+### Associations
