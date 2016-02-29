@@ -44,4 +44,46 @@ Stateless
 * Resources are representations of Real Wolrd *Entities* (People, Invoices, Payments, ...)
   * Relationships are typically nested
   * Hierarchies or Webs, **NOT Relational Models**
+* Resources are represented in URIs
+  *	Query strings for non-data elements (eg. format, sorting, etc)
 
+### REST
+
+> REpresentational State Transfer
+
+* Seperation of Client and Server
+* Server Requests are Stateless
+* Cacheable Requests 
+* Uniform Interface
+
+### Hypermedia
+
+* Method of self-describing messages
+  * Links in resources that describe how to process data
+  * Hyperlinks for resources
+* Hypermedia == HATEOAS
+  * It can be very useful or just additional overhead, so it is only as important as we need it to be
+  * Self-documenting APIs
+
+## Desigining the API
+
+### URI Design
+
+* Nouns are Good, Verbs are Bad
+  * Prefer Plurals (e.g.: Customers, Gaimes, Invoices)
+* Use Identifiers to locate individual items in URIs
+  * Does not have to be Internal Key... but it has to point to only one item.
+
+#### Using Verbs
+
+| Resource  | GET (read)  | POST (create)  | PUT (update)  | DELETE (delete)  |
+|---|---|---|---|---|
+| /customers | Get List | Create Item | Update Batch | Error |
+| /customers/123 | Get Item| Error | Update Item| Delete Item |
+
+#### Returning
+
+| Resource  | GET (read)  | POST (create)  | PUT (update)  | DELETE (delete)  |
+|---|---|---|---|---|
+| /customers | List | New Item | Status Code Only | Status Code Only* |
+| /customers/123 | Item| Status Code Only* | Updated Item| Satus Code Only |
