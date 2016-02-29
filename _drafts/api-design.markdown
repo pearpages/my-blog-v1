@@ -348,8 +348,34 @@ http://myDomain.com/api/beginWorldDomination?isVolcanoLairRequired=true
 * Azuere (Request Header): 'x-ms-version: 2011-08-18'
 
 ### URI Path
+
+Allow to drastically change the API. Everything below the version is open to change.
+
+```
+http://myDomain.com/api/v1/Customers?type=Current&id=123
+http://myDomain.com/api/vs/CurrentCustomers/123
+```
+
++ ** Pro(s) **
+  + Simple to segregate old APIs for backwards compatibility
++ ** Con(s) **
+  + Requires lots of client changes as you version
+  + Increases the size of URIS to maintain
+
 ### URI Parameter
+
+Being an optional parameter, being withut it would always point to the latest version.
+
++ **Pro(s)**
+  + Without version, users always get latest version of the API
+  + Little client changes as versions mature
++ **Con(s)**
+  + CAn surprise developers with unintened changes
+
 ### Content Negotiation
+
+
+
 ### Request Headers
 
 ## Web Apis Security
