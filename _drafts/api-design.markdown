@@ -78,15 +78,15 @@ Stateless
 
 | Resource  | GET (read)  | POST (create)  | PUT (update)  | DELETE (delete)  |
 |---|---|---|---|---|
-| /customers | Get List | Create Item | Update Batch | Error |
-| /customers/123 | Get Item| Error | Update Item| Delete Item |
+| /Customers | Get List | Create Item | Update Batch | Error |
+| /Customers/123 | Get Item| Error | Update Item| Delete Item |
 
 #### Returning
 
 | Resource  | GET (read)  | POST (create)  | PUT (update)  | DELETE (delete)  |
 |---|---|---|---|---|
-| /customers | List | New Item | Status Code Only | Status Code Only* |
-| /customers/123 | Item| Status Code Only* | Updated Item| Satus Code Only |
+| /Customers | List | New Item | Status Code Only | Status Code Only* |
+| /Customers/123 | Item| Status Code Only* | Updated Item| Satus Code Only |
 
 #### Update Example
 
@@ -135,3 +135,43 @@ HTTP/1.1 200 OK
   * 403 Forbidden
 
 ### Associations
+
+* For sub-objects
+  * Use URI Navigation ('http://myDomain.com/api/Customers/123/Invoices')
+  * Should return a List of Related Objects or a Related Object
+* May include multiple associtations on same object
+  * 'http://myDomain.com/api/Customers/123/Invoices'
+  * 'http://myDomain.com/api/Customers/123/Payments'
+  * 'http://myDomain.com/api/Customers/123/Shipments'
+* Anything more complex should use query string
+  * 'http://myDomain.com/api/Customers?state=GA'
+  * 'http://myDomain.com/api/Customers?state=GA&salesperson=144'
+  * 'http://myDomain.com/api/Customers?hasOpenOrders=true'
+
+### Formatting Results
+
+* Content Negotiation is the Best Practice. Use Accept header to determine how to format.
+* Use the URI components to format (not the best practice)
+  * 'http://myDoomain/api/Customers?format=json'
+  * 'http://myDoomain/api/Customers?format=jsonp&callback=foo'
+
+** Accept Header **
+
+```
+GET /api/games2 HTTP/1.1
+Accept: applications/json,text/xml
+Host: localhost:8863
+```
+
+#### Content Types
+
+| Type | MIME Type |
+|---|---|---|
+| JSON | application/json |
+| XML | text/xml |
+| JSONP* | applicaiton/javascript |
+| RSS | application/xml+rss |
+| ATOM | application/xml+atom |
+
+* Requires callback query parameter too: ```http://mydomain/api/Customers?callback=foo```
+
