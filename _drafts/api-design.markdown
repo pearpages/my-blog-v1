@@ -314,6 +314,22 @@ http://myDomain.com/api/games/123?fields=id,name,price,imageUrl
 
 ### Non-Resource APIs
 
+Non resource calls.
+
+* Functional Parts of your API (see example to understand)
+  * Be pragmatic and make sure that these parts of our API are documented
+  * Be sure that the user can tell it is a different type of operation
+  * **Should be completely functional**
+  * Don't use them as an excuse to build a PRC API
+
+** Functional Call example **
+
+```
+http://myDomain.com/api/calculateTax?state=GA&total=149.99
+http://myDomain.com/api/restartServer?isColdBoot=true
+http://myDomain.com/api/beginWorldDomination?isVolcanoLairRequired=true
+```
+
 ## Versioning
 
 ## Web Apis Security
