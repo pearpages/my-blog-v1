@@ -532,8 +532,22 @@ Developer creates Request -> Action API Key Timestamp -> Developer Signs Request
 
 ### Standard HATEOAS Formats
 
+#### Profile Media Types
 
+Profiles are descriptions of the data
+
+* Alternative to using custom MIME type in versioning
+* Should be included inside the Accept header
+  - Though servers can return the profile too
+
+```
+GET /api/order/123
+HOST: http://.../
+Accept: application/json;profile=http://wilderminds.com/orders
+```
 
 ### HAL
+
+
 
 ### Collection + JSON
