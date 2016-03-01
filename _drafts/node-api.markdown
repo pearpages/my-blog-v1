@@ -99,3 +99,67 @@ npm install --save body-parser
   }
 }
 ```
+
+## Dummy API
+
+**index.js**
+
+```javascript
+var express = require('express');
+var app = express();
+
+var bodyParser = require('body-parser');
+
+// middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+var cats = require('./cat.js')(app);
+
+var server = app.listen(3000, function() {
+    console.log('Server running at http://127.0.0.1:3000/');
+});
+
+```
+
+**cat.js**
+
+```javascript
+var _ = require('lodash');
+
+module.exports = function(app) {
+
+    _cats = [];
+
+    /* Create */
+    app.post('/cat', function(req, res) {
+        _cats.push(req.body);
+        res.json({ info: 'cat created successfully' });
+    });
+
+    /* Read */
+    app.get('/cat', function(req, res) {
+        res.send(_cats);
+    });
+
+    app.get('/cat/:id', function(req, res) {
+        res.send(_.find(_cats, { name: req.params.id }));
+    });
+
+    /* Update */
+    app.put('/cat/:id', function(req,res) {
+        var index = _.findIndex(_cats, {name:req.params.id});
+        _.merge(_cats[index], req.body);
+        res.json({info: 'cat updated successfully'});
+    });
+
+    /* Delete */
+    app.delete('/cat/:id', function (req,res) {
+        _.remove(_cats, function (cat) {
+            return cat.name === req.params.id;
+        });
+        res.json({info: 'cat removed successfully'});
+    });
+};
+
+```
