@@ -68,7 +68,30 @@ Node monitor
 sudo npm install -g nodemon
 ```
 
+## lodash
+
+Utility class, before everybody was using underscore.
+
+```bash
+npm install --save lodash
+```
+
+```javascript
+var _ = require('lodash');
+```
+
+## body-parser
+
+This module helps dealing with cookies and bodies.
+
+> The bodyParser object exposes various factories to create middlewares. All middlewares will populate the req.body property with the parsed body, or an empty object ({}) if there was no body to parse (or an error was returned).
+
+```bash
+npm install --save body-parser
+```
+
 ## Creating a npm script
+
 ```json
 {
   "scripts": {
