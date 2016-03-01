@@ -60,7 +60,9 @@ var server = app.listen(3000, function () {
 });
 ```
 
-## Nodemon
+## Tools
+
+### Nodemon
 
 Node monitor
 
@@ -68,7 +70,7 @@ Node monitor
 sudo npm install -g nodemon
 ```
 
-## lodash
+### lodash
 
 Utility class, before everybody was using underscore.
 
@@ -80,7 +82,7 @@ npm install --save lodash
 var _ = require('lodash');
 ```
 
-## body-parser
+### body-parser
 
 This module helps dealing with cookies and bodies.
 
@@ -90,7 +92,7 @@ This module helps dealing with cookies and bodies.
 npm install --save body-parser
 ```
 
-## Creating a npm script
+### Creating a npm script
 
 ```json
 {
@@ -163,3 +165,13 @@ module.exports = function(app) {
 };
 
 ```
+
+## Using Mongo
+
+### Adding Mongo
+
+### Working with Mongo
+
+### Nodejs
+
+### Structuring the API
