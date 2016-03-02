@@ -342,3 +342,13 @@ git push origin :my-branch-to-delete
 
 ## Useful snippets
 
+### Undo working copy modifications of one file in Git
+
+```bash
+# You can do it without the -- , but if the filename looks like a branch or tag (or other revision identifier), it may get confused, so using -- is best.
+git checkout v1.2.3 -- my-file.js         # tag v1.2.3
+git checkout stable -- my-file.js         # stable branch
+git checkout origin/master -- my-file.js  # upstream master
+git checkout HEAD -- my-file.js           # the version from the most recent commit
+git checkout HEAD^ -- my-file.js          # the version before the most recent commit
+```
