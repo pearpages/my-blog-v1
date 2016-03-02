@@ -339,3 +339,6 @@ We can do it just pushing the changes
 ```bash
 git push origin :my-branch-to-delete
 ```
+
+## Useful snippets
+
