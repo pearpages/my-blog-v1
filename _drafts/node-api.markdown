@@ -170,6 +170,51 @@ module.exports = function(app) {
 
 ### Adding Mongo
 
+**Installing Mongoose**
+
+```bash
+npm install --save mongoose
+```
+
+**index.js, include mongoose**
+```javascript
+var express = require('express');
+var app = express();
+
+var bodyParser = require('body-parser');
+
+// HERE!!!!!!!!!!!!
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/cats');
+
+// middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+var cats = require('./cat.js')(app);
+
+var server = app.listen(3000, function() {
+    console.log('Server running at http://127.0.0.1:3000/');
+});
+
+```
+
+#### Mongoose Model Example
+
+**cat_model.js**
+
+```javascript
+var mongoose = require('mongoose');
+
+var catSchema = mongoose.Schema({
+    name: String,
+    age: Number,
+    type: String
+});
+
+module.exports = mongoose.model('Cat', catSchema);
+```
+
 ### Working with Mongo
 
 ### Nodejs
