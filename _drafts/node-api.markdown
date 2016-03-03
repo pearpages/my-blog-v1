@@ -298,6 +298,24 @@ module.exports = function(app) {
 
 ### Working with Mongo
 
-### Nodejs
+#### RoboMongo
+
+> Native and cross-platform MongoDB manager
+
+[RoboMongo](https://robomongo.org/)
+
+#### Examples
+
+```
+show dbs
+use cats
+show collections
+db.cats.find(); // find all
+db.cats.find({"name":"Pere"}); // find cats with name 'Pere'
+```
+
+### Nodejs Shine
+
+NodeJs works very well as a middleware, a "traffic controller".
 
 ### Structuring the API
