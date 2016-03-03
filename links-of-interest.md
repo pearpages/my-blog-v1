@@ -3,6 +3,7 @@ layout: page
 title: "Links of interest"
 permalink: /links-of-interest
 ---
+
 ## Generators
 
 * [Markdown Tables](http://www.tablesgenerator.com/markdown_tables)
@@ -32,8 +33,6 @@ permalink: /links-of-interest
 * [Inheritance](http://www.pearpages.com/jasvascript/inheritance/2015/05/25/javascript-inheritance/)
 * [Arrays](http://www.pearpages.com/javascript/arrays/2015/05/26/javascript-arrays/)
 * [Grammar, objects and methods](http://www.pearpages.com/javascript/2015/06/02/javascript-grammar-objects-and-methods/)
-
-
 
 ## MongoDB and Mongoose
 
