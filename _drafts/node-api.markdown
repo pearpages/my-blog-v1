@@ -314,8 +314,29 @@ db.cats.find(); // find all
 db.cats.find({"name":"Pere"}); // find cats with name 'Pere'
 ```
 
-### Nodejs Shine
+### Nodejs Shines At
 
 NodeJs works very well as a middleware, a "traffic controller".
 
-### Structuring the API
+### Adding Additional Servers
+
+#### Run servers in the background
+
+```bash
+npm install -g forever
+forever list
+```
+
+#### "Request" Module
+
+Let us do requests from one server to another
+
+```bash
+npm install --save request
+```
+
+#### Check for open ports
+
+```bash
+sudo lsof -i -n -P | grep LISTEN
+```
