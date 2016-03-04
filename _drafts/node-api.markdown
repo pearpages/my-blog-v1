@@ -329,7 +329,7 @@ forever list
 
 #### "Request" Module
 
-Let us do requests from one server to another
+Let us do requests from one server to another. "Think of it as a node version of **Postman**".
 
 ```bash
 npm install --save request
@@ -339,4 +339,28 @@ npm install --save request
 
 ```bash
 sudo lsof -i -n -P | grep LISTEN
+```
+
+#### Using npm for scripts
+
+```json
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever start ./servers/cat.js | forever start ./servers/dog.js | nodemon ./servers/pet.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "lodash": "^4.5.1",
+    "mongoose": "^4.4.6",
+    "request": "^2.69.0"
+  }
+}
 ```
