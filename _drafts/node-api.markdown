@@ -369,6 +369,12 @@ sudo lsof -i -n -P | grep LISTEN
 
 ### Processing the requests Asynchronously
 
+Async it is similar to $q in angular but for the backend side.
+
+```bash
+npm install --save async
+```
+
 ### Adding a block process
 
 ## Adding a Cache
