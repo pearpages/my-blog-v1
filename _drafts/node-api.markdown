@@ -375,10 +375,8 @@ Async it is similar to $q in angular but for the backend side.
 npm install --save async
 ```
 
-### Adding a block process
-
 ## Adding a Cache
 
-###
+### Implementing a Redis Cache
 
-###
+### Caching Considerations and Use Cases
