@@ -89,7 +89,7 @@ describe('testing add', function () {
 * We can nest as many *describe* functions as we need.
 * We can use *it.skip* for writing pending tests.
 * We can run only one describe or only one it with *only*
-* mocha run all test files in the same folder
+* mocha run all test files in the same folder, by default *test* folder
 * mocha can also watch for changes in the directory
 
 ```javascript
@@ -119,9 +119,70 @@ mocha -w
 
 * spies
 * stubs
-* mocks
+* moc
 
 #### Spies
+
+An example without spy
+
+```javascript
+describe('student.dropClass', function () {
+	it('should call the callback', function () {
+		var called = false;
+		function callback() {
+			called = true;
+		}
+
+		student.dropClass(1,callback);
+
+		expect(called).to.be.true;
+	});
+});
+```
+
+The same example WITH spy
+
+```javascript
+it('should call the callback and log to the console', function () {
+	function onClassDropped() {
+		console.log('onClassDropped was called');
+	}
+
+	var spy = sinon.spy(onClassDropped);
+
+	student.dropClass(1,spy);
+	spy.called.should.be.true;
+});
+```
+
+```javascript
+	var student, schedule;
+
+	beforeEach(function () {
+		student = {
+			dropClass : function (classId, cb) {
+				// do stuff
+				if(!!cb.dropClass) {
+					cb.dropClass();
+				} else {
+					cb();
+				}
+			}
+		};
+
+		schedule = {
+			dropClass: function() {
+				console.log('class dropped');
+			}
+		};
+	});
+
+it('should call the callback even if it\'s a method of an object', function () {
+	sinon.sply(schedule.dropClass);
+	student.dropClass(1,schedule);
+	schedule.dropClass.called.should.be.true;
+});
+```
 
 #### Stubs
 
