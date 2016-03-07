@@ -123,6 +123,8 @@ mocha -w
 
 #### Spies
 
+With spies we spy on functions.
+
 An example without spy
 
 ```javascript
@@ -185,5 +187,56 @@ it('should call the callback even if it\'s a method of an object', function () {
 ```
 
 #### Stubs
+
+With stubs we spy on entire objects. And it lets us change the functionality that we need.
+
+```javascript
+beforeEach(function () {
+	student = {
+		dropClass : function (classId, cb) {
+			// do stuff
+			if(!!cb.dropClass) {
+				cb.dropClass();
+			} else {
+				cb();
+			}
+		},
+		addClass: function (schedule) {
+			if (!schedule.classIsFull()) {
+				// do stuff
+				return true;
+			} else {
+				return false;
+			}
+		}
+	};
+
+	schedule = {
+		dropClass: function() {
+			console.log('class dropped');
+		},
+		classIsFull: function () {
+			return true;
+		}
+	};
+});
+	
+describe('student with stubs', function () {
+	it('should call a stubed method', function () {
+		var stub = sinon.stub(schedule);
+
+		stub.dropClass(1, stub.dropClass);
+		stub.dropClass.called.should.be.true;
+	});
+
+	it('should return true when the class is not full', function () {
+		var stub = sinon.stub(schedule);
+		stub.classIsFull.returns(false);
+		var returnVal = student.addClass(stub);
+
+		returnVal.should.be.true;
+	});
+});
+```
 
 #### Mocks
