@@ -392,8 +392,15 @@ npm install --save async
 choco install redis-64
 ```
 
+```bash
+npm install --save redis
+```
+
 #### Usage
 
-
+```javascript
+var redis = require('redis');
+var client = redis.createClient(6379, '127.0.0.1');
+```
 
 ### Caching Considerations and Use Cases
