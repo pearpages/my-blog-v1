@@ -379,4 +379,15 @@ npm install --save async
 
 ### Implementing a Redis Cache
 
+#### Installing Redis on Windows
+
+```bash
+# Installing Chocolatey
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+```
+
+```bash
+choco install redis-64
+```
+
 ### Caching Considerations and Use Cases
