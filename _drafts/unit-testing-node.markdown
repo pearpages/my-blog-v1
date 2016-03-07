@@ -245,4 +245,20 @@ describe('student with stubs', function () {
 
 Mocks take the attributes of spies and stubs, smashes them together and changes the style a bit. A mock will both observe the calling of functions and verify that they were called in some specific way. And all this setup happens previous to calling your subject under test. After the call, mocks are simply asked if all went to plan.
 
+```javascript
+describe('student with mocks', function () {
+	it('mocks schedule', function() {
+		var mockObj = sinon.mock(schedule);
+		var expectation = mockObj.expects('classIsFull').once();
 
+		student.addClass(schedule);
+		expectation.verify();
+	});
+});
+``` 
+
+### Gulp and Grunt
+
+```bash
+npm install --save-dev gulp gulp-mocha gulp-util
+```
