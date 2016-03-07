@@ -392,4 +392,8 @@ npm install --save async
 choco install redis-64
 ```
 
+#### Usage
+
+
+
 ### Caching Considerations and Use Cases
