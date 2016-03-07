@@ -16,5 +16,73 @@
 > Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
 
 ```bash
-npm install -g mocha chai
+npm install -g mocha
+npm install chai
 ```
+
+#### First Test
+
+**test.js**
+
+```javascript
+'use strict';
+
+// jshint expr: true
+
+var chai = require('chai');
+var epect = chai.expect;
+
+chai.should();
+
+function isEven(num) {
+	return num % 2 === 0;
+}
+
+describe('isEven', function () {
+	it('should return true when number is even', function () {
+		isEven(4).should.be.true;
+	});
+
+	it('should return false when the number is odd', function () {
+		isEven(3).should.be.false;
+	});
+
+	it('should return false when the number is odd (2)', function () {
+		expect(isEven(3)).to.be.false;
+	});
+});
+```
+
+```bash
+mocha test.js
+```
+
+#### Setup and Teardown
+
+* beforeEach
+* afterEach
+
+```javascript
+describe('testing add', function () {
+	var num;
+
+	beforeEach(function () {
+		num = 5;
+	});
+
+	afterEach(function () {
+		console.log('test run');
+	});
+
+	it('should be ten adding 5 to 5', function () {
+		add(num,5).should.equal(10);
+	});
+
+	it('should be 12 adding 7 to 5', function () {
+		add(num,7).should.equal(12);
+	});
+});
+```
+
+### More Mocha Features
+
