@@ -123,7 +123,7 @@ mocha -w
 
 #### Spies
 
-With spies we spy on functions.
+Spies sound like what they do – they watch your functions and report back on how they are called. They generally avoid the violence and mayhem of a Hollywood spy, but depending on your application, this could vary.
 
 An example without spy
 
@@ -158,26 +158,26 @@ it('should call the callback and log to the console', function () {
 ```
 
 ```javascript
-	var student, schedule;
+var student, schedule;
 
-	beforeEach(function () {
-		student = {
-			dropClass : function (classId, cb) {
-				// do stuff
-				if(!!cb.dropClass) {
-					cb.dropClass();
-				} else {
-					cb();
-				}
+beforeEach(function () {
+	student = {
+		dropClass : function (classId, cb) {
+			// do stuff
+			if(!!cb.dropClass) {
+				cb.dropClass();
+			} else {
+				cb();
 			}
-		};
+		}
+	};
 
-		schedule = {
-			dropClass: function() {
-				console.log('class dropped');
-			}
-		};
-	});
+	schedule = {
+		dropClass: function() {
+			console.log('class dropped');
+		}
+	};
+});
 
 it('should call the callback even if it\'s a method of an object', function () {
 	sinon.sply(schedule.dropClass);
@@ -189,6 +189,8 @@ it('should call the callback even if it\'s a method of an object', function () {
 #### Stubs
 
 With stubs we spy on entire objects. And it lets us change the functionality that we need.
+
+Stubs are more hands-on than spies (though they sound more useless, don’t they). With a stub, you will actually change how functions are called in your test. You don’t want to change the subject under test, thus changing the accuracy of your test. But you may want to test several ways that dependencies of your unit could be expected to act.
 
 ```javascript
 beforeEach(function () {
@@ -220,7 +222,7 @@ beforeEach(function () {
 		}
 	};
 });
-	
+
 describe('student with stubs', function () {
 	it('should call a stubed method', function () {
 		var stub = sinon.stub(schedule);
@@ -240,3 +242,7 @@ describe('student with stubs', function () {
 ```
 
 #### Mocks
+
+Mocks take the attributes of spies and stubs, smashes them together and changes the style a bit. A mock will both observe the calling of functions and verify that they were called in some specific way. And all this setup happens previous to calling your subject under test. After the call, mocks are simply asked if all went to plan.
+
+
