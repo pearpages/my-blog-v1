@@ -88,6 +88,9 @@ describe('testing add', function () {
 
 * We can nest as many *describe* functions as we need.
 * We can use *it.skip* for writing pending tests.
+* We can run only one describe or only one it with *only*
+* mocha run all test files in the same folder
+* mocha can also watch for changes in the directory
 
 ```javascript
 it.skip('should be yellow when it is green', function() {});
@@ -98,3 +101,28 @@ xit('should be yellow when it is green', function() {});
 describe.skip('numerical tests', function () {});
 xdescribe('numerical tests', function () {});
 ```
+
+```javascript
+describe.only('numerical tests', function () {});
+it.only('should result four when 2 + 2', function () {});
+```
+
+```bash
+mocha -w
+```
+
+### Sinon
+
+[Sinon](http://sinonjs.org/)
+
+> Standalone test spies, stubs and mocks for JavaScript. No dependencies, works with any unit testing framework.
+
+* spies
+* stubs
+* mocks
+
+#### Spies
+
+#### Stubs
+
+#### Mocks
