@@ -86,3 +86,15 @@ describe('testing add', function () {
 
 ### More Mocha Features
 
+* We can nest as many *describe* functions as we need.
+* We can use *it.skip* for writing pending tests.
+
+```javascript
+it.skip('should be yellow when it is green', function() {});
+xit('should be yellow when it is green', function() {});
+```
+
+```javascript
+describe.skip('numerical tests', function () {});
+xdescribe('numerical tests', function () {});
+```
