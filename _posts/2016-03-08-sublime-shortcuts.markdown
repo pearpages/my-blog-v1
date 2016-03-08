@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Basic Sublime Commands"
-categories: Sublime
-date:  2015-03-8 21:40:22
+categories: sublime
+date:  2016-03-08 21:18:22
+author: Pere Pages
 ---
 
 #### Contents

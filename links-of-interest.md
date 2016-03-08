@@ -14,6 +14,10 @@ permalink: /links-of-interest
 * [Lipsum](http://lipsum.com/)
 * [Name Generator](http://random-name-generator.info/)
 
+## Editors
+
+* [Sublime Shortcuts](http://www.pearpages.com/sublime/2016/03/08/sublime-shortcuts/)
+
 ## Git
 
 * [Git Basics](/git/2016/02/07/git-basics/)
