@@ -6,6 +6,11 @@ categories: javascript node moche chai sinon
 author: Pere Pages
 ---
 
+#### Contents
+{:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ## Tools for Unit Testing Node
 
 * Mocha
