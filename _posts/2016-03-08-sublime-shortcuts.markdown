@@ -1,3 +1,17 @@
+---
+layout: post
+title: "Basic Sublime Commands"
+categories: Sublime
+date:  2015-03-8 21:40:22
+---
+
+#### Contents
+
+{:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
 ```
 Command P -> search for files
 Command Shift P -> Run commands
@@ -27,35 +41,50 @@ Use the User versions to overwrite any preferences needed
 
 ## Sublime Project
 
+```
 file.sublime-project
+```
 
 ## Find
 
+```
 Command F -> Find
 Command G -> Find Next
+```
 
 ### Find In Files
 
+```
 Shift Command F
+```
 
 ## Fold
 
+```
 Command K, Command 1
 Command K, Command 2
+```
 
 ## Duplicate
 
+```
 Command Shfit D
+```
 
 ## Comment
 
+```
 Command /
+```
 
 ## Swap Lines
 
+```
 Ctrl Command Up or Down
+```
 
 ## Snippets
 
+```
 Tools > Snippets
-
+```
