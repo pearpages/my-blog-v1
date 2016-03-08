@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Basic Unit Testing for Node with Mocha, Chai and Sinon"
+date:   2016-03-08 07:32:53
+categories: javascript node moche chai sinon
+author: Pere Pages
+---
+
 ## Tools for Unit Testing Node
 
 * Mocha
