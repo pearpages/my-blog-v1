@@ -43,6 +43,7 @@ permalink: /links-of-interest
 
 * [Bootswatch](https://bootswatch.com/)
 * [Bootsnipp](http://bootsnipp.com/)
+* [Github style guide](http://primercss.io/)
 
 ## Typescript
 
