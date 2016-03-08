@@ -4,6 +4,10 @@ title: "Links of interest"
 permalink: /links-of-interest
 ---
 
+## Angular
+
+* [Angular StyleGuide by John Papa](https://github.com/johnpapa/angular-styleguide)
+
 ## Api Design
 
 * [Api Design](http://www.pearpages.com/api/design/2016/03/03/api-design/)
@@ -24,6 +28,7 @@ permalink: /links-of-interest
 
 ## Javascript
 
+* [Essential JavaScript Links by Eric Elliott](https://github.com/ericelliott/essential-javascript-links)
 * [Functions](http://www.pearpages.com/javascript/functions/2015/05/25/javascript-functions/)
 * [Inheritance](http://www.pearpages.com/jasvascript/inheritance/2015/05/25/javascript-inheritance/)
 * [Arrays](http://www.pearpages.com/javascript/arrays/2015/05/26/javascript-arrays/)
@@ -42,6 +47,11 @@ permalink: /links-of-interest
 
 * [Mongo Basics](http://www.pearpages.com/javascript/mongodb/2016/02/10/mongodb/)
 * [Mongoose Basics](http://www.pearpages.com/javascript/mongodb/mongoose/2016/02/13/mongoose-basics/)
+
+## Software Development
+
+* [List of software development philosophies
+](https://en.wikipedia.org/wiki/List_of_software_development_philosophies)
 
 ## Styles
 
