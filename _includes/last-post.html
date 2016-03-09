@@ -1,0 +1,13 @@
+{% assign lastPost = site.posts.first %} {% assign lastPostContent = lastPost.content %}
+<h1 class="entry-title">
+{% if lastPost.title %}
+    Last post: <a href="{{ root_url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
+{% endif %}
+{% if post.title %}
+    <a href="{{ root_url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
+{% endif %}
+</h1>
+<div class="entry-content">{{ lastPostContent }}</div>
+<div class="alert alert-warning" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> For comments go to the actual post: <a href="{{ root_url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
+</div>
