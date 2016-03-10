@@ -1,17 +1,33 @@
+---
+layout: post
+title: "About Testing"
+categories: Testing
+date:  2016-03-10 08:18:22
+author: Pere Pages
+---
+
+#### Contents
+
+{:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Intro
+
 + Learn to read the code 
 + Mind your dependencies
 + Sharpen your Environment Ax
 
 **There are no secrets with tests, but there are writing testable code! Properly managed dependencies!!**
 
-### Why Test?
+## Why Test?
 
 Because writing the test is easier then running the application.
 
 **Testing is not like frosting**
 The only way to make sure your test code is testable is to write the tests from the very beginning.
 
-### Excuses
+## Excuses
 
 The only right one is: **"I DON'T KNOW HOW"**.
 
@@ -19,11 +35,11 @@ We have problems admitting we have problems writing tests. Of course it's going 
 
 It's skill like any other skill, it needs practice. How to struture the code to make it testable.
 
-### Write Tests First
+## Write Tests First
 
-Software Engineers
-QA
-Test Engineers
++ Software Engineers
++ QA
++ Test Engineers
 
 *The cake has alreaby been baked*. That's the main reason why tests do not work.
 
@@ -41,7 +57,7 @@ The difficulty of **the TEST it's about the STRUCTURE of the code. Not what the 
 + Hard-coded new Operator
 + Lack of Dependency Injection
 
-#### Real Issues
+### Real Issues
 
 + Mixing new with logic
 + Looking for things
@@ -57,7 +73,7 @@ The difficulty of **the TEST it's about the STRUCTURE of the code. Not what the 
 **Dependency Injection!!**
 What are the fundamentals items you need to make your job done.
 
-### Testable Code
+## Testable Code
 
 + Good OO
 + Dependency Injection
@@ -66,7 +82,7 @@ What are the fundamentals items you need to make your job done.
 
 **There is no secret to writing tests... there are only secrets to writing testable code!**
 
-### Tests
+## Tests
 
 + Scenario Tests
 + Functional Tests
@@ -76,21 +92,8 @@ What are the fundamentals items you need to make your job done.
 
 Tests should be run on every save.
 
----
-layout: post
-title: "About Testing"
-categories: Testing
-date:  2016-03-10 08:18:22
-author: Pere Pages
----
 
-#### Contents
-
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
-
-### Unit Testing a Class
+## Unit Testing a Class
 
 Control the dependencies. I am not going to look beyond the class I am testing.
 
@@ -98,7 +101,7 @@ No Global Objects, only objects being past in.
 
 **Friendly (the dependency) does not have to be a mock**. You can perfectly create a situation for a test with a Class.
 
-### Write a test
+## Write a test
 
 You have to know why they are written. **Can you run an implementation, given the test?!**
 
@@ -118,7 +121,7 @@ We can consider two kind of objects that we deal with:
 
 Services are *beasts* that talk to another objects and should be mocked.
 
-#### Unit Testing Review
+### Unit Testing Review
 
 * new operators are dangerous
 * Ask for what you need
@@ -139,7 +142,7 @@ Class InboxSyncerSpec{
     //...
 }
 
-### Environment
+## Environment
 
 It must be easier to write a test, and see the results run, then to write the code an run the actual application.
 
@@ -155,7 +158,7 @@ Setting up a proper environment for your code is as important as writing testabl
 
 If the environment is not friendly no one will write or run any tests.
 
-### Glossary
+## Glossary
 
 Perforce
 CL = Changeless
