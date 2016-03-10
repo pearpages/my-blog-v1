@@ -76,6 +76,20 @@ What are the fundamentals items you need to make your job done.
 
 Tests should be run on every save.
 
+---
+layout: post
+title: "About Testing"
+categories: Testing
+date:  2016-03-10 08:18:22
+author: Pere Pages
+---
+
+#### Contents
+
+{:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 ### Unit Testing a Class
 
 Control the dependencies. I am not going to look beyond the class I am testing.
