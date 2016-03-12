@@ -50,7 +50,7 @@ permalink: /links-of-interest
 
 ## Node
 
-* [Building a simple API with Node]()
+* [Building a simple API with Node](http://www.pearpages.com/javascript/node/api/2016/03/12/building-a-simple-node-api/)
 
 ## Software Development
 
