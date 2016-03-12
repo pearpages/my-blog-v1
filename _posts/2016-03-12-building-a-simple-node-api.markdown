@@ -2,7 +2,7 @@
 layout: post
 title: "Building a simple node API"
 categories: javascript node api
-date:  2016-03-12 19:40:22
+date:  2016-03-12 17:40:22
 author: Pere Pages
 ---
 
