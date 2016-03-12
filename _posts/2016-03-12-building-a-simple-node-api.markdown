@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "title"
-categories: category1 category2
-date:  2015-05-26 19:40:22
+title: "Building a simple node API"
+categories: javascript node api
+date:  2016-03-12 19:40:22
 ---
 
 #### Contents
@@ -464,5 +464,4 @@ module.exports = function(app) {
 
 ```
 
-### Caching Considerations and Use Cases
 
