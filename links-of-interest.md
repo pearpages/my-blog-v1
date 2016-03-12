@@ -48,6 +48,10 @@ permalink: /links-of-interest
 * [Mongo Basics](http://www.pearpages.com/javascript/mongodb/2016/02/10/mongodb/)
 * [Mongoose Basics](http://www.pearpages.com/javascript/mongodb/mongoose/2016/02/13/mongoose-basics/)
 
+## Node
+
+* [Building a simple API with Node]()
+
 ## Software Development
 
 * [List of software development philosophies

@@ -342,6 +342,24 @@ git push origin :my-branch-to-delete
 
 ## Useful snippets
 
+### Remove all untracked files
+
+```bash
+# Show what will be deleted with the -n option:
+
+git clean -f -n
+# Then - beware: this will delete files - run:
+
+git clean -f
+# If you want to also remove directories, run git clean -f -d or git clean -fd
+
+# If you just want to remove ignored files, run git clean -f -X or git clean -fX
+
+# If you want to remove ignored as well as non-ignored files, run git clean -f -x or git clean -fx
+
+# Note the case difference on the X for the two latter commands.
+```
+
 ### Undo working copy modifications of one file in Git
 
 ```bash
