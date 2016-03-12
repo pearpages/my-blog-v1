@@ -2,3 +2,4 @@ _site
 .sass-cache
 nbproject
 *.sublime*
+.DS_STORE
