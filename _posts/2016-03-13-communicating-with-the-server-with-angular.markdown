@@ -298,3 +298,30 @@ angular.module('app',[])
 ```
 
 ## Restangular
+
+* It's a substitute for $resource.
+* It has a dependency with *lodash*.
+* You give it fragments of the URL and constructs the URL for you
+
+```javascript
+app.config(function(RestangularProvider) {
+   Restangular.setBaseUrl('/data'); 
+});
+```
+
+```javascript
+app.factory('users',function(Restangular) {
+    return Restangular.all('users');
+});
+```
+
+```javascript
+function myController(users) {
+    users.getList().then(function(usersList) {
+        // do whatever
+        });
+    users.one(1).get(1).then(function (){});
+    uers.get(1);
+    users.one(1).all('followedInstructors').getList();
+}
+```
