@@ -174,6 +174,8 @@ return $resource('data/userData/followedInstructors',undefined {
 
 ### $http
 
+Returns a Promise
+
 **Methods**
 
 * then (config)
@@ -186,15 +188,19 @@ To access data with the *then* method we have to use *config.data*.
 
 ### $q
 
+Returs a promise
+
 **Methods**
 
 * then (data)
 * catch
 * finally
 
-### $request
+### $resource
 
-Its promise is an array:
+returns an Array
+
+All the data, plus to additional objects $promise and $resolved.
 
 ```javascript
 [$promise,$resolved]
@@ -222,8 +228,51 @@ angular.module('app',[])
 });
 ```
 
-## Transofrms
+## $http Transforms
+
+### Transform Request
+
+```javascript
+// Doing it this way my transformRequest goes first and then applies the rest of the default transformRequests.
+$http.post('data/userData/followedInstructors', list, {
+    transformRequest: [
+        function (data, headersGetter) {
+            // to inspect the headers we have to call the headersGeterr function
+            // var headers = headersGetter();
+            
+            for (var i = 0; i<data.length; i++) {
+                var item = data[i];
+                item.ts = new Date();
+            }
+            return data;
+        }
+    ].concat($http.defaults.transformRequest);
+});
+```
+
+### Transform Response
+
+```javascript
+// here the aprroach it's just the opposite, we put our changes the last.
+return $http.get('data/userData/followedInstructors', {
+    transformRespone : 
+        $http.defaults.transformResponse.concat([
+            function(data,headersGetter) {
+                return data.followedInstructors;
+            }
+        ]);
+    });
+```
 
 ## Interceptors
+
+Interceptors are very useful, for example, for Authentication tokens, or any thing that we need to add to each call.
+
+```javascript
+angular.module('app',[])
+.config(function ($httpProvider,$provide) {
+    
+});
+```
 
 ## Restangular
