@@ -230,6 +230,8 @@ angular.module('app',[])
 
 ## $http Transforms
 
+Angular, for instance, has Transforms that do JSON serialization and deserialization for you automatically.
+
 ### Transform Request
 
 ```javascript
@@ -268,10 +270,30 @@ return $http.get('data/userData/followedInstructors', {
 
 Interceptors are very useful, for example, for Authentication tokens, or any thing that we need to add to each call.
 
+We create the in the .config function and use the **$provide**. 
+
+Interceptors have 4 different methods:
+
+* request
+* requestError
+* response
+* responseError
+
 ```javascript
 angular.module('app',[])
-.config(function ($httpProvider,$provide) {
-    
+.config(function($httpProvider, $provide) {
+    $provide.factory('myInterceptor', function() {
+        return {
+            response: function (config) {
+                if(config.config.url === '/data/courses') {
+                    config.data.splice(5);
+                }
+                return config;
+            }
+        };
+    });
+
+    $httpProvider.interceptors.push('myInterceptor');
 });
 ```
 

@@ -1,31 +1,4 @@
 
-## Interceptors
-
-Commonly used to add authentication information.
-
-Functions
-
-- request
-- requestError
-- response
-- responseError
-
-```javascript
-app.config(function($httpProvider, $provide) {
-	$provide.factory('myInterceptor', function() {
-		return {
-			response: function (config) {
-				if(config.config.url === '/data/courses') {
-					config.data.splice(5);
-				}
-				return config;
-			}
-		};
-	});
-
-	$httpProvider.interceptors.push('myInterceptor');
-});
-```
 
 ## Restangular
 
