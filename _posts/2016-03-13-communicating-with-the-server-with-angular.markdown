@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Communicationg with the server with Angular"
+title: "Communicating with the server with Angular"
 categories: javascript rest http angular
 date:  2016-03-13 08:12:23
 author: Pere Pages
