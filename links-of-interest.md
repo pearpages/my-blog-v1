@@ -8,6 +8,7 @@ permalink: /links-of-interest
 
 * [Angular StyleGuide by John Papa](https://github.com/johnpapa/angular-styleguide)
 * [Basic Angular Concepts](http://www.pearpages.com/angularjs/web/javascript/2015/05/13/angularjs/)
+* [ngResource,$q and $http](http://www.pearpages.com/javascript/rest/http/angular/2016/03/13/communicating-with-the-server-with-angular/)
 
 ## Api Design
 
