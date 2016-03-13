@@ -7,6 +7,7 @@ permalink: /links-of-interest
 ## Angular
 
 * [Angular StyleGuide by John Papa](https://github.com/johnpapa/angular-styleguide)
+* [Basic Angular Concepts](http://www.pearpages.com/angularjs/web/javascript/2015/05/13/angularjs/)
 
 ## Api Design
 
