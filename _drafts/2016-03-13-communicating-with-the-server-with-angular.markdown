@@ -11,17 +11,216 @@ author: Pere Pages
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## $resource
+$http is low level and *$resource is high level and for Restful End Points*.
+
+## $resource (ngResource)
+
+We can use $resource for get calls that not are necesseraly *resourceful*.
+
+The next example does server side logic in the client side, it is **Bad practice**. It is just an example.
+
+Add the .js file
+
+```html
+<script type="text/javascript" src="vendor/angular-resource.min.js"></script>
+```
+
+Add the dependency to the Module
+
+```javascript
+var app = angular.module('app',['ngResource']);
+```
+
+Factories and Service
+
+```javascript
+app.factory('users', function ($resource) {
+    return $resource('/data/users/:id', {id: "@id"});
+});
+```
+
+```javascript
+app.factory('catalog', function ($resource) {
+    return $resource('/data/courses/:id', {id: "@id"});
+});
+```
+
+```javascript
+// one Singleton to keep the User
+app.value('identity', {});
+```
+
+Controllers
+
+```javascript 
+function LoginController (users,notifier,identity) {
+    users.query().$promise.then(function(userCollection) {
+        // userCollection is a simple Array
+        userCollection.forEach(function (user) {
+            if(name === user.name && password === user.password) {
+                notifier.notify('You have successfully signed in!');
+                identity.currentUser = user;
+            }
+        });
+        if(identify.currentUser === undefined) {
+            notifier.notify('Username/Password Combination incorrect');
+        }
+    });    
+}
+```
+
+```javascript
+function CatalogListController (catalog) {
+    var vm = this;
+
+    this.catalog = catalog.query();
+}
+```
+
+```javascript
+function CatalogController (catalog,notifier) {
+    var vm = this;
+
+    this.registerCourse = function (course) {
+        course.registered = true;
+        course.$save();
+        notifier.notify('You have registered for '+ course.name);
+    }
+}
+```
 
 ## $http
 
+```javascript
+app.factory('followedInstructors', function ($http) {
+    return {
+        get: function() {
+            // ...
+        },
+        save: function() {
+            // ...
+        }
+    };
+});
+```
+
 ## $http to READ
+
+```javascript
+app.factory('followedInstructors', function ($http, $q) {
+    return {
+        get: function() {
+            // Solution1: This solution returns a promise
+            // return $http.get('data/userData/followedInstructors');
+            
+            // Solution2: Also returns a promise but we move all the logic to the service
+            var dfd = $q.defer();
+            $http.get('data/userData/followedInstructors')
+            .success(function (data) {
+                dfd.resolve(data);
+            });
+
+            return dfd.promise;
+        },
+        save: function() {
+            // ...
+        }
+    };
+});
+```
+
+Controller
+
+```javascript
+function myController() {
+    var vm = this;
+
+    // Solution1: we use the success method of the promise
+    // followedInstructors.get().success(function(data) {
+    //      vm.followedInstructors = data;
+    // });
+    
+    // Solution2
+    vm.followedInstructors = follwedInstructors.get();
+}   
+```
 
 ## $http to SAVE
 
-## $http vs $resource vs $promises
+```javascript
+app.factory('followedInstructors', function ($http) {
+    return {
+        get: function() {
+            // ...
+        },
+        save: function(list) {
+            $http.post('data/userData/followedInstructors', list)
+        }
+    };
+});
+```
+
+## $resource with non Restful End Points
+
+Usutally it isn't a good idea to use $resource for not Restful End Points, but we can still use it if we are using a GET.
+
+```javascript
+return $resource('data/userData/followedInstructors',undefined {
+    get: {method: "GET", isArray: true}
+}).get().$promise;
+```
+
+## Comparing promises from $http, $request and $q
+
+### $http
+
+**Methods**
+
+* then (config)
+* catch
+* finally
+* success (data,status,header,config)
+* error
+
+To access data with the *then* method we have to use *config.data*.
+
+### $q
+
+**Methods**
+
+* then (data)
+* catch
+* finally
+
+### $request
+
+Its promise is an array:
+
+```javascript
+[$promise,$resolved]
+
+// promise has another array with the elements, the $promise and boolean $resolved
+```
 
 ## $http configuration
+
+```javascript
+return $http.get('data/userData/followedInstructors', {cache:true});
+```
+
+```javascript
+$http.post('data/userData/followedInstructors', list, {headers: {"ContentType": 'application/x-www-form-urlencoded'}
+});
+```
+
+### Configuring the App to have a default $http configuration
+
+```javascript
+angular.module('app',[])
+.config(function ($httpProvider) {
+    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+});
+```
 
 ## Transofrms
 
