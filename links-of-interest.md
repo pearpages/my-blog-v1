@@ -7,6 +7,8 @@ permalink: /links-of-interest
 ## Angular
 
 * [Angular StyleGuide by John Papa](https://github.com/johnpapa/angular-styleguide)
+* [Basic Angular Concepts](http://www.pearpages.com/angularjs/web/javascript/2015/05/13/angularjs/)
+* [ngResource,$q and $http](http://www.pearpages.com/javascript/rest/http/angular/2016/03/13/communicating-with-the-server-with-angular/)
 
 ## Api Design
 
@@ -47,6 +49,10 @@ permalink: /links-of-interest
 
 * [Mongo Basics](http://www.pearpages.com/javascript/mongodb/2016/02/10/mongodb/)
 * [Mongoose Basics](http://www.pearpages.com/javascript/mongodb/mongoose/2016/02/13/mongoose-basics/)
+
+## Node
+
+* [Building a simple API with Node](http://www.pearpages.com/javascript/node/api/2016/03/12/building-a-simple-node-api/)
 
 ## Software Development
 
