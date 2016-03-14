@@ -352,3 +352,14 @@ git checkout origin/master -- my-file.js  # upstream master
 git checkout HEAD -- my-file.js           # the version from the most recent commit
 git checkout HEAD^ -- my-file.js          # the version before the most recent commit
 ```
+
+### Stop tracking a specific file that we don't want to commit
+
+```bash
+git update-index --assume-unchanged <file>
+
+# update
+# To undo and start tracking again (if you forgot what files were untracked, see this question):
+
+git update-index --no-assume-unchanged [<file> ...]
+```
