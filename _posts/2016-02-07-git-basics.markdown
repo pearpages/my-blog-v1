@@ -381,3 +381,15 @@ git update-index --assume-unchanged <file>
 
 git update-index --no-assume-unchanged [<file> ...]
 ```
+
+### Merge two branches and in case of conflict get the other branch changes
+
+```bash
+git merge -X theirs <branch>
+```
+
+### Merge two branches and in case of conflict get the our changes
+
+```bash
+git merge -s ours <branch>
+```
