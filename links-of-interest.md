@@ -27,6 +27,7 @@ permalink: /links-of-interest
 ## Git
 
 * [Git Basics](/git/2016/02/07/git-basics/)
+* [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
 ## Javascript
 
