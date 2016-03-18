@@ -9,10 +9,15 @@ permalink: /links-of-interest
 * [Angular StyleGuide by John Papa](https://github.com/johnpapa/angular-styleguide)
 * [Basic Angular Concepts](http://www.pearpages.com/angularjs/web/javascript/2015/05/13/angularjs/)
 * [ngResource,$q and $http](http://www.pearpages.com/javascript/rest/http/angular/2016/03/13/communicating-with-the-server-with-angular/)
+* [Angular Youtube Channel](https://www.youtube.com/user/angularjs)
 
 ## Api Design
 
 * [Api Design](http://www.pearpages.com/api/design/2016/03/03/api-design/)
+
+## Charts
+
+* [Google Charts](https://google-developers.appspot.com/chart/)
 
 ## Generators
 
@@ -30,6 +35,7 @@ permalink: /links-of-interest
 
 ## Javascript
 
+* [SuperheroJS](http://superherojs.com/)
 * [Essential JavaScript Links by Eric Elliott](https://github.com/ericelliott/essential-javascript-links)
 * [Functions](http://www.pearpages.com/javascript/functions/2015/05/25/javascript-functions/)
 * [Inheritance](http://www.pearpages.com/jasvascript/inheritance/2015/05/25/javascript-inheritance/)
@@ -54,6 +60,11 @@ permalink: /links-of-interest
 
 * [Building a simple API with Node](http://www.pearpages.com/javascript/node/api/2016/03/12/building-a-simple-node-api/)
 
+## PHP
+
+* [Zend Framework Reference](http://framework.zend.com/manual/current/en/index.html)
+* [PHP: The Right Way](http://www.phptherightway.com/)
+
 ## Software Development
 
 * [List of software development philosophies
@@ -69,3 +80,8 @@ permalink: /links-of-interest
 ## Typescript
 
 * [Typescript Reference](http://www.pearpages.com/javascript/typescript/2016/02/09/typescript/)
+
+## Web
+
+* [Next Generation HTML5 and JavaScript](http://www.infoq.com/articles/next-generation-HTML5-JavaScript)
+* [devzum.com](http://devzum.com/)
