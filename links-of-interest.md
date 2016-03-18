@@ -49,6 +49,7 @@ permalink: /links-of-interest
 
 ## Karma
 
+* [Karma](https://karma-runner.github.io/)
 * [Code Coverage with Istanbul](http://www.pearpages.com/javascript/karma/istanbul/2015/07/24/karma-code-coverage/)
 
 ## Markdown
