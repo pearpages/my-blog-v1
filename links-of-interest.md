@@ -50,6 +50,7 @@ permalink: /links-of-interest
 ## Markdown
 
 * [Complete syntax by @daringfireball](http://daringfireball.net/projects/markdown/syntax)
+* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Cheatsheet by adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
 
 ## MongoDB and Mongoose
