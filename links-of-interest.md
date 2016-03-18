@@ -76,6 +76,8 @@ permalink: /links-of-interest
 ## Programming Playground
 
 * [CODEPEN](http://codepen.io/)
+* [jsFiddle](https://jsfiddle.net/)
+* [Plunker](https://plnkr.co/)
 
 ## Python
 
