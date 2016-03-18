@@ -75,6 +75,7 @@ permalink: /links-of-interest
 * [Zend Framework Reference](http://framework.zend.com/manual/current/en/index.html)
 * [PHP: The Right Way](http://www.phptherightway.com/)
 * [phpdoc](https://www.phpdoc.org/docs/latest/guides/docblocks.html)
+* [phpspec](http://www.phpspec.net/en/latest/manual/introduction.html)
 
 ## Programming Playground
 
