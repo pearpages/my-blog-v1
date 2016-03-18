@@ -38,6 +38,7 @@ permalink: /links-of-interest
 
 * [SuperheroJS](http://superherojs.com/)
 * [Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+* [MDN Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Essential JavaScript Links by Eric Elliott](https://github.com/ericelliott/essential-javascript-links)
 * [Functions](http://www.pearpages.com/javascript/functions/2015/05/25/javascript-functions/)
 * [Inheritance](http://www.pearpages.com/jasvascript/inheritance/2015/05/25/javascript-inheritance/)
