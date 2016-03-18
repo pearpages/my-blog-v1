@@ -70,6 +70,11 @@ permalink: /links-of-interest
 
 * [Building a simple API with Node](http://www.pearpages.com/javascript/node/api/2016/03/12/building-a-simple-node-api/)
 
+## Package Managers
+
+* [Chocolatey](https://chocolatey.org/)
+* [Homebrew](http://brew.sh/)
+
 ## PHP
 
 * [Zend Framework Reference](http://framework.zend.com/manual/current/en/index.html)
