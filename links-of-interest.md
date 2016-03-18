@@ -36,6 +36,7 @@ permalink: /links-of-interest
 ## Javascript
 
 * [SuperheroJS](http://superherojs.com/)
+* [Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 * [Essential JavaScript Links by Eric Elliott](https://github.com/ericelliott/essential-javascript-links)
 * [Functions](http://www.pearpages.com/javascript/functions/2015/05/25/javascript-functions/)
 * [Inheritance](http://www.pearpages.com/jasvascript/inheritance/2015/05/25/javascript-inheritance/)
@@ -64,6 +65,7 @@ permalink: /links-of-interest
 
 * [Zend Framework Reference](http://framework.zend.com/manual/current/en/index.html)
 * [PHP: The Right Way](http://www.phptherightway.com/)
+* [phpdoc](https://www.phpdoc.org/docs/latest/guides/docblocks.html)
 
 ## Software Development
 
