@@ -87,6 +87,10 @@ permalink: /links-of-interest
 
 * [http://docs.python-guide.org/en/latest/](The Hitchhiker’s Guide to Python!)
 
+## Regex
+
+* [Regex 101](https://regex101.com/)
+
 ## Software Development
 
 * [List of software development philosophies
@@ -108,3 +112,4 @@ permalink: /links-of-interest
 * [Next Generation HTML5 and JavaScript](http://www.infoq.com/articles/next-generation-HTML5-JavaScript)
 * [devzum.com](http://devzum.com/)
 * [Developer Mozilla](https://developer.mozilla.org/en-US/)
+* [The Joel Test](http://www.joelonsoftware.com/articles/fog0000000043.html)
