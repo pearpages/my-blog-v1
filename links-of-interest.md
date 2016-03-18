@@ -43,6 +43,10 @@ permalink: /links-of-interest
 * [Arrays](http://www.pearpages.com/javascript/arrays/2015/05/26/javascript-arrays/)
 * [Grammar, objects and methods](http://www.pearpages.com/javascript/2015/06/02/javascript-grammar-objects-and-methods/)
 
+## Jekyll
+
+* [Using Jekyll with GitHub](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)
+
 ## Karma
 
 * [Code Coverage with Istanbul](http://www.pearpages.com/javascript/karma/istanbul/2015/07/24/karma-code-coverage/)
@@ -57,6 +61,7 @@ permalink: /links-of-interest
 
 * [Mongo Basics](http://www.pearpages.com/javascript/mongodb/2016/02/10/mongodb/)
 * [Mongoose Basics](http://www.pearpages.com/javascript/mongodb/mongoose/2016/02/13/mongoose-basics/)
+* [Mongoose Docs](http://mongoosejs.com/docs/)
 
 ## Node
 
@@ -67,6 +72,10 @@ permalink: /links-of-interest
 * [Zend Framework Reference](http://framework.zend.com/manual/current/en/index.html)
 * [PHP: The Right Way](http://www.phptherightway.com/)
 * [phpdoc](https://www.phpdoc.org/docs/latest/guides/docblocks.html)
+
+## Programming Playground
+
+* [CODEPEN](http://codepen.io/)
 
 ## Python
 
