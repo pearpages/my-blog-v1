@@ -68,6 +68,10 @@ permalink: /links-of-interest
 * [PHP: The Right Way](http://www.phptherightway.com/)
 * [phpdoc](https://www.phpdoc.org/docs/latest/guides/docblocks.html)
 
+## Python
+
+* [http://docs.python-guide.org/en/latest/](The Hitchhiker’s Guide to Python!)
+
 ## Software Development
 
 * [List of software development philosophies
