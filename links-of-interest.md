@@ -114,6 +114,7 @@ permalink: /links-of-interest
 
 ## Web
 
+* [TechWars](http://www.techwars.io/)
 * [Next Generation HTML5 and JavaScript](http://www.infoq.com/articles/next-generation-HTML5-JavaScript)
 * [devzum.com](http://devzum.com/)
 * [Developer Mozilla](https://developer.mozilla.org/en-US/)
