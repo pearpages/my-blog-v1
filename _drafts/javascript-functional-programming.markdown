@@ -126,14 +126,73 @@ var g = _.chain(greetings)
 + Folktale
 + jQuery
 
-## Programming Techniques
+## Implementig Functional Programming Techniques
+
+### Partial function application
+
+Partial application in JavaScript is the process of binding values to one or more arguments of a function that returns another function that accepts the remaining, unbound arguments. 
+
+### Currying
+
+Currying is the process of transforming a function with many arguments into a function with one argument that returns another function that takes more arguments as needed.
+
+### Apply, call and the this keyword
+
+In pure functional languages, functions are not invoked; they're applied.
+
+#### Call()
+
+```
+fun.call(thisArg[, arg1[, arg2[, ...]]])
+```
+
+The call() function lets you define the *this* keyword as the first argument.
+
+```javascript
+// normal way
+['Hello', 'world'].join(' ');
+```
+
+```javascript
+// using call
+Array.prototype.join.call(['Hello','world', ' ']);
+```
+
+It can be used, for example, to invoke anonymous functions:
+
+```javascript
+(function() {console.log(this.length)}).call([1,2,3]);
+```
+
+#### Apply()
+
+The call() function accepts a list of arguments, the apply() function accepts an array of arguments.
+
+```
+fun.apply(thisArg, [argsArray])
+```
+
+#### Binding arguments
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+```
+fun.bind(thisArg[, arg1[, arg2[, ...]]])
+```
+
+```javascript
+function Drum() {
+    this.noise = 'boom';
+    this.duration = 1000;
+    this.goBoom = function() {console.log(this.noise)};
+}
+
+var drum = new Drum();
+setInterval(drum.goBoom.bind(drum), drum.duration);
+```
 
 ## Category Theory
 
 ## Advanced topics and pitfalls
 
 ## Functional and Object-oriented programming
-
-
-
-
