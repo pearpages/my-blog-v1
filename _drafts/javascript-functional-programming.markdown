@@ -65,5 +65,36 @@ The key to identifying functions that can be written in a more functional way is
 + Divide and conquer: recusively break problems into smaller instances
 + Lazy evaluation: non-strict evaluation, call-by-need and deferred execution, the result of a function it is not calculated until it is needed
 
+### Javascript basic toolkit
+
+* map()
+* filter()
+* reduce()
+
+In javascript they only work in Arrays.
+
+#### Callback
+
+A callback() function is used for passing to other functions for them to use
+
+#### Array
+
+* forEach
+* concat
+* reverse (but it doesn't return a new Array!!)
+* sort (the same as reverse)
+* every, some
+
+## Environment
+
+## Programming Techniques
+
+## Category Theory
+
+## Advanced topics and pitfalls
+
+## Functional and Object-oriented programming
+
+
 
 
