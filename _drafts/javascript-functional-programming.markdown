@@ -87,6 +87,41 @@ A callback() function is used for passing to other functions for them to use
 
 ## Environment
 
+> Underscore has become the standard functional javascript library in the eyes of many.
+
+Underscore is actually a reimplementation of **Ruby's Enumerable module**, which explains why *CoffeeScript* was also influenced by Ruby.
+
++ map()
++ find()
++ invoke()
++ pluck()
++ sortyBy()
++ groupBy()
+
+```javascript
+var g = _.chain(greetings)
+.sortBy(function(x) {return x.value.length})
+.pluck('origin')
+.map(function(x) {return x.chart(0).toUpperCase()+x.slice(1)})
+.reduce(function(x,y) {return x + ' ' + y}, '')
+.value();
+```
+
+### Functional libraries for JavaScript
+
++  Underscore.js
++  [Fantasy Land](https://github.com/fantasyland/fantasy-land)
++  Bilby.js
++  Lazy.js
++  Bacon.js
++  Functional
++  wu.js
++  sloth.js
++  stream.js
++  **Lo-Dash.js**
+
+
+
 ## Programming Techniques
 
 ## Category Theory
