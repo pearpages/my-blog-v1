@@ -109,18 +109,22 @@ var g = _.chain(greetings)
 
 ### Functional libraries for JavaScript
 
-+  Underscore.js
-+  [Fantasy Land](https://github.com/fantasyland/fantasy-land)
-+  Bilby.js
-+  Lazy.js
-+  Bacon.js
-+  Functional
-+  wu.js
-+  sloth.js
-+  stream.js
-+  **Lo-Dash.js**
-
-
++ Underscore.js
++ [Fantasy Land](https://github.com/fantasyland/fantasy-land)
++ Bilby.js
++ Lazy.js
++ Bacon.js
++ Functional
++ wu.js
++ sloth.js
++ stream.js
++ **Lo-Dash.js**
++ Sugar
++ from.js
++ JSLINQ
++ Boiler.js
++ Folktale
++ jQuery
 
 ## Programming Techniques
 
