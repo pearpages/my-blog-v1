@@ -44,10 +44,6 @@ What's lacking is
 * built-in immutable data -> programmer discipline
 * it isn't also very good with recursion due to the way it handles tail calls -> *Tampolining*
 
-
-
-
-
 ### Advantages
 
 * Cleaner code
