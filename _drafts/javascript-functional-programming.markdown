@@ -16,6 +16,44 @@ date:  2015-05-26 19:40:22
 
 ### What makes a language functional? 
 
+**Functional programming cannot be performed in C. Functional programming cannot be performed in Java (without a lot of cumbersome workarounds for "almost" functional programming).**
+
 | Characteristic | Imperative | Functional |
 |:--|:--|:--|
 | Programming Style | Perform step-by-step tasks and manage changes in state | Define what the problem is and what data transformations are needed to achieve the solution |
+| State Changes | Important | Non-existent |
+| Primary Flow Control | Loops, conditionals, and function calls | Function calls and recursion |
+| Primary Manipulation Unit | Structures and class objects | Functions as first-class objects and data sets |
+
+The syntax of the language must allow for certain design patterns, such as:
+
++ an inferred type system
++ anonymous functions
++ Lambda calculus
++ the interpreter's evaluation strategy should be non-strict and call-by-need*
+
+* also known as deferred execution, which allows for immutable data structures and non-strict, lazy evaluation.
+
+### Is Javascript a functional programming language?
+
+> JavaScript is not a pure functional language. 
+
+What's lacking is 
+
+* lazy evaluation -> Lazy.js
+* built-in immutable data -> programmer discipline
+* it isn't also very good with recursion due to the way it handles tail calls -> *Tampolining*
+
+
+
+
+
+### Advantages
+
+* Cleaner code
+* Modularity
+* Reusability
+* Reduced coupling
+* Mathematically correct
+
+The key to identifying functions that can be written in a more functional way is to look for **loops** and **temporary variables**, such as words and count instances in the preceding example. We can usually do away with both temporary variables and loops by replacing them with **higher-order functions**.
