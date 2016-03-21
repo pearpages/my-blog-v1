@@ -53,3 +53,17 @@ What's lacking is
 * Mathematically correct
 
 The key to identifying functions that can be written in a more functional way is to look for **loops** and **temporary variables**, such as words and count instances in the preceding example. We can usually do away with both temporary variables and loops by replacing them with **higher-order functions**.
+
+### Main Concepts
+
++ Self-invoking functions and closures: the function defined in the closure 'remembers' the environment in which it was created
++ Higher-order functions: take another function as an input or return a function as the output
++ Pure functions: return a value computed using only thei nputs passed to it
++ Anonymous functions: allow us the ability to define ad-hoc logic, on-the-spot and as needed. They are the embodiment of **Lambda calculus**
++ Method chains: multiple functions are applied to an object one after another
++ Recursion: a function that calls itself
++ Divide and conquer: recusively break problems into smaller instances
++ Lazy evaluation: non-strict evaluation, call-by-need and deferred execution, the result of a function it is not calculated until it is needed
+
+
+
