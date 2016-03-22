@@ -191,6 +191,62 @@ var drum = new Drum();
 setInterval(drum.goBoom.bind(drum), drum.duration);
 ```
 
+#### Function Factories
+
+```javascript
+function bindFristArg(func, a) {
+    return function(b) {
+        return func(a,b);
+    }
+}
+
+var makePowersOf = bindFirstArg(bindFirstArg, Math.pow);
+   var powersOfThree = makePowersOf(3);
+   console.log(powersOfThree(2)); // 9
+   console.log(powersOfThree(3)); // 27
+```
+
+#### Partial Application
+
+Partial application is the process of binding values to one or more arguments of a function that returns a partially-applied function that accepts the remaining, unbound arguments.
+
+The biggest flaw in this method is that the way in which the arguments are passed, as in how many and in what order, can be ambiguous. There's a better way to do this: currying.
+
+##### From the left
+
+```javascript
+Function.prototype.partialApply = function() {
+    var func = this;
+    args = Array.prototype.slice.call(arguments);
+    return function() {
+        return func.apply(this, args.concat(
+            Array.prototype.slice.call(arguments)
+        ));
+    }
+}
+```
+
+##### From the right
+
+```javascript
+Function.prototype.partialApplyRight = function() {
+    var func = this;
+    args = Array.prototype.slice.call(arguments);
+    return function() {
+        return func.apply(
+            this,
+            [].slice.call(arguments,0)
+            .concat(args));
+    }
+}
+```
+
+### Currying
+
+Currying is the process of transforming a function with many arguments into a function with one argument that returns another function that takes more arguments as needed.
+
+Currying allows much better control ofhow arguments are passed to the function.
+
 ## Category Theory
 
 ## Advanced topics and pitfalls
