@@ -304,9 +304,9 @@ Function.prototype.sequence = function(prevFunc) {
 }
 ```
 
-
-
 ## Category Theory
+
+> Category theory is the theoretical concept that empowers function composition.
 
 ## Advanced topics and pitfalls
 
