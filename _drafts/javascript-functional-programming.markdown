@@ -274,6 +274,38 @@ Function.prototype.curry = function (numArgs) {
 
 ### Function Composition
 
+In functional programming, we want everything to be a function. We specially want unary functions if possible.
+
+> **Unary** functions are functions that take only a single input. Functions with multiple inputs are **polyadic**, but we usually say *binary* for functions that accept two inputs and **ternary** for three inputs. Some functions don't accept specific number of inputs; we call those **variadic**.
+
+#### Compose
+
+Composing functions allows us to build complex funcitons from many simple, generic functions.
+
+```javascript
+Function.prototype.compose = function(prevFunc) {
+    var nextFunc = this;
+    return function() {
+        return nextFunc.call(this,prevFunc,apply(this.arguments));
+    }
+}
+```
+
+Functions are applied from right to left.
+
+#### Sequence - compose in reverse
+
+```javascript
+Function.prototype.sequence = function(prevFunc) {
+    var nextFunc = this;
+    return function() {
+        return prevFunc.call(this,nextFunc.apply(this,arguments));
+    }
+}
+```
+
+
+
 ## Category Theory
 
 ## Advanced topics and pitfalls
