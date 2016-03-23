@@ -44,6 +44,7 @@ permalink: /links-of-interest
 * [Inheritance](http://www.pearpages.com/jasvascript/inheritance/2015/05/25/javascript-inheritance/)
 * [Arrays](http://www.pearpages.com/javascript/arrays/2015/05/26/javascript-arrays/)
 * [Grammar, objects and methods](http://www.pearpages.com/javascript/2015/06/02/javascript-grammar-objects-and-methods/)
+* [Moment.js, Parse, validate, manipulate, and display dates in JavaScript](http://momentjs.com/)
 
 ## Jekyll
 

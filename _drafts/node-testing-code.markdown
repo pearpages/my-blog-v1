@@ -1,3 +1,15 @@
+---
+layout: post
+title: "Testing Node Code"
+categories: javascript nodejs testing
+date:  2016-03-23 19:12:12
+---
+
+#### Contents
+{:.no_toc}
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 * Business Logic
 * Exceptions
 * Finding Edge Cases
@@ -11,6 +23,8 @@
 * To arrange
 * To Act
 * To Assert
+
+Tests don't have to be 'DRY'. They can have duplication of code if it helps to understand better the test.
 
 ## Testing Errors
 
@@ -37,4 +51,13 @@ describe('unregisterStudent', function() {
 ```
 
 ## Finding Edge Cases
+
+## IO and Asynchronous Operations
+
+## Testing with Mocks
+
+## Testing Promises
+
+## Test Coverage
+
 
