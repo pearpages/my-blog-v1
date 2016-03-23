@@ -45,7 +45,12 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-
+/**
+ * Main Menu Icons
+ */
+.trigger .glyphicon{
+    color: #828282;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -139,7 +144,7 @@ blockquote {
 }
 
 #markdown-toc {
-    padding: 16px 28px;
+    padding: 16px 40px;
     background-color: #DDD;
     border-radius: 8px;
     margin: 10px 0;
