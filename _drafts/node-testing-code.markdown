@@ -58,6 +58,12 @@ describe('unregisterStudent', function() {
 
 ## Testing Promises
 
+Install the library ```bluebird```
+
+```bash
+npm install --save-dev bluebird
+```
+
 ## Test Coverage
 
 
