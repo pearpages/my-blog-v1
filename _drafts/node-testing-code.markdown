@@ -72,4 +72,6 @@ npm install --save-dev chai-as-promised
 
 ## Test Coverage
 
-
+```bash
+npm install -g istanbul
+```
