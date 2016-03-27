@@ -64,6 +64,12 @@ Install the library ```bluebird```
 npm install --save-dev bluebird
 ```
 
+Install the library ```chai-as-promised```
+
+```bash
+npm install --save-dev chai-as-promised
+```
+
 ## Test Coverage
 
 
