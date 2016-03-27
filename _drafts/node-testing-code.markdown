@@ -75,3 +75,7 @@ npm install --save-dev chai-as-promised
 ```bash
 npm install -g istanbul
 ```
+
+```bash
+istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec ./test
+```
