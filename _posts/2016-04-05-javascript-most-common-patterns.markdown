@@ -225,7 +225,7 @@ Signature
 ClassName.prototype.methodName = function (arguments) {};
 ```
 
-```javasccript
+```javascript
 var Task = function (name) {
   this.name = name;
   this.completed = false;
