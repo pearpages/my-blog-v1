@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript Most Common Patterns"
 categories: javascript patterns
-date:  2016-04-06 00:12:22
+date:  2016-04-05 00:12:22
 author: Pere Pages
 ---
 
