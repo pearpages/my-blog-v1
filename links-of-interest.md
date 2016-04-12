@@ -45,6 +45,7 @@ permalink: /links-of-interest
 * [Arrays](http://www.pearpages.com/javascript/arrays/2015/05/26/javascript-arrays/)
 * [Grammar, objects and methods](http://www.pearpages.com/javascript/2015/06/02/javascript-grammar-objects-and-methods/)
 * [Moment.js, Parse, validate, manipulate, and display dates in JavaScript](http://momentjs.com/)
+* [Common Patterns](http://www.pearpages.com/javascript/patterns/2016/04/05/javascript-most-common-patterns/)
 
 ## Jekyll
 
@@ -75,6 +76,11 @@ permalink: /links-of-interest
 
 * [Chocolatey](https://chocolatey.org/)
 * [Homebrew](http://brew.sh/)
+
+## Patterns
+
+* [Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+* [Javascript Common Patterns](http://www.pearpages.com/javascript/patterns/2016/04/05/javascript-most-common-patterns/)
 
 ## PHP
 
