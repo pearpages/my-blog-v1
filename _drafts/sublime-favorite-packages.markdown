@@ -4,3 +4,4 @@
 + [GitGutter](https://packagecontrol.io/packages/GitGutter)
 + [Typescript](https://packagecontrol.io/packages/TypeScript)
 + [Side​Bar​Enhancements](https://packagecontrol.io/packages/SideBarEnhancements)
++ [Sass](https://packagecontrol.io/search/sass)
