@@ -393,3 +393,9 @@ git merge -X theirs <branch>
 ```bash
 git merge -s ours <branch>
 ```
+
+### Change the date of a commit
+
+```bash
+git commit -am "message of the commit" --date="2015-11-28 11:34:12"
+```
