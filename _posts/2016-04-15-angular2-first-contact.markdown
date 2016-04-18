@@ -64,7 +64,7 @@ categories: javascript angular2
 <my-story></my-story>
 ```
 
-```Typescript
+```typescript
 import { Component } from 'angular2/core';
 
 @Component({
