@@ -121,6 +121,7 @@ permalink: /links-of-interest
 
 ## Typescript
 
+* [TypeScript Playground](http://www.typescript.org/Playground/)
 * [Typescript Reference](http://www.pearpages.com/javascript/typescript/2016/02/09/typescript/)
 
 ## Web
