@@ -3,6 +3,7 @@ layout: post
 title:  "Dependency Injection With AngularJS"
 date:   2015-10-12 17:00:23
 categories: javascript programming angularjs
+author: Pere Pages
 ---
 
 In general, there are only three ways an object can get a hold of its dependencies:

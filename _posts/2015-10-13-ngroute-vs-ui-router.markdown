@@ -3,6 +3,7 @@ layout: post
 title:  "ngRoute vs ui-router"
 date:   2015-10-13 18:12:43
 categories: javascript angularjs routing
+author: Pere Pages
 ---
 
 **ngRoute** merely allows you to assign controllers and templates to URL routes, whereas the fundamental abstraction in **ui-router** is **states**, which is a more powerful concept. 

@@ -3,6 +3,7 @@ layout: post
 title: "Using Angular resource"
 date: 2015-06-09 19:45:02
 categories: javascript angularjs
+author: Pere Pages
 ---
 
 **$resource** service is built on the top of the **$http** service.

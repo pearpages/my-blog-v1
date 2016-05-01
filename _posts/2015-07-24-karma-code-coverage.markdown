@@ -3,6 +3,7 @@ layout: post
 title:  "Karma Code Coverage with Istanbul"
 date:   2015-07-24 20:33:15
 categories: javascript karma istanbul
+author: Pere Pages
 ---
 
 Karma can generate code coverage using awesome Istanbul. If you want to generate the coverage, you need to configure up to three parts:

@@ -3,6 +3,7 @@ layout: post
 title: "Angular2 first contact"
 date:   2016-04-15 07:02:15
 categories: javascript angular2
+author: Pere Pages
 ---
 
 #### Contents

@@ -3,6 +3,7 @@ layout: post
 title:  "CordovaJs"
 date:   2015-07-22 19:33:15
 categories: javascript cordovajs
+author: Pere Pages
 ---
 
 ## Introduction

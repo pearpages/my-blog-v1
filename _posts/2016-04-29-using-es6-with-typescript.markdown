@@ -3,6 +3,7 @@ layout: post
 title: "Using E6 with Typescript"
 date:   2016-04-29 19:12:45
 categories: javascript typescript es6
+author: Pere Pages
 ---
 
 #### Contents

@@ -3,6 +3,7 @@ layout: post
 title: "Web Api Design"
 categories: api design
 date:  2016-03-03 08:10:22
+author: Pere Pages
 ---
 
 #### Contents

@@ -3,6 +3,7 @@ layout: post
 title:  "Typescript Reference"
 categories: javascript typescript
 date:   2016-02-09 08:32:53
+author: Pere Pages
 ---
 
 #### Contents

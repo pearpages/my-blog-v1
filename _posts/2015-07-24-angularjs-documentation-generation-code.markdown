@@ -3,6 +3,7 @@ layout: post
 title:  "AngularJS Documentation Generation Code"
 date:   2015-07-24 22:12:14
 categories: javascript angularjs
+author: Pere Pages
 ---
 
 The AngularJS project uses a form of [JSDoc](http://usejsdoc.org/) for all of its documentation.

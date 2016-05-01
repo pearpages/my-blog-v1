@@ -3,6 +3,7 @@ layout: post
 title: "Angular Tests"
 date: 2015-06-11 19:15:02
 categories: javascript angularjs
+author: Pere Pages
 ---
 
 ## Fundamentals of TDD

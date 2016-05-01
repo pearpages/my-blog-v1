@@ -3,6 +3,7 @@ layout: post
 title:  "Git Basics"
 date:   2016-02-07 18:22:12
 categories: git
+author: Pere Pages
 ---
 
 #### Contents
