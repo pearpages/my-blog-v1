@@ -3,6 +3,7 @@ layout: post
 title: "An Angular2 example"
 date:   2016-04-30 20:12:35
 categories: javascript angular angular2
+author: Pere Pages
 ---
 
 #### Contents
