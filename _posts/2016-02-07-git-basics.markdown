@@ -274,6 +274,8 @@ Tags always stay on the same commit
 
 ```bash
 # renaming is the same than moving
+# renaming LOCAL branch
+git branch -m <oldname> <newname>
 git branch -m fix1 bug1234
 ```
 
