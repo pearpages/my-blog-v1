@@ -48,7 +48,7 @@ tsc first.ts
 
 TypeScript
 
-```typescript
+```javascript
 class Greeter {
     greeting: string;
     construct (message: string) {
@@ -147,7 +147,7 @@ window.onload = function () {
 
 ### Grammar, Declarations, and Annotations
 
-```typescript
+```javascript
 var an1; // any type
 var num1: number; // type annotation
 var num2: number  = 2; // type annotation
@@ -156,7 +156,7 @@ var num4 = num3 + 100; // type inference
 var str1 = num1 + 'some string'; // Error!
 ```
 
-```typescript
+```javascript
 init : (s: string, p: string, c: string) => void = function (startButton, pauseButton, clearButton) {
     //...
 };
@@ -164,16 +164,16 @@ init : (s: string, p: string, c: string) => void = function (startButton, pauseB
 
 ### Ambient Declarations
 
-```typescript
+```javascript
 declare var document;
 ```
 
-```typescript
+```javascript
 /// <reference path="jquery.d.ts" />
 declare var $;
 ```
 
-```typescript
+```javascript
 /// <reference path="typings/knockout-2.2.d.ts />"
 declare var ko;
 
@@ -202,7 +202,7 @@ module whatever {
 + interface
 + literal types
 
-```typescript
+```javascript
 // ? means optional
 var squereIt = function (rect: {
     h: number;
@@ -217,31 +217,31 @@ var squereIt = function (rect: {
 
 ### Functions 
 
-```typescript
+```javascript
 var myFunc = function (h: number, w: number) {
     return h * w;
 }
 ```
 
-```typescript
+```javascript
 var myFunc = (h: number, w: number) => h * w;
 ```
 
-```typescript
+```javascript
 var greetMe: (msg: string) => void;
 ```
 
-```typescript
+```javascript
 module utilities {
     var squareItSimple = (h: number,w: number) => h * w;
 }
 ```
 
-```typescript
+```javascript
 var helloWorld: (name?: string) => void;
 ```
 
-```typescript
+```javascript
 module utilities{
     var squareIt: (rect: {h: number; w?: number;}) => number;
 
@@ -262,7 +262,7 @@ module utilities{
 
 ### Interfaces
 
-```typescript
+```javascript
 module utilities {
     
     interface SquareFunction {
@@ -293,7 +293,7 @@ module utilities {
 }
 ```
 
-```typescript
+```javascript
 module people {
     
     interface Person {
@@ -333,7 +333,7 @@ module people {
 }
 ```
 
-```typescript
+```javascript
 module ratings {
     interface ratesEval {
         addRating(rating: number) => void;
@@ -385,13 +385,13 @@ Properties act as filters and can have get or set blocks.
 
 Propertes are only available when compiling to ES5: tsc.exe --target ES5 YourFile.ts
 
-```typescript
+```javascript
 class Car {
     constructor(public engine: string) {}
 }
 ```
 
-```typescript
+```javascript
 class Car {
     // Fields
     engine: string;
@@ -426,7 +426,7 @@ class Car {
 
 ### Complex Types
 
-```typescript
+```javascript
 class Engine {
     constructor(public horsePower: number, public engineType: string) {}
 }
@@ -454,7 +454,7 @@ var car = new Car(engine);
 
 ### Defining Classes
 
-```typescript
+```javascript
 class Engine {
     constructor(public horsePower: number,public engineType: string) {}
 }
@@ -494,7 +494,7 @@ Propertes are only available when compiling to ES5: ```tsc.exe --target ES5 Your
 
 ### Casting
 
-```typescript
+```javascript
 var table: HTMLTableElement = 
 <HTMLTableElement>document.createElement('table');
 ```
@@ -507,7 +507,7 @@ var table: HTMLTableElement =
 
 ## Extending Types
 
-```typescript
+```javascript
 class ChildClass extends ParentClass {
     constructor() {
         super(); // the base class constructor
@@ -515,7 +515,7 @@ class ChildClass extends ParentClass {
 }
 ```
 
-```typescript
+```javascript
 class Auto {
     engine: Engine;
     constructor(engine: Engine) {
@@ -535,7 +535,7 @@ class Truck extends Auto {
 
 ### Example
 
-```typescript
+```javascript
 class Engine {
     constructor(public horsePower: number, public engineType: string) {}
 
@@ -604,7 +604,7 @@ class Truck extends Auto {
 
 Interfaces provide a way to enforce a "contract".
 
-```typescript
+```javascript
 interface IEngine {
     start(callback: (startStatus: bool, engineType: string) => void): void;
     stop(callback: (stopStatus: bool, engineType: string) => void): void;
@@ -636,7 +636,7 @@ class Engine implements IEngine {
 
 ### Using Interface as a Type
 
-```typescript
+```javascript
 class Auto {
     engine: IEngine; // interface as a type
     basePrice: number;
@@ -651,14 +651,14 @@ class Auto {
 
 ### Casting Interfaces
 
-```typescript
+```javascript
 var myEngine = <Engine>auto.engine;
 console.log(myEngine.horsePower.toString());
 ```
 
 ### Extending and Interface
 
-```typescript
+```javascript
 interface IAutoOptions {
     engine: IEngine;
     basePrice: number;
@@ -676,7 +676,7 @@ interface ITruckOptions extends IAutoOptions {
 
 #### Using and Extended Interface
 
-```typescript
+```javascript
 class Truck extends Auto {
     private _bedLength: string;
     fourByFour: bool;
@@ -691,7 +691,7 @@ class Truck extends Auto {
 
 Interfaces are also very useful to use for parameter objects.
 
-```typescript
+```javascript
 interface IAutoOptions {
     basePrice: number;
     engine: IEngine;
@@ -716,7 +716,7 @@ class Whatever {
 }
 ```
 
-```typescript
+```javascript
 interface ITruckOptions extends IAutoOptions {
     bedLength: string;
     fourByFour: bool;   
@@ -738,7 +738,7 @@ class Truck extends Auto {
 
 If we define the same module in different files, they both will share the information contained inside them. But anything outside the module definition won't.
 
-```typescript
+```javascript
 module dataserveice {
     // code  
 };
@@ -748,7 +748,7 @@ module dataserveice {
 
 Check the *Module Pattern* and *Revealing Module Pattern*
 
-```typescript
+```javascript
 module Shapes{
     export class Rectangle {
         constructor(public height: number, public width: number) {
@@ -774,7 +774,7 @@ var circle = new Shapes.Circle(20); // The same
 
 #### Shortchuts
 
-```typescript
+```javascript
 import Utils = App.Tools;
 
 // instead of var log = new App.Tools.Utils.Logger();
@@ -792,7 +792,7 @@ var log = new Utils.Logger();
 **Example**
 
 shapes.ts
-```typescript
+```javascript
 modules Shapes {
     export class Rectangle {
         constructor (
@@ -804,7 +804,7 @@ modules Shapes {
 ``` 
 
 shapemaker.ts
-```typescript
+```javascript
 /// <reference path="shapes.ts" />
 
 module ShapeMaker {
@@ -833,7 +833,7 @@ AMD is a module approach which works better with Browsers.
 #### Loading Module Dependencies with Require.js
 
 main.ts
-```typescript
+```javascript
 require(['bootstrapper'],
     (bootstrapper) => {
     boostrapper.run();
@@ -841,7 +841,7 @@ require(['bootstrapper'],
 ```
 
 boostrapper.ts
-```typescript
+```javascript
 import gt = module('greeter');
 
 export function run() {
@@ -852,7 +852,7 @@ export function run() {
 ```
 
 greeter.ts
-```typescript
+```javascript
 export class Greeter {
     start() {
         this.timerToken = setInterval( () => 
