@@ -12,14 +12,20 @@ vim
 
 ## moving around
 
-h,j,k,l keys
+h,j,k,l,w,b keys
 
 ```
-j -> moves up
-k -> modews down
+j -> moves down
+k -> modews up
 ```
 
 ```
 h -> moves left
 l -> moves right
 ```
+
+```
+w -> moves forward one word
+b -> moves backwards one word
+```
+
