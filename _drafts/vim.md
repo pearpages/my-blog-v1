@@ -29,3 +29,9 @@ w -> moves forward one word
 b -> moves backwards one word
 ```
 
+## modes
+
+- Normal (esc)
+- Insert (i)
+- Visual (v)
+- Visual-line (shift v)
