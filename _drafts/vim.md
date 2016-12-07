@@ -72,5 +72,5 @@ e.g. ```d5w``` deletes 5 words.
 :set nonumber
 :set relativenumber
 :set norelativenumber
-:set number relativenumber
+:help option-list
 ```
