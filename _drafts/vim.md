@@ -35,3 +35,10 @@ b -> moves backwards one word
 - Insert (i)
 - Visual (v)
 - Visual-line (shift v)
+
+## saving files
+
+```
+:w filename.txt
+```
+
