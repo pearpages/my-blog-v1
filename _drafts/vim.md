@@ -42,3 +42,11 @@ b -> moves backwards one word
 :w filename.txt
 ```
 
+## built-in commands
+
+- delete line ```d d```
+- delete line leaving the space ```shift d```
+
+### combined complex expressions
+
+e.g. ```d5w``` deletes 5 words.
