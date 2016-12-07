@@ -47,6 +47,18 @@ b -> moves backwards one word
 - delete line ```d d```
 - delete line leaving the space ```shift d```
 
+```
+# remove inside html tag
+cit
+# remove inside {}
+ci{
+# remove inside ""
+ci"
+```
 ### combined complex expressions
 
 e.g. ```d5w``` deletes 5 words.
+
+## copy n paste
+
+- enter in visual mode press ```y``` to copy and ```p``` to paste. When deleting ```dd``` it's like cutting. Then you can also paste with ```p```.
