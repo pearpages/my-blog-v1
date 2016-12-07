@@ -74,3 +74,13 @@ e.g. ```d5w``` deletes 5 words.
 :set norelativenumber
 :help option-list
 ```
+
+## .vimrc
+
+```
+syntax on
+set number relativenumber
+filetype plugin indent on
+set tabstop=2 shiftwidth=2 expandtab
+set backspace=indent,eol,start
+```
