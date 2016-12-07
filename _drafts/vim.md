@@ -62,3 +62,15 @@ e.g. ```d5w``` deletes 5 words.
 ## copy n paste
 
 - enter in visual mode press ```y``` to copy and ```p``` to paste. When deleting ```dd``` it's like cutting. Then you can also paste with ```p```.
+
+## configuring vim
+
+```
+:syntax on
+:syntax off
+:set number
+:set nonumber
+:set relativenumber
+:set norelativenumber
+:set number relativenumber
+```
