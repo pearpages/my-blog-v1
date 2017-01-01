@@ -515,6 +515,34 @@ function getRndInteger(min, max) {
 
 ---
 
+## Javascript Dates
 
+> Dates written as numbers, specifies the number of milliseconds since January 1, 1970, 00:00:00.
 
-#blog
+### Creating Date objects
+
+```javascript
+var d = new Date("October 13, 2014 11:13:00");
+var d = new Date(86400000);
+var d = new Date(99, 5, 24, 11, 33, 30, 0);
+var d = new Date(99, 5, 24);
+var d = new Date("2015-03-25");
+var d = new Date("2015-03");
+```
+
+### Date Formats
+
+> The ISO format follows a strict standard in JavaScript.
+
+> ISO Date	"2015-03-25" (The International Standard)
+
+```javascript
+var d = new Date("2015-03-25");
+var d = new Date("2015-03-25T12:00:00Z");
+```
+
+> UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).
+
+> Omitting T or Z in a date-time string can give different result in different browser.
+
+---
