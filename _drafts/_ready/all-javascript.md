@@ -590,3 +590,17 @@ document.getElementById("demo").innerHTML = text;
 
 ---
 
+## Javascript Arrays
+
+```javascript
+var cars = [
+    "Saab",
+    "Volvo",
+    "BMW"
+];
+
+var cars = new Array("Saab", "Volvo", "BMW");
+
+document.getElementById("demo").innerHTML = cars;
+```
+
