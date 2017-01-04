@@ -604,3 +604,23 @@ var cars = new Array("Saab", "Volvo", "BMW");
 document.getElementById("demo").innerHTML = cars;
 ```
 
+> JavaScript does not support arrays with named indexes.
+
+> In JavaScript, arrays always use numbered indexes.  
+
+> The new keyword only complicates the code. It can also produce some unexpected results.
+
+### How to Recognize an Array
+
+```javascript
+Array.isArray(fruits);     // returns true
+
+function isArray(x) {
+    return x.constructor.toString().indexOf("Array") > -1;
+}
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits instanceof Array     // returns true
+```
+
