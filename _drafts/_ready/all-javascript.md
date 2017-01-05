@@ -614,13 +614,19 @@ document.getElementById("demo").innerHTML = cars;
 
 ```javascript
 Array.isArray(fruits);     // returns true
+```
 
+```javascript
 function isArray(x) {
     return x.constructor.toString().indexOf("Array") > -1;
 }
+```
 
+```javascript
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 fruits instanceof Array     // returns true
 ```
+
+---
 
