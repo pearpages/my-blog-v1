@@ -630,3 +630,60 @@ fruits instanceof Array     // returns true
 
 ---
 
+## Javascript Array Methods
+
+* join()
+* pop()
+* push() *adds the end*
+* shift()
+* unshift() *adds the beginning*
+* splice()
+* concat()
+* slice()
+
+> Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+
+### Splice
+
+The first parameter (2) defines the position where new elements should be added (spliced in).
+
+The second parameter (0) defines how many elements should be removed.
+
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+```javascript
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+```
+
+```javascript
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);        // Removes the first element of fruits
+```
+
+### slice
+
+The slice() method slices out a piece of an array into a new array.
+
+> The slice() method creates a new array. It does not remove any elements from the source array.
+
+```javascript
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1); // ["Orange", "Lemon", "Apple", "Mango"]
+```
+
+```javascript
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);
+```
+
+Create a new copy of an array
+
+```javascript
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+ver copy = fruits.slice();
+```
+
+[Array Reference](http://www.w3schools.com/jsref/jsref_obj_array.asp)
+
+---
