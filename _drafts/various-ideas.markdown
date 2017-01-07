@@ -4,7 +4,7 @@ Creo que nos falta un documento donde se defina como trabajamos y unos objetivos
 •	Specific
 •	Measurable
 •	Attainable
-•	Realistic 
+•	Relevant 
 •	timely
 
 # Domains
