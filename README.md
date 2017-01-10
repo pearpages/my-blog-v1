@@ -2,8 +2,7 @@
 
 My peronal Blog [pearpages.com](http://www.pearpages.com)
 
-* TOC
-{:toc}
+[Markdown Cheat Sheet]('/Markdown.pdf')
 
 ---
 
