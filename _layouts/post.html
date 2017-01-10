@@ -13,10 +13,7 @@ layout: default
 			<div class="4u">
 				<section>
 					<h3>Content</h3>
-					<p>
-					{{toc_only}}</p>
-					<p>{{inject_anchors}}	</p>
-					<p>XXXXXX</p>
+					<div id="post-content"></div>
 				</section>
 			</div>
 			<div class="8u skel-cell-important">
@@ -28,3 +25,7 @@ layout: default
 
 	</div>
 </section>
+
+<script>
+	$('ul#markdown-toc').appendTo('#post-content');
+</script>

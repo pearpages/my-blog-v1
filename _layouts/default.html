@@ -5,8 +5,11 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="Blog about programming by @pearpages / Pere Pages Soms" />
     <meta name="keywords" content="html web javascript angular angular2 react ionic ionic2 nativescript" />
+
+    <script src="/js/jquery.min.js"></script>
+
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-    
+
     <link rel="stylesheet" href="/css/skel.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/style-xlarge.css" />
@@ -14,15 +17,23 @@
 
 <body id="top">
     <!-- Header -->
-    {% include header.html %} 
-    
-    {{content}}
+    {% include header.html %}
 
+    <!-- Main -->
+    <section id="main" class="wrapper style1">
+        <!-- subheader -->
+        <header class="major">
+            <h2>@pearpages</h2>
+            <p>Blog about programming</p>
+        </header>
+
+        {{content}}
+
+    </section>
+    
     <!-- Footer -->
     {% include footer.html %}
 
-
-    <script src="/js/jquery.min.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/skel-layers.min.js"></script>
     <script src="/js/init.js"></script>
