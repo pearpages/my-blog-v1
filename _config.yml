@@ -23,6 +23,6 @@ gems:
 lsi: false
 safe: true
 incremental: false
-
+permalink: /posts/:categories/:year/:month/:day/:title.html
 gist:
    noscript: false

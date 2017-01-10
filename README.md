@@ -32,6 +32,17 @@ bundle update
 bundle exec jekyll serve
 ```
 
+---
+
+## Tips
+
+### Configuring Permalink
+
+```
+# _config.yml
+permalink: /posts/:categories/:year/:month/:day/:title.html
+```
+
 --- 
 
 ## Considerations
@@ -54,4 +65,4 @@ Right now the *post.html* template is using *jQuery* to move the TOC (table of c
 
 ## Pending Tasks
 
-+ 
++ rendering
