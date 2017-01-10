@@ -2,7 +2,7 @@
 
 My peronal Blog [pearpages.com](http://www.pearpages.com)
 
-[Markdown Cheat Sheet]('/Markdown.pdf')
+[Markdown Cheat Sheet](Markdown.pdf)
 
 ---
 
