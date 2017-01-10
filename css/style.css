@@ -131,7 +131,9 @@
 	}
 
 		pre code {
+			background-color: #000;
 			display: block;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			line-height: 1.75em;
 			padding: 1em 1.5em;
 		}

@@ -53,6 +53,15 @@ Right now is using a CSS folder, create a **_sass** folder to start using *sass*
 
 Old layouts and includes to use as inspiration and migration.
 
+## TOC (Table of Contents)
+
+Add this in the *markdown* file.
+
+```
+* TOC
+{:toc}
+```
+
 ---
 
 ## Warnings

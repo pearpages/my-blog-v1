@@ -1,8 +1,12 @@
 ---
-layout: page
+layout: post
 title: "Links of interest"
+subtitle: "Knowledge Database"
 permalink: /links-of-interest
 ---
+
+* TOC
+{:toc}
 
 ## Angular
 
