@@ -2,79 +2,43 @@
 layout: default
 ---
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-7">
-            {% include google-search.html %} {% include posts.html %}
-        </div>
-        <hr class='visible-sm visible-xs' />
-        <div class="col-md-5">
-            <div class="row">
-                <div class="col-md-12" style="text-align:center;">
-                    <img width="180px" src="http://s.gravatar.com/avatar/fbc25b82eba8c88e090e661a277c4f75?s=250" alt="Pere Pages" class="img-circle" style="box-shadow: 0px 0px 5px #888888; position: relative; right: -30px;">
-                    <img width="180px" src="/img/pear-reading-a-book.jpg" alt="PearPages" class="img-circle" style="box-shadow: 0px 0px 5px #888888; position: relative; left: -15px; z-index: -5;">
-                </div>
-            </div>            
-
-            <div class="row">
-            <p>
-            <br/>
-              Interested in front end technologies, big data, tv shows, movies, food and contemporary subcultures. <a href="/pere-pages-soms/">more</a>
-              </p>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align:center;">
-                  <a href="https://es.linkedin.com/pub/pere-pag%C3%A8s-soms/113/782/82b">
-      
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Pere Pagès Soms's profile on LinkedIn">
-        
-    </a>
-                </div>
-            </div>
-
-            <hr class="divider" />
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Github</h4>
-                    <div id="github-widget" data-user="pearpages" data-display="calendar"></div>
-                    <script>
-var r = new XMLHttpRequest();
-var widget = document.getElementById('github-widget');
-
-r.overrideMimeType("application/json");  
-r.open("GET", "https://gist.github.com.ru/pearpages/919584e7dd5e26d4fe97?username=pearpages");
-r.onreadystatechange = function () {
-  if (r.readyState != 4 || r.status != 200) return;
-  var response = JSON.parse(r.response.replace(/href=\\"\//g, 'href=\\"https://github.com/'));
-  if (response.error) {
-    widget.innerHTML='Oooooops, please make sure your name in "data-user" is a real person on github';
-    return; 
-  }
-  var result = response.result;
-  var display = widget.dataset.display.split(',').forEach(function(d) {
-    widget.innerHTML+=result[d];
-  })
-};
-r.send();
-function appendCSS(name){
-  var stylesheet = document.createElement("link")
-  stylesheet.setAttribute("rel", "stylesheet")
-  stylesheet.setAttribute("href", name)
-  document.getElementsByTagName("head")[0].appendChild(stylesheet)
-}
-
-appendCSS('//gh-widget.oyanglul.us/main.css');
-appendCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.css')</script>
-                </div>
-            </div>
-            <hr class="divider" /> 
-            {% include twitter-widget.html %}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
-        </div>
-    </div>
-</div>
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<!-- subheader -->
+				<header class="major">
+					<h2>@pearpages</h2>
+					<p>Blog about programming</p>
+				</header>
+				<div class="container">
+					<div class="row">
+						<div class="8u">
+							<section>
+								<h2>Mollis ut adipiscing</h2>
+								<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+								<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
+								<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet blandit adipiscing arcu ante.</p>
+							</section>
+						</div>
+						<div class="4u">
+							<!-- sidebar -->
+							{% include sidebar.html %}
+						</div>
+					</div>
+					<hr class="major" />
+					<div class="row">
+						<div class="6u">
+							{% include headline.html %}
+						</div>
+						<div class="6u">
+							<section class="special">
+								<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<h3>Neque ornare adipiscing</h3>
+								<p>Eget mi ac magna cep lobortis faucibus accumsan enim lacinia adipiscing metus urna adipiscing cep commodo id. Ac quis arcu amet. Arcu nascetur lorem adipiscing non faucibus odio nullam arcu lobortis. Aliquet ante feugiat. Turpis aliquet ac posuere volutpat lorem arcu aliquam lorem.</p>
+								<ul class="actions">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>

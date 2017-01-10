@@ -27,3 +27,11 @@ bundle update
 ```bash
 bundle exec jekyll serve
 ```
+
+## Considerations
+
+Right now is using a CSS folder, create a **_sass** folder to start using *sass* again.
+
+## Old folder (_old)
+
+Old layouts and includes

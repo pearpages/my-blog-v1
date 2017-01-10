@@ -19,6 +19,7 @@ timezone: Europe/Madrid
 excerpt_separator: "" 
 gems:
   - jekyll-sitemap
+  - jekyll-toc
 lsi: false
 safe: true
 incremental: false

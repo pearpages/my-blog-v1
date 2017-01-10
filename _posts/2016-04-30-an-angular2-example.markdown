@@ -274,8 +274,8 @@ export class ProductListComponent {
 
 ### Template
 
-```html
-<button (click)='toggleImage()' class="btn btn-primary">{{showImage ? 'Hide Images' : 'Show Images'}}</button>
+```
+<button (click)='toggleImage()' class="btn btn-primary"> {{ text }} </button>
 
 <!-- ... -->
 
@@ -331,7 +331,6 @@ export class ProductListComponent {
 <td>{{product.productName | uppercase}}</td>
 <td>{{product.productCode | lowercase}}</td>
 <td>{{product.releaseDate}}</td>
-<td>{{product.price | currency:'EUR':true:'1.2-2'}}</td>
 <td>{{product.starRating}}</td>
 ```
 

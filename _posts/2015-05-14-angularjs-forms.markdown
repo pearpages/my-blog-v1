@@ -3,6 +3,7 @@ layout: post
 title:  "AngularJS Forms"
 date:   2015-05-14 11:00:00
 categories: javascript angularjs
+toc: true
 ---
 
 ## The Form

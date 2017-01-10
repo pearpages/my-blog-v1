@@ -489,6 +489,7 @@ As the `bower_components` folder is not located in any of the base paths, a spec
 
 The default Browser Sync port is `3000`, if you ever need to change it, head over to the [gulp/server.js](https://github.com/Swiip/generator-gulp-angular/blob/master/app/templates/gulp/_server.js#L42) file and add the `port` attribute to the *server* variable.
 Example below : 
+
 ```javascript
 browserSync.instance = browserSync.init({
     startPath: '/',
@@ -566,7 +567,7 @@ It adds all the files in the Gulp stream which ables us to filter them and apply
 
 It also perform the concatenation and rewrite the `index.html` pointing on the new file (line `.pipe($.useref())`).
 
-To understand where the files are located and how to call the targeted files, you have to look at the comments (not the Gulp file), basically, the syntax is: `<!-- build:{{type: css or js}}({{base path}}) {{target file path}} -->`.
+To understand where the files are located and how to call the targeted files, you have to look at the comments (not the Gulp file).
 
 More information on [gulp-useref](https://github.com/jonkemp/gulp-useref).
 
