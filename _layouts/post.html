@@ -2,9 +2,15 @@
 layout: default
 ---
 
+<section id="main" class="wrapper style1">
 	<header class="major">
 		<h2>{{page.title}}</h2>
 		<p>{{page.subtitle}}</p>
+		<p>
+			{% for cat in page.categories %} 
+			<span>{{cat}}</span> 
+			{% endfor %}
+		</p>
 	</header>
 	<div class="container">
 		<div class="row">
@@ -22,6 +28,7 @@ layout: default
 		</div>
 
 	</div>
+</section>
 
 <script>
 	$('ul#markdown-toc').appendTo('#post-content');
