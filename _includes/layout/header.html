@@ -1,0 +1,58 @@
+{% comment %}
+
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Header
+
+	Description:
+
+		Generates the title and navigation menu of all pages.
+
+	Example:
+
+		{% include layout/header.html %}
+
+{% endcomment %}
+
+<!-- Header -->
+	<header id="header">
+
+		<!-- Logo -->
+			<span class="logo">
+				<a href="{{ site.baseurl }}/">{{ site.title }}</a>
+				<span>{{ site.tagline }}</span>
+			</span>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="{{ site.baseurl }}/">Home</a></li>
+					<li>
+						<a href="#" class="icon fa-angle-down">Dropdown</a>
+						<ul>
+							<li><a href="#">Option One</a></li>
+							<li><a href="#">Option Two</a></li>
+							<li><a href="#">Option Three</a></li>
+							<li>
+								<a href="#">Submenu</a>
+								<ul>
+									<li><a href="#">Option One</a></li>
+									<li><a href="#">Option Two</a></li>
+									<li><a href="#">Option Three</a></li>
+									<li><a href="#">Option Four</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+					<li><a href="{{ site.baseurl }}/generic.html">Generic</a></li>
+					<li><a href="{{ site.baseurl }}/elements.html">Elements</a></li>
+					<li><a href="#" class="button">Log In</a></li>
+				</ul>
+			</nav>
+
+	</header>

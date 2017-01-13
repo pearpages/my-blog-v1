@@ -1,0 +1,60 @@
+{% comment %}
+
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Banner
+
+	Description:
+
+		Generates a slider from an array of slides passed as context. Can also
+		generate the slides from blog posts by passing site.posts as the array.
+
+	Example:
+
+		---
+		my_slides_array:
+		- image: /images/slide1.jpg
+			position: bottom right
+			title: Slide title 1
+			excerpt: Slide content 1.
+			url: http://example.com
+			link_text: Slide link 1
+		- image: /images/slide2.jpg
+			position: center
+			title: Slide title 2
+			excerpt: Slide content 2.
+			url: http://example.com
+			link_text: Slide link 2
+		---
+
+		{% include layout/banner.html slides=page.my_slides_array %}
+
+{% endcomment %}
+
+<!-- Banner -->
+	<section id="banner">
+
+		{% for slide in include.slides %}
+
+			<article data-position="{{ slide.position }}">
+				<div class="inner">
+					<img src="{{ site.baseurl }}{{ slide.image }}" alt="{{ slide.title }}">
+					<h2>{{ slide.title }}</h2>
+					<p>{{ slide.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+
+					{% if slide.url %}
+						<ul class="actions">
+							<li><a class="button big" href="{{ slide.url }}">{{ slide.link_text | default: "Read More" }}</a></li>
+						</ul>
+					{% endif %}
+
+				</div>
+			</article>
+
+		{% endfor %}
+
+	</section>

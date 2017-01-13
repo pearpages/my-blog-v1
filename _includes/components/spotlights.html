@@ -1,0 +1,73 @@
+{% comment %}
+
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Spotlights
+
+	Description:
+
+		Generates a spotlight grid from an array passed as context. Can also
+		generate a grid of blog posts by passing site.posts as the array.
+
+	Example:
+
+		---
+		my_spotlight_array:
+		- image: /images/pic01.jpg
+			title: Spotlight title 1
+			excerpt: Spotlight content 1
+			url: http://example.com
+			link_text: Learn More
+		- image: /images/pic02.jpg
+			title: Spotlight title 2
+			excerpt: Spotlight content 2
+			url: http://example.com
+			link_text: Learn More
+		---
+
+		{% include components/spotlights.html spotlights=page.my_spotlight_array %}
+
+{% endcomment %}
+
+<!-- Spotlights -->
+	<section class="spotlights alt">
+
+		{% for spotlight in include.spotlights %}
+
+			<article>
+
+				{% if spotlight.url and spotlight.image %}
+					<a href="{{ spotlight.url }}" class="image fit">
+						<img src="{{ site.baseurl }}{{ spotlight.image }}" alt="{{ spotlight.title }}">
+					</a>
+				{% elsif spotlight.image %}
+					<span class="image fit">
+						<img src="{{ site.baseurl }}{{ spotlight.image }}" alt="{{ spotlight.title }}">
+					</span>
+				{% endif %}
+
+				<h3>
+					{% if spotlight.url %}
+						<a href="{{ spotlight.url }}">{{ spotlight.title }}</a>
+					{% else %}
+						{{ spotlight.title }}
+					{% endif %}
+				</h3>
+
+				<p>{{ spotlight.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+
+				{% if spotlight.url %}
+					<ul class="actions">
+						<li><a href="{{ spotlight.url }}" class="button">{{ spotlight.link_text | default: "Read More" }}</a></li>
+					</ul>
+				{% endif %}
+
+			</article>
+
+		{% endfor %}
+
+	</section>

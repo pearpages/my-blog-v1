@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-7">
+            {% include google-search.html %} {% include posts.html %}
+        </div>
+        <hr class='visible-sm visible-xs' />
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                    <img width="180px" src="http://s.gravatar.com/avatar/fbc25b82eba8c88e090e661a277c4f75?s=250" alt="Pere Pages" class="img-circle" style="box-shadow: 0px 0px 5px #888888; position: relative; right: -30px;">
+                    <img width="180px" src="/img/pear-reading-a-book.jpg" alt="PearPages" class="img-circle" style="box-shadow: 0px 0px 5px #888888; position: relative; left: -15px; z-index: -5;">
+                </div>
+            </div>            
+
+            <div class="row">
+            <p>
+            <br/>
+              Interested in front end technologies, big data, tv shows, movies, food and contemporary subcultures. <a href="/pere-pages-soms/">more</a>
+              </p>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                  <a href="https://es.linkedin.com/pub/pere-pag%C3%A8s-soms/113/782/82b">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Pere Pagès Soms's profile on LinkedIn">
+        
+    </a>
+                </div>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Github</h4>
+                    <div id="github-widget" data-user="pearpages" data-display="calendar"></div>
+                    <script>
+var r = new XMLHttpRequest();
+var widget = document.getElementById('github-widget');
+
+r.overrideMimeType("application/json");  
+r.open("GET", "https://gist.github.com.ru/pearpages/919584e7dd5e26d4fe97?username=pearpages");
+r.onreadystatechange = function () {
+  if (r.readyState != 4 || r.status != 200) return;
+  var response = JSON.parse(r.response.replace(/href=\\"\//g, 'href=\\"https://github.com/'));
+  if (response.error) {
+    widget.innerHTML='Oooooops, please make sure your name in "data-user" is a real person on github';
+    return; 
+  }
+  var result = response.result;
+  var display = widget.dataset.display.split(',').forEach(function(d) {
+    widget.innerHTML+=result[d];
+  })
+};
+r.send();
+function appendCSS(name){
+  var stylesheet = document.createElement("link")
+  stylesheet.setAttribute("rel", "stylesheet")
+  stylesheet.setAttribute("href", name)
+  document.getElementsByTagName("head")[0].appendChild(stylesheet)
+}
+
+appendCSS('//gh-widget.oyanglul.us/main.css');
+appendCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.css')</script>
+                </div>
+            </div>
+            <hr class="divider" /> 
+            {% include twitter-widget.html %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
+        </div>
+    </div>
+</div>

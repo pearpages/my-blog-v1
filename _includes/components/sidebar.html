@@ -1,0 +1,79 @@
+{% comment %}
+
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Sidebar
+
+	Description:
+
+		Generates a sidebar, allows setting the alignment when including.
+
+	Example:
+
+		{% include components/sidebar.html align="left|right" %}
+
+{% endcomment %}
+
+<!-- Sidebar -->
+	<aside class="sidebar{% if include.align == 'left' %} alt{% endif %}">
+
+		<!-- Blurb -->
+			<section>
+				<h2>Magna etiam</h2>
+				<p>Fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem sed euismod placerat. Vivamus porttitor et magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper lorem ipsum.</p>
+				<ul class="actions">
+					<li><a href="#" class="button">Learn More</a></li>
+				</ul>
+			</section>
+
+		<!-- Featured post -->
+			{% comment %} Set featured_post in _config.yml {% endcomment %}
+			{% assign post = site.posts | where:"id",site.featured_post | first %}
+			{% if post %}
+
+				<section class="featured-posts">
+					<h2>Featured post</h2>
+					<article>
+
+						{% if post.image %}
+							<a href="{{ post.url }}" class="image fit">
+								<img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}">
+							</a>
+						{% endif %}
+
+						<header>
+							<span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+							<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+						</header>
+						{{ post.excerpt }}
+						<ul class="actions">
+							<li><a href="{{ post.url }}" class="button">Continue Reading</a></li>
+						</ul>
+					</article>
+				</section>
+
+			{% endif %}
+
+		<!-- Posts -->
+			<section>
+				<h2>Recent posts</h2>
+				<ul class="posts">
+
+					{% for post in site.posts limit:8 %}
+						<li>
+							<a href="{{ post.url }}">{{ post.title }}</a>
+							<span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+						</li>
+					{% endfor %}
+
+				</ul>
+				<ul class="actions">
+					<li><a href="#" class="button">More Posts</a></li>
+				</ul>
+			</section>
+
+	</aside>

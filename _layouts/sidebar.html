@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% comment %}
+
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Sidebar layout
+
+	Description:
+
+		A layout where content is displayed alongside the sidebar.
+		Allows defining the sidebar orientation on each page.
+
+	Example:
+
+		---
+		layout: sidebar
+		sidebar-align: left
+		---
+
+{% endcomment %}
+
+<!-- Main -->
+	<section class="main">
+		<section>
+			{{ content }}
+		</section>
+	</section>
+
+{% include components/sidebar.html align=page.sidebar-align %}

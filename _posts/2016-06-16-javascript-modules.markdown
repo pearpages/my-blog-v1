@@ -6,6 +6,8 @@ categories: javascript modules
 author: Pere Pages
 ---
 
+This is the summary of the post.
+
 #### Contents
 {:.no_toc}
 * Will be replaced with the ToC, excluding the "Contents" header

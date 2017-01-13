@@ -1,0 +1,53 @@
+{% comment %}
+
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Features
+
+	Description:
+
+		Generates a feature grid from an array passed as context. Can also
+		generate a grid of blog posts by passing site.posts as the array.
+
+	Example:
+
+		---
+		my_features_array:
+		- icon: fa-envelope
+			title: Feature title 1
+			excerpt: Feature content 1.
+		- icon: fa-phone
+			title: Feature title 2
+			excerpt: Feature content 2.
+			url: http://example.com
+			link_text: Learn More!
+		---
+
+		{% include components/features.html features=page.my_features_array %}
+
+{% endcomment %}
+
+<!-- Features -->
+	<section class="features alt">
+
+		{% for feature in include.features %}
+
+			<article class="icon {{ feature.icon | default: 'fa-star' }}">
+				<h3>{{ feature.title }}</h3>
+				<p>{{ feature.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+
+				{% if feature.url %}
+					<ul class="actions">
+						<li><a href="{{ feature.url }}" class="button">{{ feature.link_text | default: "Read More" }}</a></li>
+					</ul>
+				{% endif %}
+
+			</article>
+
+		{% endfor %}
+
+	</section>

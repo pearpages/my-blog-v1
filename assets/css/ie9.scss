@@ -1,0 +1,139 @@
+---
+---
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Features */
+
+	.features {
+		> article {
+			float: left;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+/* Spotlights */
+
+	.spotlights {
+		> article {
+			float: left;
+			width: 49.5%;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+/* Wrapper */
+
+	.wrapper {
+		.main {
+			float: left;
+			width: 67%;
+		}
+
+		.sidebar {
+			float: left;
+			width: 33%;
+		}
+
+		.main:last-child {
+			width: 100%;
+			float: none;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+/* Header */
+
+	#header {
+		> nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			> ul {
+				> li {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		> article {
+			padding-top: 6em;
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		> .inner {
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+
+		.info {
+			float: left;
+			width: 67%;
+
+			.about {
+				float: left;
+			}
+
+			.team {
+				float: left;
+
+				article {
+
+					.image {
+						float: left;
+					}
+
+					&:after {
+						content: '';
+						display: block;
+						clear: both;
+					}
+				}
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+
+		.contact {
+			float: left;
+			width: 33%;
+		}
+	}

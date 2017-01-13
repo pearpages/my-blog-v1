@@ -1,27 +1,27 @@
 # Site settings
-title: PearPages
-myName: Pere Pages
-email: hello@pearpages.com
-description: "Blog about programming. Patterns, javascript, angularjs, html, css, sass, less, desing, UX, PHP, front end, back end, Unit testing, QA,... and any other thing that matters like Movies and Series."
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.pearpages.com" # the base hostname & protocol for your site
-twitter_username: pearpages
-github_username:  pearpages
+title: Faction
+tagline: By Pixelarity
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.com" # the base hostname & protocol for your site
+
+# Plugins
+gems: ["jekyll-paginate"]
 
 # Build settings
-permalink: pretty
 markdown: kramdown
-kramdown:
-    input: GFM
-    hard_wrap: false
-highlighter: rouge
-timezone: Europe/Madrid
-excerpt_separator: "" 
-gems:
-  - jekyll-sitemap
-lsi: false
-safe: true
-incremental: false
+sass:
+  sass_dir: assets/sass
 
-gist:
-   noscript: false
+# Pagination
+paginate: 4
+paginate_path: "/blog/page:num/"
+
+# Featured post
+# The URL of the post that will be featured in the sidebar
+# This is accessible as {{ page.id }} and will depend on your
+# URL format settings
+featured_post: /jekyll/update/2016/10/03/welcome-to-jekyll

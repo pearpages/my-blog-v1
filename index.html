@@ -1,80 +1,103 @@
 ---
 layout: default
+title: Home | Faction
+excerpt: Faction by Pixelarity
+
+slides:
+- image: /images/slide01.jpg
+  position: bottom right
+  title: Ultricies sed magna
+  excerpt: Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor ipsum dolor.
+  url: "#"
+  link_text: Magna sed dolor
+- image: /images/slide02.jpg
+  position: top right
+  title: Sed mattis nunc lorem
+  excerpt: Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida fringilla.
+  url: "#"
+  link_text: Magna sed dolor
+- image: /images/slide03.jpg
+  position: right
+  title: Nisl sed vitae
+  excerpt: Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac magna consequat purus ipsum consequat.
+  url: "#"
+  link_text: Magna sed dolor
+- image: /images/slide04.jpg
+  position: center
+  title: Porta ultricies consectetur
+  excerpt: Mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt lorem ipsum dolor sit amet. Magna tellus fusce tincidunt lorem.
+  url: "#"
+  link_text: Magna sed dolor
+
+features:
+- icon: fa-diamond
+  title: Nisl sed vitae
+  excerpt: Nullam et orci sed lorem magna et vivamus sagittis libero.
+- icon: fa-floppy-o
+  title: Sed mattis nunc
+  excerpt: Duis non efficitur nisi, sed justo. Maecenas sagittis semper.
+- icon: fa-laptop
+  title: Porta ultricies
+  excerpt: Maecenas sagittis felis ac sagittis semper. Curabitur purus leo.
+- icon: fa-paper-plane
+  title: Magna tellus
+  excerpt: Auctor orci eu dolor consectetur, interdum ullamcorper ante.
+
+spotlights:
+- image: /images/pic01.jpg
+  title: Sit amet posuere risus amet lorem faucibus lectus
+  excerpt: Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac magna consequat.
+  url: "#"
+  link_text: Learn More
+- image: /images/pic02.jpg
+  title: Ante sed fermentum tempus vitae eleifend magna
+  excerpt: Quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis felis elementum.
+  url: "#"
+  link_text: Learn More
+- image: /images/pic03.jpg
+  title: Lorem ipsum dolor sit amet consectetur adipiscing
+  excerpt: Purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+  url: "#"
+  link_text: Learn More
+- image: /images/pic04.jpg
+  title: Duis vulputate amet tincidunt lacinia velit aliquet
+  excerpt: Mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt lorem ipsum dolor sit amet.
+  url: "#"
+  link_text: Learn More
+
 ---
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-7">
-            {% include google-search.html %} {% include posts.html %}
-        </div>
-        <hr class='visible-sm visible-xs' />
-        <div class="col-md-5">
-            <div class="row">
-                <div class="col-md-12" style="text-align:center;">
-                    <img width="180px" src="http://s.gravatar.com/avatar/fbc25b82eba8c88e090e661a277c4f75?s=250" alt="Pere Pages" class="img-circle" style="box-shadow: 0px 0px 5px #888888; position: relative; right: -30px;">
-                    <img width="180px" src="/img/pear-reading-a-book.jpg" alt="PearPages" class="img-circle" style="box-shadow: 0px 0px 5px #888888; position: relative; left: -15px; z-index: -5;">
-                </div>
-            </div>            
+{% comment %}
 
-            <div class="row">
-            <p>
-            <br/>
-              Interested in front end technologies, big data, tv shows, movies, food and contemporary subcultures. <a href="/pere-pages-soms/">more</a>
-              </p>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align:center;">
-                  <a href="https://es.linkedin.com/pub/pere-pag%C3%A8s-soms/113/782/82b">
-      
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Pere Pagès Soms's profile on LinkedIn">
-        
-    </a>
-                </div>
-            </div>
+	Faction by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
 
-            <hr class="divider" />
+	Name:
 
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Github</h4>
-                    <div id="github-widget" data-user="pearpages" data-display="calendar"></div>
-                    <script>
-var r = new XMLHttpRequest();
-var widget = document.getElementById('github-widget');
+		Index page
 
-r.overrideMimeType("application/json");  
-r.open("GET", "https://gist.github.com.ru/pearpages/919584e7dd5e26d4fe97?username=pearpages");
-r.onreadystatechange = function () {
-  if (r.readyState != 4 || r.status != 200) return;
-  var response = JSON.parse(r.response.replace(/href=\\"\//g, 'href=\\"https://github.com/'));
-  if (response.error) {
-    widget.innerHTML='Oooooops, please make sure your name in "data-user" is a real person on github';
-    return; 
-  }
-  var result = response.result;
-  var display = widget.dataset.display.split(',').forEach(function(d) {
-    widget.innerHTML+=result[d];
-  })
-};
-r.send();
-function appendCSS(name){
-  var stylesheet = document.createElement("link")
-  stylesheet.setAttribute("rel", "stylesheet")
-  stylesheet.setAttribute("href", name)
-  document.getElementsByTagName("head")[0].appendChild(stylesheet)
-}
+	Description:
 
-appendCSS('//gh-widget.oyanglul.us/main.css');
-appendCSS('//cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.css')</script>
-                </div>
-            </div>
-            <hr class="divider" /> 
-            {% include twitter-widget.html %}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
-        </div>
-    </div>
-</div>
+		An homepage showcasing all components included with Faction.
+
+{% endcomment %}
+
+<!-- Main -->
+	<section class="main">
+
+		{% include layout/banner.html slides=page.slides %}
+
+		<!-- Blurb -->
+			<section>
+				<h1>Sed mattis nunc lorem</h1>
+				<p>Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla lorem.</p>
+			</section>
+
+		{% include components/features.html features=page.features %}
+
+		{% include components/spotlights.html spotlights=page.spotlights %}
+
+	</section>
+
+{% include components/sidebar.html %}
