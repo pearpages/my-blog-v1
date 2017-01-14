@@ -4,10 +4,6 @@ layout: default
 
 {% comment %}
 
-	Faction by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-
 	Name:
 
 		Sidebar layout
@@ -34,3 +30,10 @@ layout: default
 	</section>
 
 {% include components/sidebar.html align=page.sidebar-align %}
+
+<script>
+	console.log($('.sidebar'));
+	console.log($('ul#markdown-toc'));
+	$('.sidebar').html('<section><h2>TOC</h2><div></div></section>');
+	$('ul#markdown-toc').appendTo('.sidebar section div');
+</script>

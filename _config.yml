@@ -1,12 +1,10 @@
 # Site settings
-title: Faction
-tagline: By Pixelarity
+title: "@pearpages"
+tagline: "You need systems not goals"
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Page and blog about programming, best practices, methodology and fun.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://pearpages.com" # the base hostname & protocol for your site
 
 # Plugins
 gems: ["jekyll-paginate"]

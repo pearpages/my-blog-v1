@@ -1,8 +1,12 @@
 ---
-layout: page
+layout: sidebar
+sidebar-align: left
 title: "Links of interest"
 permalink: /links-of-interest
 ---
+
+* TOC
+{:toc}
 
 ## Angular
 
