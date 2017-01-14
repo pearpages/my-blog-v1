@@ -11,7 +11,9 @@ bundle exec jekyll serve
 ## Pending
 
 + Check highlighting
-
++ Defining all posts summary page
++ Definining bio page
++ Defining home page
 
 ---
 
