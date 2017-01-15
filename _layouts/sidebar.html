@@ -31,9 +31,11 @@ layout: default
 
 {% include components/sidebar.html align=page.sidebar-align %}
 
+{% if page.sidebar-align == 'left' %}
 <script>
-	console.log($('.sidebar'));
-	console.log($('ul#markdown-toc'));
-	$('.sidebar').html('<section><h2>TOC</h2><div></div></section>');
-	$('ul#markdown-toc').appendTo('.sidebar section div');
+	if($('ul#markdown-toc').length > 0) {
+		$('.sidebar').html('<section><h2>TOC</h2><div></div></section>');
+		$('ul#markdown-toc').appendTo('.sidebar section div');
+	}
 </script>
+{% endif %}

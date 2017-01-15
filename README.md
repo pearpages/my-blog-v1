@@ -86,6 +86,7 @@ Right now is using a CSS folder, create a **_sass** folder to start using *sass*
 <div class="6u 12u$(medium)" >
 </div>
 ```
+
 ## Old folder (_old)
 
 Old layouts and includes to use as inspiration and migration.
