@@ -32,6 +32,11 @@ title: Blog
 					<article>
 						<header>
 							<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+							<p style="margin-top: -20px">
+								{% for cat in post.categories %} 
+								<span style="background-color: #3ed8c4; padding: 0.5em 1em; color: #fff; font-size: 0.55em;;">{{cat}}</span> 
+								{% endfor %}
+							</p>
 							<p>{{ post.date | date: "%B %-d, %Y" }}</p>
 						</header>
 						{{ post.excerpt }}
