@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: sidebar
+sidebar-align: left
 title: "JavaScript Modules"
 date:   2016-06-16 08:33:12
 categories: javascript modules
@@ -8,9 +9,7 @@ author: Pere Pages
 
 This is the summary of the post.
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ## Popular Module Patterns

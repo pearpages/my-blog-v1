@@ -34,7 +34,9 @@ layout: default
 {% if page.sidebar-align == 'left' %}
 <script>
 	if($('ul#markdown-toc').length > 0) {
-		$('.sidebar').html('<section><h2>TOC</h2><div></div></section>');
+		var title = $('ul#markdown-toc').attr('title').length === 0 ? 'TOC' : $('ul#markdown-toc').attr('title');
+		var icon = $('ul#markdown-toc').attr('icon').length === 0 ? '' : '<i class="fa fa-'+$('ul#markdown-toc').attr('icon')+'" aria-hidden="true"></i> ';
+		$('.sidebar').html('<section><h2>'+icon+title+'</h2><div></div></section>');
 		$('ul#markdown-toc').appendTo('.sidebar section div');
 	}
 </script>
