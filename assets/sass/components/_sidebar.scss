@@ -32,6 +32,10 @@
 			}
 		}
 
+		ul#markdown-toc li{
+			list-style-type: upper-roman;
+		}
+
 		@include breakpoint(large) {
 			> section {
 				@include padding(2.5em, 2.25em);
