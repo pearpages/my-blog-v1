@@ -49,6 +49,12 @@ bundle exec jekyll serve
 
 ---
 
+## Liquid
+
+Liquid is an open-source template language created by Shopify and written in Ruby. It is the backbone of Shopify themes and is used to load dynamic content on storefronts.
+
+---
+
 ## Tips
 
 ### Configuring Permalink
