@@ -1,14 +1,12 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Basic Authentication"
 date:   2015-05-15 09:33:15
 categories: authentication javascript angularjs
 ---
 
-#### Contents
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 Once the user provices valid user credentials, the AngularJS application can store those credentials in a *cookie* or some other temporary storage.

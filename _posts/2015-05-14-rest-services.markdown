@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "REST Services (REpresentational State Transfer)"
 date:   2015-05-14 15:00:25
 categories: web javascript json

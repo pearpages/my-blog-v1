@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Creating Pages in Symfony"
 date:   2015-06-08 19:45:03
 categories: php symfony

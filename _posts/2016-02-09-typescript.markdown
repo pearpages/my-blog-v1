@@ -1,15 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Typescript Reference"
 categories: javascript typescript
 date:   2016-02-09 08:32:53
 author: Pere Pages
 ---
 
-#### Contents
-
-{:.no_toc}
-* list format
+* TOC
 {:toc}
 
 [Typescript: http://www.typescriptlang.org](http://www.typescriptlang.org)

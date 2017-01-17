@@ -1,14 +1,12 @@
 ---
 layout: post
+sidebar-align: left
 title:  "AngularJS Directives"
 date:   2015-05-15 12:34:01
 categories: directives javascript angularjs
 ---
 
-#### Contents
-{:.no_toc}
-
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 Directives are what sets AngularJS apart form Javascript client-side frameworks.

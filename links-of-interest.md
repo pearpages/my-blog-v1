@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post
 sidebar-align: left
 title: "Links of interest"
 permalink: /links-of-interest

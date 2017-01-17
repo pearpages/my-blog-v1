@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Modules in AngularJS"
 date:   2015-06-02 08:33:15
 categories: javascript angularjs

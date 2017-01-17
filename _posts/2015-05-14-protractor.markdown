@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Protractor"
 date:   2015-05-14 00:00:25
 categories: javascript tests framework

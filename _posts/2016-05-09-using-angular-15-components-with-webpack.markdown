@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Using Angular 1.5 Components with Webpack"
 date:   2016-05-09 08:03:25
 categories: javascript angular angular15
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 It's all about letting webpack know how to get the dependencies.
@@ -45,7 +44,8 @@ module.exports = function(app) {
 module.exports = function(app) {
     app.directive('bandInfo', function(bandList) {
         return {
-            template: require('./band-info.html'), // see how we are including the html template
+            template: require('./band-info.html'), 
+            // see how we are including the html template
             restrict: 'E',
             controller: function($scope) {
             }

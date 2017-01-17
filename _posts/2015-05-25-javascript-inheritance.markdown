@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Javascript Inheritance"
 categories: jasvascript inheritance
 date: 2015-05-25 20:40:23

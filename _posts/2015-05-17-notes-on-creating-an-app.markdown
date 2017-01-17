@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Notes on creating an app"
 date:   2015-05-17 22:10:02
 categories: javascript app

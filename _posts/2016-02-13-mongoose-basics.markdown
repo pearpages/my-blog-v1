@@ -1,15 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Mongoose Basics"
 categories: javascript mongodb mongoose
 date:  2016-02-13 19:55:22
 author: Pere Pages
 ---
 
-#### Contents
-
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 [Mongo Tools](http://docs.mongodb.org/ecosystem/tools/administration-interfaces)

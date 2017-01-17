@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "An Angular2 example"
 date:   2016-04-30 20:12:35
 categories: javascript angular angular2
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ## Component
@@ -267,7 +266,8 @@ export class ProductListComponent {
 ```
 
 ```html
-<td><img [src]="product.imageUrl" [title]="product.productName" [style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
+<td><img [src]="product.imageUrl" [title]="product.productName" 
+[style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
 ```
 
 ## Event Binding
@@ -280,7 +280,8 @@ export class ProductListComponent {
 <!-- ... -->
 
 <!-- check the ngIf -->
-<td><img *ngIf='showImage' [src]="product.imageUrl" [title]="product.productName" [style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
+<td><img *ngIf='showImage' [src]="product.imageUrl" [title]="product.productName" 
+[style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
 
 <!-- ... -->
 ``` 
@@ -498,7 +499,10 @@ export class StarComponent implements OnChanges {
 ```
 
 ```html
-<td><ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></ai-star></td>
+<td>
+    <ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'>
+    </ai-star>
+</td>
 ```
 
 ```typescript

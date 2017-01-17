@@ -1,15 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Basic Sublime Commands"
 categories: sublime
 date:  2016-03-08 21:18:22
 author: Pere Pages
 ---
 
-#### Contents
-
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 

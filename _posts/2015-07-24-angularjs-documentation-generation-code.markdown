@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "AngularJS Documentation Generation Code"
 date:   2015-07-24 22:12:14
 categories: javascript angularjs

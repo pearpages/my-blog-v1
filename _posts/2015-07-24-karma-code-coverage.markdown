@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Karma Code Coverage with Istanbul"
 date:   2015-07-24 20:33:15
 categories: javascript karma istanbul

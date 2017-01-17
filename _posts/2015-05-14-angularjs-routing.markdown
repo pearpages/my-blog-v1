@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "AngularJs Routing"
 categories: angularjs web javascript
 date:   2015-05-14 11:12:53

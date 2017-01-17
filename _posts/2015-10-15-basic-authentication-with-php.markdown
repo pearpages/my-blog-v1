@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Basic Authentication with PHP"
 date:   2015-10-15 18:32:12
 categories: php http authentication

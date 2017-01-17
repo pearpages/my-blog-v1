@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Rails Basics"
 categories: ruby rails
 date:   2015-06-04 19:02:23

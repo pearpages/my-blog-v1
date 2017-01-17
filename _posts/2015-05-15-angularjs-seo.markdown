@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "AngularJS SEO"
 date:   2015-05-15 18:22:12
 categories: seo javascript angularjs

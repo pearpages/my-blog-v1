@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "AngularJS Services"
 date:   2015-05-14 15:30:25
 categories: web javascript angularjs

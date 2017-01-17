@@ -1,9 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Yeoman Angular Generators"
 date:   2015-05-15 11:33:15
 categories: yeoman javascript angularjs
 ---
+
+* TOC
+{:toc}
 
 Available generators:
 

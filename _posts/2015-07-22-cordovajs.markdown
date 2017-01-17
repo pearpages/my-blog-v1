@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "CordovaJs"
 date:   2015-07-22 19:33:15
 categories: javascript cordovajs

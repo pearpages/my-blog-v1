@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Basic Unit Testing for Node with Mocha, Chai and Sinon"
 date:   2016-03-08 07:32:53
-categories: javascript node moche chai sinon
+categories: javascript node mocha chai sinon
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ## Tools for Unit Testing Node

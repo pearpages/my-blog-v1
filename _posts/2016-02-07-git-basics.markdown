@@ -1,15 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Git Basics"
 date:   2016-02-07 18:22:12
 categories: git
 author: Pere Pages
 ---
 
-#### Contents
-
-{:.no_toc}
-* 
+* TOC
 {:toc}
 
 ## History of Version Control

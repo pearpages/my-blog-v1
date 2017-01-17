@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "ngRoute vs ui-router"
 date:   2015-10-13 18:12:43
 categories: javascript angularjs routing

@@ -1,15 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "About Testing"
 categories: Testing
 date:  2016-03-10 08:18:22
 author: Pere Pages
 ---
 
-#### Contents
-
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ## Intro

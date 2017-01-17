@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Angular Tests"
 date: 2015-06-11 19:15:02
 categories: javascript angularjs

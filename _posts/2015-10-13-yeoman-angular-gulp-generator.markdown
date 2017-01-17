@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Angular Gulp Generator"
 date:   2015-10-13 19:52:33
 categories: javascript angularjs yeoman generator

@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Javascript Arrays"
 categories: javascript arrays
 date:  2015-05-26 19:40:22

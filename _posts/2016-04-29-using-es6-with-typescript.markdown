@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Using E6 with Typescript"
 date:   2016-04-29 19:12:45
 categories: javascript typescript es6
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 - Syntax

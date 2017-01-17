@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "AngularJS Security"
 date:   2015-05-15 15:24:12
 categories: security javascript angularjs

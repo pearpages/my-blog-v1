@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Notes on Express"
 date:   2015-05-17 22:10:02
 categories: javascript nodejs express

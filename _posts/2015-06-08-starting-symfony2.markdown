@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Starting Symfony2"
 date:   2015-06-08 19:18:03
 categories: php symfony

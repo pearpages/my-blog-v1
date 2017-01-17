@@ -1,15 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Building a simple node API"
 categories: javascript node api
 date:  2016-03-12 17:40:22
 author: Pere Pages
 ---
 
-#### Contents
-
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ## Some quick examples

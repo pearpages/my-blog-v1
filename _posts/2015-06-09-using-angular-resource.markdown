@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Using Angular resource"
 date: 2015-06-09 19:45:02
 categories: javascript angularjs

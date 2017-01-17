@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title:  "Dependency Injection With AngularJS"
 date:   2015-10-12 17:00:23
 categories: javascript programming angularjs

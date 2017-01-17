@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Javascript Most Common Patterns"
 categories: javascript patterns
 date:  2016-04-05 00:12:22
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 + Introduction

@@ -1,5 +1,6 @@
 ---
 layout: post
+sidebar-align: left
 title: "Javascript, Grammar, Objects and Methods"
 date:   2015-06-02 09:02:15
 categories: javascript

@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Using Webpack"
 date:   2016-05-04 18:02:05
 categories: javascript 
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ## Introduction
@@ -436,7 +435,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader") // <--
+                loader: ExtractTextPlugin.extract("style-loader","css-loader!sass-loader")
             }
         ]
     },
@@ -515,7 +514,8 @@ npm install url-loader --save-dev
 {
     test: /.(png|jpg)$/,
     exclude: '/node_modules/,
-    loader: 'url-loader?limit=10000' // bundles images below this size otherwize does a request for the image
+    loader: 'url-loader?limit=10000' 
+    // bundles images below this size otherwize does a request for the image
 }
 ```
 
@@ -529,7 +529,8 @@ npm install url-loader --save-dev
 {
     test: /.(png|jpg|ttf|eot)$/,
     exclude: '/node_modules/,
-    loader: 'url-loader?limit=10000' // bundles images below this size otherwize does a request for the image
+    loader: 'url-loader?limit=10000' 
+    // bundles images below this size otherwize does a request for the image
 }
 ```
 

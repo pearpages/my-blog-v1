@@ -1,14 +1,13 @@
 ---
 layout: post
+sidebar-align: left
 title: "Communicating with the server with Angular"
 categories: javascript rest http angular
 date:  2016-03-13 08:12:23
 author: Pere Pages
 ---
 
-#### Contents
-{:.no_toc}
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 $http is low level and *$resource is high level and for Restful End Points*.
