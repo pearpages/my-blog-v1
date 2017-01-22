@@ -40,6 +40,14 @@ bundle exec jekyll serve
 
 ---
 
+## Rouge
+
+```bash
+gem install kramdown rouge
+```
+
+---
+
 ## Pending
 
 + Check highlighting
