@@ -55,6 +55,7 @@ gem install kramdown rouge
 ## Pending
 
 + Creating pages by category
++ adding analytics
 
 ---
 
