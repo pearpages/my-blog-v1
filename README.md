@@ -46,14 +46,15 @@ bundle exec jekyll serve
 gem install kramdown rouge
 ```
 
+### Stylesheets
+
+[http://richleland.github.io/pygments-css/](http://richleland.github.io/pygments-css/)
+
 ---
 
 ## Pending
 
-+ Check highlighting
-+ Defining all posts summary page
-+ Definining bio page
-+ Defining home page
++ Creating pages by category
 
 ---
 
