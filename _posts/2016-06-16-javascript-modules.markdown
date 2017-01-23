@@ -5,6 +5,7 @@ title: "JavaScript Modules"
 date:   2016-06-16 08:33:12
 categories: javascript modules
 author: Pere Pages
+comments: true
 ---
 
 * TOC

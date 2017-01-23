@@ -42,7 +42,9 @@ layout: default
 	</span>
 {% endif %}
 			{{ content }}
-      {% include components/comments.html %}
+			{% if page.comments %}
+      			{% include components/comments.html %}
+			{% endif %}
 		</section>
 	</section>
 
