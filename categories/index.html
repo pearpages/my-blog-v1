@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<section>
+    <section>
+            <ul>
+            {% for category in site.categories %}
+            <li>{{category | first}}</li>
+            {% endfor %}
+        </ul>
+    </section>
+</section>
