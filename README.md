@@ -54,8 +54,9 @@ gem install kramdown rouge
 
 ## Pending
 
-+ Creating pages by category
++ Create pages by category
 + adding a search widget and a search page using lunr.js
++ Create gallery
 
 ---
 
