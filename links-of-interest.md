@@ -95,6 +95,7 @@ permalink: /links-of-interest
 
 ## Programming Playground
 
+* [jsbin.com](http://jsbin.com/)
 * [CODEPEN](http://codepen.io/)
 * [jsFiddle](https://jsfiddle.net/)
 * [Plunker](https://plnkr.co/)
