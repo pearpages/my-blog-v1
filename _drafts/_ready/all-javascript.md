@@ -53,7 +53,7 @@ function myFunction() {
 </html>
 ```
 
-External scripts cannot contain <script> tags.
+External scripts cannot contain **script** tags.
 
 ```javascript
 <!DOCTYPE html>
