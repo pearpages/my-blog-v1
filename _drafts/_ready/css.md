@@ -312,3 +312,17 @@ img {
     transform: translate(-50%, -50%);
 }
 ```
+
+---
+
+## Combinators
+
+> A combinator is something that explains the relationship between the selectors.
+
++ descendant selector (space)
++ child selector (>) *that are the immediate children of a specified element*
++ adjacent sibling selector (+) *same parent, immediately after*
++ general sibling selector (~) *same parent, all siblings*
+
+---
+
