@@ -84,3 +84,48 @@ div {
 
 ---
 
+## Outline
+
+> However, the outline property is different from the border property - The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.
+
++ outline	 *Sets all the outline properties in one declaration*
++ outline-color	 *Sets the color of an outline*
++ outline-offset	 *Specifies the space between an outline and the edge or border of an element*
++ outline-style	 *Sets the style of an outline*
++ outline-width	 *Sets the width of an outline*
+
+---
+
+## Text
+
++ color	 *Sets the color of text*
++ direction	 *Specifies the text direction/writing direction*
++ letter-spacing	 *Increases or decreases the space between characters in a text*
++ line-height	 *Sets the line height*
++ text-align	 *Specifies the horizontal alignment of text*
++ text-decoration	 *Specifies the decoration added to text*
++ text-indent	 *Specifies the indentation of the first line in a text-block*
++ text-shadow	 *Specifies the shadow effect added to text*
++ text-transform	 *Controls the capitalization of text*
++ text-overflow	 *Specifies how overflowed content that is not displayed should be signaled to the user*
++ unicode-bidi	 *Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document*
++ vertical-align	 *Sets the vertical alignment of an element*
++ white-space	 *Specifies how white-space inside an element is handled*
++ word-spacing	 *Increases or decreases the space between words in a text*
+
+---
+
+## Fonts
+
+* Serif
+* Sans-Serif
+* Monospace
+
++ font	 *Sets all the font properties in one declaration*
++ font-family	 *Specifies the font family for text*
++ font-size	 *Specifies the font size of text*
++ font-style	 *Specifies the font style for text*
++ font-variant	 *Specifies whether or not a text should be displayed in a small-caps font*
++ font-weight	 *Specifies the weight of a font*
+
+---
