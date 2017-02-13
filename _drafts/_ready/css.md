@@ -155,5 +155,98 @@ div {
 
 ---
 
-## Tables
+## Position
+
+* bottom	
+* clip	*Clips an absolutely positioned element*
+* cursor	*Specifies the type of cursor to be displayed*
+* left	
+* overflow	
+* overflow-x
+* overflow-y
+* position	
+* right	
+* top	
+* z-index	
+
+---
+
+## Overflow
+
++ visible
++ hidden
++ scroll
++ auto
+
+* overflow	
+* overflow-x
+* overflow-y
+
+---
+
+## Float
+
+### clearfix Hack
+
+```css
+.clearfix {
+    overflow: auto;
+}
+```
+
+```css
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+```
+
++ clear
++ float
++ overflow
++ overflow-x
++ overflow-y
+
+---
+
+## Align
+
+### Center Align elements
+
+```css
+.center {
+    margin: auto; /* <-- the key */
+    width: 50%;
+}
+```
+
+### Center Align Text
+
+```css
+.text {
+    text-align: center;
+}
+
+```
+
+### Center image
+
+```css
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+```
+
+### Left and Right Align - Using position
+
+```css
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+}
+```
 
