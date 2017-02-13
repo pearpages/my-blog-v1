@@ -250,3 +250,65 @@ img {
 }
 ```
 
+### Let and Right Align - Using float
+
+```css
+.right {
+    float: right;
+    width: 300px;
+}
+```
+
+> Tip: When aligning elements with float, always define margin and padding for the <body> element. This is to avoid visual differences in different browsers.
+
+### Center Vertically - Using padding
+
+```css
+.center {
+    padding: 70px 0;
+}
+```
+
+```css
+.center {
+    padding: 70px 0;
+    text-align: center;
+}
+```
+
+### Center Vertically - Using line-height
+
+> Another trick is to use the **line-height** property with a value that is equal to the **height** property.
+
+```css
+.center {
+    line-height: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+```
+
+### Center Vertically - Using position & transform
+
+```css
+.center { 
+    height: 200px;
+    position: relative;
+    border: 3px solid green; 
+}
+
+.center p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+```
