@@ -326,3 +326,99 @@ img {
 
 ---
 
+## Pseudo-classes
+
+> A pseudo-class is used to define a special state of an element.
+
+.e.g.
+
++ :hover
++ :link /* unvisited link */
++ :visited
++ :active
++ :hover
++ :first-child
+
+
+```
+selector:pseudo-class {
+    property:value;
+}
+```
+
+### Right order
+
+1. :link,:visited
+2. :hover
+3. :active
+
+### :lang
+
+```html
+<html>
+<head>
+<style>
+q:lang(no) {
+    quotes: "~" "~";
+}
+</style>
+</head>
+
+<body>
+<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+</body>
+</html>
+```
+
+---
+
+## pseudo-element
+
+> A CSS pseudo-element is used to style specified parts of an element.
+
+```
+selector::pseudo-element {
+    property:value;
+}
+```
+
+.e.g.
+
++ first-line
++ first-letter
+
+
+```css
+p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+```
+
+```css
+p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+```
+
+### ::before and ::after
+
+```css
+h1::before {
+    content: url(smiley.gif);
+}
+```
+
+### ::selection
+
+The ::selection pseudo-element matches the portion of an element that is selected by a user.
+
+```css
+::selection {
+    color: red; 
+    background: yellow;
+}
+```
+
+---
