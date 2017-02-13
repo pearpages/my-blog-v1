@@ -64,3 +64,23 @@ p.mix {border-style: dotted dashed solid double;}
 
 ---
 
+## Box Model
+
++ Content  *The content of the box, where text and images appear*
++ Padding  *Clears an area around the content. The padding is transparent*
++ Border  *A border that goes around the padding and content*
++ Margin  *Clears an area outside the border. The margin is transparent*
+
+```css
+div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0; 
+}
+```
+
+> Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+---
+
