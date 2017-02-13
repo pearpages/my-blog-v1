@@ -129,3 +129,31 @@ div {
 + font-weight	 *Specifies the weight of a font*
 
 ---
+
+## Icons
+
++ Font Awesome Icons
++ Bootstrap Icons
++ Google Icons
+
+---
+
+## Links
+
+* a:link - a normal, unvisited link
+* a:visited - a link the user has visited
+* a:hover - a link when the user mouses over it
+* a:active - a link the moment it is clicked
+
+---
+
+## Lists
+
+* list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+* list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
+* list-style-image (specifies an image as the list item marker)
+
+---
+
+## Tables
+
