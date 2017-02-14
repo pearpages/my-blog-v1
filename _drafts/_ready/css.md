@@ -1093,3 +1093,82 @@ Using image sprites will reduce the number of server requests and save bandwidth
 ```
 
 ---
+
+## Attribute selectors
+
+> It is possible to style HTML elements that have specific attributes or attribute values.
+
+```css
+a[target] {
+    background-color: yellow;
+}
+```
+
+```css
+a[target="_blank"] { 
+    background-color: yellow;
+}
+```
+
+### CSS [attribute~="value"] Selector (Contains -whole word-)
+
+The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+
+```css
+[title~="flower"] {
+    border: 5px solid yellow;
+}
+```
+
+### CSS [attribute*="value"] Selector (Contains -NOT whole word-)
+
+```css
+[class*="te"] {
+    background: yellow;
+}
+```
+
+### CSS [attribute|="value"] Selector (Starts With -whole word-)
+
+> The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! 
+
+```css
+[class|="top"] {
+    background: yellow;
+}
+```
+
+### CSS [attribute^="value"] Selector (Starts With -NOT whole word-)
+
+```css
+[class^="top"] {
+    background: yellow;
+}
+```
+
+### CSS [attribute$="value"] Selector (Ends with)
+
+```css
+[class$="test"] {
+    background: yellow;
+}
+```
+
+### Example: Styling Forms
+
+```css
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: yellow;
+}
+
+input[type="button"] {
+    width: 120px;
+    margin-left: 35px;
+    display: block;
+}
+```
+
+---
