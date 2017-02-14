@@ -458,3 +458,36 @@ The ::selection pseudo-element matches the portion of an element that is selecte
 ```
 
 ---
+
+## Opacity
+
+The opacity property can take a value from 0.0 - 1.0. The lower value, the more transparent.
+
+```css
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+```
+
+### Transparent Hover Effect
+
+```css
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+```
+
+### Transparency using RGBA
+
+```css
+div {
+    background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
+}
+```
