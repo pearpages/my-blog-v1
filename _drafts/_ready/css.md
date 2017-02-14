@@ -1172,3 +1172,42 @@ input[type="button"] {
 ```
 
 ---
+
+## Styling Forms
+
+### Focused Inputs
+
+```css
+input[type=text]:focus {
+    background-color: lightblue;
+}
+```
+
+### Input with icon / image
+
+```css
+input[type=text] {
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+```
+
+### Animated Search Input
+
+In this example we use the CSS3 transition property to animate the width of the search input when it gets focus.
+
+```css
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+```
+
+---
