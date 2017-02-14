@@ -901,3 +901,177 @@ li.dropdown {
 ```
 
 [Tooltip examples](http://www.w3schools.com/css/css_tooltip.asp)
+
+---
+
+### Image Gallery
+
+```html
+<html>
+<head>
+<style>
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="img">
+  <a target="_blank" href="fjords.jpg">
+    <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="forest.jpg">
+    <img src="forest.jpg" alt="Forest" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="lights.jpg">
+    <img src="lights.jpg" alt="Northern Lights" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="mountains.jpg">
+    <img src="mountains.jpg" alt="Mountains" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
+</html>
+```
+
+### Responsive Image Gallery
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.img {
+    border: 1px solid #ccc;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_fjords.jpg">
+      <img src="img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+</div>
+
+</body>
+</html>
+```
+
+---
