@@ -4,7 +4,7 @@ tagline: "You need systems not goals"
 description: > # this means to ignore newlines until "baseurl:"
   Page and blog about programming, best practices, methodology and fun.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://pearpages.com" # the base hostname & protocol for your site
+url: "https://pearpages.com" # the base hostname & protocol for your site
 
 # Plugins
 gems: ["jekyll-paginate"]
