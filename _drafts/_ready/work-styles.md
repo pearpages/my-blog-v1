@@ -4,22 +4,22 @@
 
 We basically stick to **Airbnb's** JavaSCript Coding Style guide which has kind of become an industry standard.
 
-[https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+* [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
 ## Angular-related coding style
 
 We stick to the official Angular coding style-guide (shameless self-promotion: I contributed to this project back in the day and getting the community agreeing on that became a pain eventually, so for what it's worth let's leverage all that hard work pulled in). This should not be an issue should you have used the Angular-CLI in the past, but we currently do not use that tool ourselves but create items by hand instead, so being familiar with the naming conventions for code entities and classes is a must.
 
-[https://angular.io/guide/styleguide](https://angular.io/guide/styleguide)
+* [https://angular.io/guide/styleguide](https://angular.io/guide/styleguide)
 
 ## Projects Architecture
 
 We pretty much embrace the guidelines issued by the Angular team in regards of application design, plus some nuances that are specific to Redux-driven projects with support for side effect model patterns (this is, the Effects lib).
 
-[https://angular.io/guide/architecture](https://angular.io/guide/architecture)
-[https://angular.io/guide/ngmodule](https://angular.io/guide/ngmodule)
-[https://github.com/ngrx/effects](https://github.com/ngrx/effects)
-[https://github.com/ngrx/example-app](https://github.com/ngrx/example-app)
+* [https://angular.io/guide/architecture](https://angular.io/guide/architecture)
+* [https://angular.io/guide/ngmodule](https://angular.io/guide/ngmodule)
+* [https://github.com/ngrx/effects](https://github.com/ngrx/effects)
+* [https://github.com/ngrx/example-app](https://github.com/ngrx/example-app)
 
 Combining observables in a single stream is a common operation in our daily practice, so taking a look into operators such as
 
@@ -34,7 +34,7 @@ Combining observables in a single stream is a common operation in our daily prac
 
 Netanel Basal posts
 
-[https://netbasal.com/](https://netbasal.com/)
+* [https://netbasal.com/](https://netbasal.com/)
 
 ## IDE
 
